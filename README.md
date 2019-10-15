@@ -1,3 +1,1 @@
 # ShopSamsung
-Test Amaçlıdır....
-ygkyukyug
