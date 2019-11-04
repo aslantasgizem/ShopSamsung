@@ -1,0 +1,1178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Samsung.com</title>
+<script type="text/javascript" src="https://unpkg.com/vue@latest"></script>
+<script type="text/javascript" src="https://unpkg.com/vue-simple-search-dropdown@latest/dist/vue-simple-search-dropdown.min.js"></script>
+    
+<link rel="stylesheet" type="text/css" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="code.css"/>
+<link href="code.js">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<script src ="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-multiselect@2.1.0"></script>
+<link rel="stylesheet" href="https://unpkg.com/vue-multiselect@2.1.0/dist/vue-multiselect.min.css">
+
+</head>
+
+
+<body>
+   
+ 
+    <!--  Reference : https://vuejs.org/v2/guide/  Kodların yazımının çoğunda vuejs sitesinden yardım alındı. -->
+  
+    <script src="https://unpkg.com/vue"></script>
+     
+  
+  
+    <!-- Reference : https://vuejs.org/v2/examples/modal.html -->
+    <!-- Modal kullanılarak popup bir sayfa yapıldı. Yani İl-Değiştir yazısına basınca bulunduğumuz sayfayı bulanık
+    yaparak sayfanın üzerine küçük bir ekran açar.  -->
+  
+   <div id="menu-wrapper" style="margin-top: 35px;">
+      <div style="margin-left: 870px; margin-top: -30px;">
+          <script type="text/x-template" id="modal-template">
+             <!-- Transition, anasayfadan il değiştir sayfasına geçiş için kullanıldı. -->
+            <transition name="modal">
+              <div class="modal-mask"> <!--Kamuflaj edilecek alan -->
+                <div class="modal-wrapper"> <!--İç içe olan öğeleri oluşturmak için div.-->
+                  <div class="modal-container"> <!--modal içerik içinde farklı kısımlar oluşturmak için kullanıldı.-->
+                    <div class="modal-header"> <!--Kalıcı bir başlık içeren modal için bir başlık tanımlar. -->
+                        <button class="modal-default-button" @click="$emit('close')"> <!-- butona basınca sayfayı kapatır-->
+                            X
+                          </button>
+                          <!-- Slot etiketi kullanımı ile her slot tanımı için aynı içerik dönecektir. Bu durumu name attribute ile kontrol ediyoruz.-->
+                      <slot name="header"> <!--Slot name'e varsayılan yani onu kapsayan div'in ismini verdik.-->
+                      İl Değiştir
+                      </slot>
+                    </div>
+                    <div class="modal-body"> <!--Sınıf modal gövdesi için stil tanımlamak için kullanılır.Paragraf, resim gibi biçimlendirme eklenir. -->
+                      <slot name="body">
+                          <h4> Lütfen yaşadığınız şehri seçiniz.</h4>
+                          <select v-model="selected" style="width: 120px; height: 35px;">
+                            <!-- option'lara Combobox'ın içinde bulunacak şehirler yazıldı.-->
+                            <option disabled value="">Please select</option>
+                            <option>Adana</option>
+                            <option>Adıyaman</option>
+                            <option>Afyon</option>
+                            <option>Ağrı</option>
+                            <option>Aksaray</option>
+                            <option>Amasya</option>
+                            <option>Ankara</option>
+                            <option>Antalya</option>
+                            <option>Ardahan</option>
+                            <option>Artvin</option>
+                            <option>Aydın</option>
+                            <option>Balıkesir</option>
+                            <option>Bartın</option>
+                            <option>Batman</option>
+                            <option>Bayburt</option>
+                            <option>Bilecik</option>
+                            <option>Bingöl</option>
+                            <option>Bitlis</option>
+                            <option>Bolu</option>
+                            <option>Burdur</option>
+                            <option>Bursa</option>
+                            <option>Çanakkale</option>
+                            <option>Çankırı</option>
+                            <option>Çorum</option>
+                            <option>Denizli</option>
+                            <option>Diyarbakır</option>
+                            <option>Düzce</option>
+                            <option>Edirne</option>
+                            <option>Elazığ</option>
+                            <option>Erzincan</option>
+                            <option>Erzurum</option>
+                            <option>Eskişehir</option>
+                            <option>Gaziantep</option>
+                            <option>Giresun</option>
+                            <option>Gümüşhane</option>
+                            <option>Hakkari</option>
+                            <option>Hatay</option>
+                            <option>Iğdır</option>
+                            <option>Isparta</option>
+                            <option>İstanbul(Asya)</option>
+                            <option>İstanbul(Avr)</option>
+                            <option>İzmir</option>
+                            <option>K.Maraş</option>
+                            <option>Karabük</option>
+                            <option>Karaman</option>
+                            <option>Kars</option>
+                            <option>Kastamonu</option>
+                            <option>Kayseri</option>
+                            <option>Kırıkkale</option>
+                            <option>Kırklareli</option>
+                            <option>Kırşehir</option>
+                            <option>Kilis </option>
+                            <option>Kocaeli </option>
+                            <option>Konya </option>
+                            <option>Kütahya </option>
+                            <option>Malatya </option>
+                            <option>Manisa </option>
+                            <option>Mardin </option>
+                            <option>Mersin </option>
+                            <option>Muğla </option>
+                            <option>Muş </option>
+                            <option>Nevşehir </option>
+                            <option>Niğde </option>
+                            <option>Ordu </option>
+                            <option>Osmaniye</option>
+                            <option>Rize </option>
+                            <option>Sakarya </option>
+                            <option>Samsun </option>
+                            <option>Siirt </option>
+                            <option>Sinop </option>
+                            <option>Sivas </option>
+                            <option>Şanlıurfa </option>
+                            <option>Şırnak </option>
+                            <option>Tekirdağ </option>
+                            <option>Tokat </option>
+                            <option>Trabzon </option>
+                            <option>Tunceli </option>
+                            <option>Uşak </option>
+                            <option>Van </option>
+                            <option>Yalova </option>
+                            <option>Yozgat </option>
+                            <option>Zonguldak </option>
+                            
+                      </slot>
+                    </div>
+          
+                    <div class="modal-footer"> <!--Alt kısım için bilgi tanımlanan kısımdır.Bu kısma kaydet butonu eklendi.-->
+                      <slot name="footer">
+                          <button onclick=" " type="submit" class="btn" style="width: 110px; height: 35px; margin-top:-85px; margin-left:130px; background-color:blue; color:white">KAYDET</button>
+                       
+                      </slot>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </transition>
+          </script>
+          
+          <!-- app oluşturuldu-->
+          <div id="app4">
+            <button id="show-modal" @click="showModal = true" style="background-color: white; border: 0px;"> Yalova-İl Değiştir</button>
+            <modal v-if="showModal" @close="showModal = false">
+              <!--
+                Varsayılan içerik bu kısımda yazılır.
+              -->
+              <h3 slot="header">İL DEĞİŞTİR</h3>
+            </modal>
+          </div>
+          <li>
+            <img class="icon2" alt="sepet" height="15" src="https://shop.samsung.com.tr/Themes/SamsungShop/Content/images/samsungshop/header-cart-icon.png" width="40" />
+          </li>
+          
+          </div>
+         
+        </div>
+         
+     <!-- Reference : https://designmodo.com/create-css3-mega-menu/ -->
+     <!-- Burada nav2 adını verdiğimiz class içerisinde kategori kısmı oluşturuldu.-->   
+     <!--Numarasız Listeler <ul> etiketi ile başlar ve </ul> etiketi ile biter.
+       Liste maddeleri ise <li> etiketi ile başlar.-->
+  
+    <ul class="nav2" style="width: 1200px; height: 20px; margin-top: -85px;">
+      <li>
+        <a href="#">MOBIL </a>
+        <div>
+          <div class="nav2-column"> <!--Kategori içindeki alt kategoriler oluşturuldu.-->
+            <h3><a href="Mobil.html" style="color: #000000;"> ONE CIKAN  MOBIL URUNLER </a></h3>
+            <ul> 
+              <li><a href="#">Galaxy M30s   </a></li> <!-- Linkler oluşturuldu.-->
+              <li><a href="#">Galaxy Note10|10+   </a></li>
+              <li><a href="#">Galaxy Watch Active 2   </a></li>
+              <li><a href="#">Galaxy A30s   </a></li>
+              <li><a href="#">Galaxy Tab S6   </a></li>
+              <li><a href="#">Galaxy A30|A50   </a></li>
+              <li><a href="#">Galaxy A20   </a></li>
+              <li><a href="#">Galaxy M10   </a></li>
+              <li><a href="#">Galaxy Tab S5e   </a></li> 
+            </ul>
+          </div>
+          <div class="nav2-column">
+            <h3>   MOBIL URUNLER   </h3>
+            <ul>
+              <li><a href="#">   Akilli Telefonlar   </a></li>
+              <li><a href="#">   Tabletler   </a></li>
+              <li><a href="#">   Akilli Saatler   </a></li>
+            </ul>         
+          </div>
+  
+          <div class="nav2-column">
+            <h3>MOBIL UYGULAMALAR</h3>
+            <ul>
+              <li><a href="#">Bixby</a></li>
+              <li><a href="#">Samsung Health</a></li>
+              <li><a href="#">SmartThings</a></li>
+              <li><a href="#">Smart Switch</a></li>
+              <li><a href="#">Samsung DeX</a></li>
+              <li><a href="#">Samsung Kids Home</a></li>
+            </ul>
+          </div>
+          <div class="nav2-column">
+            <h3></h3>
+            <ul>
+              <li><img src="Photos/10note.jpg" style="margin-left: 150px;"></li>
+            </ul>
+          </div>
+         
+  
+        </div>
+      </li>
+      <li>
+        <a href="Tv.html">TV - AV</a>
+        <div>
+          <div class="nav2-column">
+            <h3>ONE CIKAN TV - AV URUNLERI</h3>
+            <ul>
+              <li><a href="#">QLED 8K TV</a></li>
+              <li><a href="#">Samsung Harman Kardon Soundbar</a></li>
+              
+            </ul>
+          </div>
+  
+          <div class="nav2-column">
+            <h3>TELEVIZYONLAR</h3>
+            <ul>
+              <li><a href="#">QLED</a></li>
+              <li><a href="#">The Frame</a></li>
+                          <li><a href="#">Premium UHD</a></li>
+                          <li><a href="#">UHD</a></li>
+              <li><a href="#">Full HD</a></li>
+            </ul>   
+          </div>
+  
+          <div class="nav2-column">
+            <h3>SES SISTEMLERI</h3>
+            <ul>
+              <li><a href="#">Soundbar</a></li>
+              
+            </ul>
+                  </div>
+                  <div class="nav2-column">
+            <h3>TV SATIN ALMA KILAVUZU</h3>
+            <ul>
+              <li><a href="#">8K Nedir?</a></li>
+              <li><a href="#">4K Nedir?</a></li>
+              <li><a href="#">HDR Nedir?</a></li>
+              <li><a href="#">Akilli TV Nedir?</a></li>
+              <li><a href="#">Hangi Ekran Boyutu?</a></li>
+            
+            </ul>
+          </div>
+          <div class="nav2-column">
+            <h3></h3>
+            <ul>
+              <li><img src="Photos/2tel.jpg" style="margin-left:-60px;"></li>
+            </ul>
+          </div>
+          </div>
+      </li>
+      <li>
+        <a href="#">BEYAZ ESYA</a>
+        <div>
+          <div class="nav2-column">
+            <h3>ONE CIKAN BEYAZ ESYALAR</h3>
+            <ul>
+              <li><a href="#">Wind Free Klimalar</a></li>
+              <li><a href="#">Addwash Camasir Makineleri</a></li>
+              <li><a href="#">Powerbot Robot Süpürge</a></li>
+              <li><a href="#">Triple Cooling Buzdolabi</a></li>
+              
+            </ul>
+          </div>
+  
+          <div class="nav2-column">
+            <h3>BEYAZ ESYA</h3>
+            <ul>
+              <li><a href="#">Klima</a></li>
+              <li><a href="#">Buzdolabi</a></li>
+              <li><a href="#">Pisiriciler</a></li>
+              <li><a href="#">Camasir Makineleri</a></li>
+              <li><a href="#">Camasir Kurutma Makineleri</a></li>
+              <li><a href="#">Bulasik Makineleri</a></li>
+              <li><a href="#">Elektrikli Süpürge</a></li>
+              
+            </ul>
+          </div>
+  
+          <div class="nav2-column">
+            <h3>AKILLI EV</h3>
+            <ul>
+              <li><a href="#">Smartthings Hub</a></li>
+              <li><a href="#">Su Sizintisi Sensörü</a></li>
+                          <li><a href="#">Hareket Sensörü</a></li>
+                          <li><a href="#">Cok Amacli Sensör</a></li>
+            </ul>
+  
+            
+          </div>
+  
+          <div class="nav2-column">
+            <h3>CHEF COLLECTION</h3>
+          </div>
+          <div class="nav2-column">
+            <h3></h3>
+            <ul>
+              <li><img src="Photos/3reklam.jpg" style="margin-left:-60px;"></li>
+            </ul>
+          </div>
+       </div>
+      </li>
+      <li>
+        <a href="#">AKSESUAR</a>
+        <div>
+          <div class="nav2-column">
+            <h3> GUC </h3>
+            <ul>
+              <li><a href="#">Tasinabilir Sarj Cihazi</a></li>
+              <li><a href="#">Sarj Aletleri</a></li>
+              <li><a href="#">Sarjli Kiliflar</a></li>
+              <li><a href="#">Piller</a></li>
+              
+            </ul>
+          </div>
+  
+          <div class="nav2-column">
+            <h3>SES</h3>
+            <ul>
+              <li><a href="#">AKG Kablosuz Kulaklik</a></li>
+              <li><a href="#">Kablosuz Kulaklik</a></li>
+              <li><a href="#">Kablolu Kulaklik</a></li>
+              <li><a href="#">Cocuk Kulakliklari</a></li>
+              
+            </ul>
+          </div>
+  
+          <div class="nav2-column">
+            <h3>KILIF</h3>
+            <ul>
+              <li><a href="#"> Galaxy Note10| 10+ Kiliflari </a></li>
+              <li><a href="#"> Galaxy S10E|S10|S10+ Kiliflari </a></li>
+                          <li><a href="#"> Galaxy Note9 Kiliflari </a></li>
+                          <li><a href="#"> Galaxy S9 | S9+ Kiliflari </a></li>
+                          <li><a href="#"> Galaxy S8 | S8+ Kiliflari </a></li>
+                          <li><a href="#"> Galaxy S7 | S7 edge Kiliflari </a></li>
+                          <li><a href="#"> Tablet Kiliflari </a></li>
+                          <li><a href="#"> A Serisi Kiliflari </a></li>
+                          <li><a href="#"> Galaxy Note5 Kiliflari </a></li>
+                          <li><a href="#"> J Serisi Kiliflari </a></li>
+                          <li><a href="#"> Diğer Kiliflar </a></li>
+            </ul>
+  
+            
+          </div>
+  
+          <div class="nav2-column">
+            <h3>DIGER AKSESUARLAR</h3>
+            <ul>
+              <li><a href="#">Takip Cihazlari</a></li>
+              <li><a href="#">Drone</a></li>
+              <li><a href="#">Koruyucu Film</a></li>
+              <li><a href="#">Kablolar - Dönüstürücüler</a></li>
+              <li><a href="#">Akilli Oyuncaklar</a></li>
+              <li><a href="#">Arac Tutucular / Standlar</a></li>
+              <li><a href="#">Akilli Saat Kayislari</a></li>
+              <li><a href="#">S Pen</a></li>
+            </ul>
+          </div>
+          <div class="nav2-column">
+            <h3></h3>
+            <ul>
+              <li><img src="Photos/4kulaklık.png" style="margin-left:-60px;"></li>
+            </ul>
+          </div>
+        </div>
+              <li>
+                  <a href="#">IT- HAFIZA</a>
+                  <div>
+                      <div class="nav2-column">
+                          <h3>ONE CIKAN IT- HAFIZA URUNLERI</h3>
+                          <ul>
+                              <li><a href="#">Curved Monitor</a></li>
+                              <li><a href="#">Space Monitor</a></li>
+                              <li><a href="#">Samsung Flip</a></li>
+                            
+                          </ul>
+                      </div>
+      
+                      <div class="nav2-column">
+                          <h3>MONITOR</h3>
+                          <ul>
+                              <li><a href="#">Gaming Monitoe</a></li>
+                              <li><a href="#">Space Monitorler</a></li>
+                              <li><a href="#">Endüstriyel Monitorler</a></li>
+                          </ul>
+      
+                          
+                      </div>
+      
+                      <div class="nav2-column">
+                          <h3>HAFIZA DEPOLAMA</h3>
+                          <ul>
+                              <li><a href="#">Tasinabilir SSD</a></li>
+                              <li><a href="#">Hafiza Karti</a></li>
+                              <li><a href="#">SSD</a></li>
+                              <li><a href="#">USB Flash Bellek</a></li>
+                          </ul>
+                      </div>
+                      <div class="nav2-column">
+                        <h3></h3>
+                        <ul>
+                          <li><img src="Photos/5tel.jpg" style="margin-left:180px;"></li>
+                        </ul>
+                      </div>
+                      
+                  </div>
+              </li>
+      <li><a href="#">KAMPANYALAR</a></li>
+      <li></li>
+      
+      <li>
+        <a href="file:///C:/Users/Tu%C4%9F%C3%A7e%20Gizem/Desktop/Samsung.com/anasayfa.htm">
+        <img class="sms" alt="samsung" height="19" src="Photos/samsung-logo.png" width="129" />
+       
+      </li>
+        <div style=" position:absolute; z-index: 20; margin-top: -17px; "> <input type=button id="sonuc" value="0" style="margin-left: 1300px; color: #000000;"></div>
+  
+        </ul>
+        
+      
+    </ul>
+
+    
+  
+       <!-- Reference: https://github.com/romainsimon/vue-simple-search-dropdown -->
+       
+      <div id="app3" style="width: 10px; height: 50px; margin-left: 1000px; margin-top: -30px; " >
+          <Dropdown
+            :options="options"
+            v-on:selected="validateSelection"
+            v-on:filter="getDropdownValues"
+            :disabled="false"          
+            placeholder="Ne Aramıştınız?">
+          </Dropdown>
+          <br /> 
+          
+      </div>
+      <div>
+      <!--menu5 kısmı bir ikondan oluşan dropdown menüdür.
+         İçinde uye ol, uye girisi, sifremi unuttum ve istek listesi linklerini barındırır-->
+        <ul class="menu5">
+              <li class="uyegirisi1">
+                    <a class="uyegirisi" href="#"><img class="icon1" src="Photos/header-user-icon.png" ></a>
+                   <ul class="uyegirisi2">
+                      <li>
+                        <a class="uyegirisi3" href="uyeol.html">Üye Ol</a>
+                      </li>
+                      <li>
+                        <a class="uyegirisi3" href="uyegirisi.html">Üye Girişi</a>
+                      </li>
+                      <li>
+                        <a class="uyegirisi3" href="index.html" >Şifremi Unuttum</a>
+                      </li>
+                      <li>
+                        <a class="uyegirisi3" href="#">İstek Listesi</a>
+                      </li>
+                  </ul>
+              </li>
+        </ul>
+      </div>
+     
+     
+  </div>
+  
+  <div>
+    
+  </div>
+     
+   
+    
+     
+   
+  <hr>
+  <div class="üstmobil">
+  <h5 style="color:darkblue; font-weight: bold;"><a href="code.html" class="anasayfayazisi" style="margin-left: 60px; color:#372f2b; font-family:Arial, Helvetica, sans-serif; font-size: 13px;" > Anasayfa / </a> ÖNE ÇIKAN MOBİL ÜRÜNLER</h5>
+  <h1 style="margin-left: 420px; margin-top: 70px; font-weight: bold;"> ÖNE ÇIKAN TV-AV ÜRÜNLER</h1>
+  </div>
+
+
+  <h4 style="margin-left: 35px; margin-top: 50px;">KATEGORİLER</h4> 
+ 
+  <hr style="width: 25%; margin-left:-950px;">
+  <b><p style="margin-top:-70px; margin-left: 400px;">23 </p></b>
+  <p style="margin-top:-52px; margin-left: 425px;">Ürün Var </p>
+
+
+  <div id="app9">
+      <Dropdown
+       :options="options"
+       v-on:selected="validateSelection"
+       v-on:filter="getDropdownValues"
+       :disabled="false"
+       placeholder="Sırala                                                         > ">
+     </Dropdown>
+     <br />
+   </div>
+  <div class="mobilkategori">
+      <div class="mobilmenu" >
+          <ul >
+              <li class=""><a href="" title="" class="yazimbl"  style="text-decoration: none;">MOBİL</a>
+                
+              </li>
+              <li><a href="" title="" class="yazimbl" style="color: darkblue; text-decoration: none;" >TV-AV</a>
+                  <ul>
+                      <li><a href="" title="" class="yazimbl" style="color: darkblue; text-decoration: none; ">ÖNE ÇIKAN TV-AV ÜRÜNLER</a>
+                      <ul>
+                          <li> <a href="#" class="yazimbl" style="text-decoration: none;">RU Serisi 4K TV </a></li>
+                          <li> <a href="#" class="yazimbl" style="text-decoration: none;"> QLED 8K TV </a></li>
+                          <li> <a href="#" class="yazimbl" style="text-decoration: none;"> Samsung Harman Kardon Soundbar </a></li>
+
+
+                      </ul>
+                      </li>
+                      <li><a href="" title="" class="yazimbl"  style="text-decoration: none;">TELEVİZYONLAR</a></li>
+                      <li><a href="" title="" class="yazimbl"  style="text-decoration: none;">SES SİSTEMLERİ</a></li>
+                      
+                  </ul>
+              
+              </li>
+              
+            
+              <li><a href="" title="" class="yazimbl"  style="text-decoration: none;">BEYAZ EŞYA</a>
+                 
+              </li>
+              <li><a href="" title="" class="yazimbl" style="text-decoration: none;">AKSESUAR</a>
+                 
+              </li>
+              <li><a href="" title="" class="yazimbl" style="text-decoration: none;">IT-HAFIZA</a>
+               
+              </li>
+          
+              
+          </ul>
+      </div>
+      
+      
+      <div class="cle"></div>
+  </div>
+                      
+
+
+  <div class="fiyatfiltre">
+
+
+      <h5 style="margin-left: 35px; margin-top: 50px;">FİYATA GÖRE FİLTRELE</h5> 
+
+      <hr style="width: 25%; margin-left:-950px;">
+
+
+      <!-- checkbox -->
+    <div class="checkboxfiltre">
+      <input 
+        type="checkbox"
+        v-model="toggle"
+        true-value="yes"
+        false-value="no"
+      >
+    </div> 
+    <p style="margin-left: 70px; margin-top: -25px;"> 3000 TL - 5000 TL </p>
+    <div class="checkboxfiltre">
+        <input 
+          type="checkbox"
+          v-model="toggle"
+          true-value="yes"
+          false-value="no"
+        >
+      </div> 
+      <p style="margin-left: 70px; margin-top: -25px;"> 5000 TL - 7500 TL </p>
+      <div class="checkboxfiltre">
+          <input 
+            type="checkbox"
+            v-model="toggle"
+            true-value="yes"
+            false-value="no"
+          >
+        </div> 
+        <p style="margin-left: 70px; margin-top: -25px;"> 7500 TL - 10000 TL </p>
+        <div class="checkboxfiltre">
+            <input 
+              type="checkbox"
+              v-model="toggle"
+              true-value="yes"
+              false-value="no"
+            >
+          </div> 
+          <p style="margin-left: 70px; margin-top: -25px;"> 10000 TL - 12500 TL </p>
+          <div class="checkboxfiltre">
+              <input 
+                type="checkbox"
+                v-model="toggle"
+                true-value="yes"
+                false-value="no"
+              >
+            </div> 
+            <p style="margin-left: 70px; margin-top: -25px;"> 12500 TL - 15000 TL </p>
+            <div class="checkboxfiltre">
+                <input 
+                  type="checkbox"
+                  v-model="toggle"
+                  true-value="yes"
+                  false-value="no"
+                >
+              </div> 
+              <p style="margin-left: 70px; margin-top: -25px;"> 15000 TL - 20000 TL </p>
+              <div class="checkboxfiltre">
+                  <input 
+                    type="checkbox"
+                    v-model="toggle"
+                    true-value="yes"
+                    false-value="no"
+                  >
+                </div> 
+                <p style="margin-left: 70px; margin-top: -25px;"> 20000 TL - 30000 TL </p>
+              <div class="checkboxfiltre">
+                  <input 
+                    type="checkbox"
+                    v-model="toggle"
+                    true-value="yes"
+                    false-value="no"
+                  >
+                </div> 
+                <p style="margin-left: 70px; margin-top: -25px;"> Üstünde 30000 TL </p>
+
+  </div>
+
+
+
+<!--
+                        kategori2 div'inde tüm ürünler farklı divler ama aynı class isimleriyle oluşturuldu.
+                        Class isimlerinin aynı olmasının sebebi CSS özelliklerinin aynı olması.
+                        Ürün açıklamaları ve resimler  'gallery'  div'inde oluşturuldu.
+                       -->
+                       <div class="kategori3"> 
+                        
+                        <div  class="responsive">
+                          
+                          <div  class="gallery">
+                            <a target="_blank" href="#">
+                                <img id="vue-app115"  v-bind:title="message75" src="Photos/0017304_samsung-43-ru7100-4k-uhd-tv_415.jpeg"  width="250" height="170"/>
+                              </a>
+                            <p class="yazilarürün2" style="margin-top:105px ; margin-left: 25px;">
+                                <a href="#" style=" color: #000;font-size: 15px;" > Samsung 43'' RU7090 4K UHD SMART TV </a></p>
+                                <div id="vue-app114" style="margin-top:59px ; margin-left: 0px;" >
+                                      <h5 style="margin-left: 100px; margin-top:40px;">4049,00 TL</h5> 
+                                    <button class="button button2" >
+                                      <a v-on:click ="click"  style="text-decoration: none;color: #000;" >ÜRÜNÜ İNCELE</a>
+                                    </button>   
+                                    <button v-bind:title="message" class="button button3" >&#9825</button>      
+                                                    
+                                </div>
+  
+                       
+                          </div>
+                        </div>
+                      
+                        <div  class="responsive">
+                            
+                          <div  class="gallery">
+                            <a target="_blank" href="#">
+                                <img id="vue-app116"  v-bind:title="message76" src="Photos/0017304_samsung-43-ru7100-4k-uhd-tv_415.jpeg"  width="220" height="150"/>
+                              </a>
+                            <p class="yazilarürün2">
+                                <a href="#" style=" color: #000;font-size: 15px;" > Samsung 50'' RU7090 4K UHD SMART TV </a></p>
+                                <div id="vue-app10" >
+                                    <h5 style="margin-left: 40px; margin-top:50px;text-decoration:line-through;">5049,00 TL</h5>
+                                      <h5 style="margin-left: 170px; margin-top:-25px;">3799,00 TL</h5> 
+                                    <button  onclick="arttir()" class="button button2" class="button button2" >
+                                      <a v-on:click ="click"  style="text-decoration: none;color: #000;">SEPETE EKLE</a>
+                                           
+                                                   
+                                </div>
+                          
+                          </div>
+                        </div>
+                      
+                        <div  class ="responsive">
+                         
+                          <div  class="gallery">
+                            <a target="_blank" href="#">
+                                <img id="vue-app117"  v-bind:title="message77" src="Photos/0017304_samsung-43-ru7100-4k-uhd-tv_415.jpeg"  width="220" height="150"/>
+                                </a>
+                            <p class="yazilarürün2">
+                                <a href="#" style=" color: #000;font-size: 15px;" > Samsung 55'' RU7090 4K UHD SMART TV </a></p>
+                                    <div id="vue-app10" >
+                                        <h5 style="margin-left: 40px; margin-top:50px;text-decoration:line-through;">5599,00 TL</h5>
+                                          <h5 style="margin-left: 170px; margin-top:-25px;">4399,00 TL</h5> 
+                                        <button  onclick="arttir()" class="button button2" class="button button2" >
+                                          <a v-on:click ="click"  style="text-decoration: none;color: #000;">SEPETE EKLE</a>
+                                                          
+                                  </div>
+                                
+                          
+                          </div>
+                        </div>
+                        <div class="responsive">
+                            <div class="div1">
+                          <div class="gallery">
+                            <a target="_blank" href="#">
+                                <img id="vue-app118"  v-bind:title="message78" src="Photos/0017304_samsung-43-ru7100-4k-uhd-tv_415.jpeg"  width="220" height="150"/>
+                              </a>
+                            <p class="yazilarürün1" style="margin-top:105px ; margin-left: 15px;">
+                                <a href="#" style=" color: #000;font-size: 15px;" > Samsung 65'' RU7090 4K UHD SMART TV </a></p>
+                                        <div id="vue-app10" >
+                                            <h5 style="margin-left: 40px; margin-top:50px;text-decoration:line-through;">7999,00 TL</h5>
+                                              <h5 style="margin-left: 170px; margin-top:-25px;">6499,00 TL</h5> 
+                                            <button  onclick="arttir()" class="button button2" class="button button2" >
+                                              <a v-on:click ="click"  style="text-decoration: none;color: #000;">SEPETE EKLE</a>
+                                                                 
+                                </div>
+                           
+                          </div>
+                        </div>
+                      </div>
+                        <div class="responsive">
+                            <div class="div1">
+                          <div class="gallery">
+                            <a target="_blank" href="#">
+                                <img id="vue-app119"  v-bind:title="message79" src="Photos/0016997_samsung-98-q900r-qled-8k-tv_415.jpeg"  width="220" height="150"/>
+                                   </a>
+                            <p class="yazilarürün1" style="margin-top:105px ; margin-left: 15px;">
+                                <a href="#" style=" color: #000;font-size: 15px;" > Samsung 65'' Q900R QLED 8K TV </a>
+                              </p>
+                                  <div id="vue-app106" style="margin-top:65px ;" >                                           
+                                        <h5 style="margin-left: 90px; margin-top:35px;">31999,00 TL</h5> 
+                                      <button   class="button button2" class="button button2" >
+                                        <a v-on:click ="click" style="text-decoration: none;color: #000;">ÜRÜNÜ İNCELE</a>
+                                        <button v-bind:title="message" class="button button3" >&#9825</button>                   
+                                </div>
+                           
+                          </div>
+                        </div>
+                        </div>
+                        <div class="responsive">
+                            <div class="div1">
+                          <div class="gallery">
+                            <a target="_blank" href="#">
+                                <img id="vue-app120"  v-bind:title="message80" src="Photos/0016997_samsung-98-q900r-qled-8k-tv_415.jpeg"  width="220" height="150"/>
+                              </a>
+                            <p class="yazilarürün1" style="margin-top:105px ; margin-left: 15px;">
+                                <a href="#" style=" color: #000;font-size: 15px;" > Samsung 75'' Q900R QLED 8K TV </a></p>
+                                <div id="vue-app105" style="margin-top:65px " >
+                                    
+                                      <h5 style="margin-left: 90px; margin-top:55px;">4399,00 TL</h5> 
+                                    <button  onclick="arttir()" class="button button2" class="button button2" >
+                                      <a v-on:click ="click" style="text-decoration: none;color: #000;">SEPETE EKLE</a>
+                                      <button v-bind:title="message" class="button button3" >&#9825</button>
+                                                                   
+                                </div>
+                           
+                          </div>
+                        </div>
+                        </div>
+                        <div  class="responsive">
+                            <div class="div1">
+                          <div  class="gallery">
+                            <a target="_blank" href="#">
+                         <!--
+                          Mouse ürün resminin üzerine geldiğinde ürünün yazısını göstermesi için her ürüne id verildi.
+                          Id verilmesinin sebebi her ürünün farklı isimde olması.
+                          v-bind:title kısımlarında yazan message'lere code.js kısmında  isimler tanımlandı.                                                
+                          -->
+                          <img id="vue-app121"  v-bind:title="message81" src="Photos/0016997_samsung-98-q900r-qled-8k-tv_415.jpeg"  width="220" height="150"/>
+                        </a>
+                            <p class="yazilarürün3" style="margin-top:155px">
+                                <a href="#" style=" color: #000;font-size: 15px;" > Samsung 82'' RU7090 4K UHD SMART TV </a></p>
+                                <div id="vue-app10" >
+                                    
+                                      <h5 style="margin-left: 90px; margin-top:55px;">61999,00 TL</h5> 
+                                    <button  onclick="arttir()" class="button button2" class="button button2" >
+                                      <a v-on:click ="click" style="text-decoration: none;color: #000;">SEPETE EKLE</a>
+                                             
+                          </div>
+                        
+                          
+                        </div>
+                         
+                        </div>
+                      </div>
+                        <div  class="responsive">
+                            <div class="div1">
+                          <div  class="gallery">
+                            <a target="_blank" href="#">
+                                <img id="vue-app122"  v-bind:title="message82" src="Photos/0016997_samsung-98-q900r-qled-8k-tv_415.jpeg"  width="220" height="150"/>
+                                  
+                            </a>
+                            <p class="yazilarürün3">
+                                <a href="#" style=" color: #000;font-size: 15px;" > Samsung 98'' Q900R QLED 8K TV </a>
+                              </p>
+                                  <div id="vue-app107" style="margin-top:70px" >                                           
+                                        <h5 style="margin-left: 90px; margin-top:35px;">31999,00 TL</h5> 
+                                      <button class="button button2" >
+                                        <a v-on:click ="click" style="text-decoration: none;color: #000;">ÜRÜNÜ İNCELE</a>
+                                        <button v-bind:title="message" class="button button3" >&#9825</button>                   
+                                </div>
+                          
+                          </div>
+                        </div>
+                      </div>
+                        <div  class="responsive">
+                            <div class="div1">
+                          <div  class="gallery">
+                            <a target="_blank" href="#">
+                                <img id="vue-app123"  v-bind:title="message83" src="Photos/0017630_samsung-q70r-harman-kardon-soundbar_415.jpeg"  width="220" height="150"/>
+                                      
+                            </a>
+                            <p class="yazilarürün3">
+                                <a href="#" style=" color: #000;font-size: 15px;" > Samsung  Q70R Harman Kardon Soundbar </a></p>
+                                <div id="vue-app108" style="margin-top:55px" >
+                                      <h5 style="margin-left: 40px; margin-top:50px;text-decoration:line-through;">4999,00 TL</h5>
+                                      <h5 style="margin-left: 170px; margin-top:-25px;">3524,00 TL</h5> 
+                                    <button  onclick="arttir()" class="button button2" class="button button2" >
+                                      <a v-on:click ="click"  style="text-decoration: none;color: #000;">SEPETE EKLE</a>
+                                      <button v-bind:title="message" class="button button3" >&#9825</button>                   
+                                </div>
+                           
+                          </div>
+                        </div> 
+                      </div>
+                        <div  class="responsive">
+                            <div class="div1">
+                          <div  class="gallery">
+                            <a target="_blank" href="#">
+                                <img id="vue-app124"  v-bind:title="message84" src="Photos/0017304_samsung-43-ru7100-4k-uhd-tv_415.jpeg"  width="220" height="150"/>
+                                  
+                            </a>
+                            <p class="yazilarürün3" style="margin-top:105px ; margin-left: 15px;">
+                                <a href="#" style=" color: #000;font-size: 15px;" > Samsung 43'' RU7100 4K UHD SMART TV </a></p>
+                                <div id="vue-app109"  >
+                                      <h5 style="margin-left: 40px; margin-top:50px;text-decoration:line-through;">4049,00 TL</h5>
+                                      <h5 style="margin-left: 170px; margin-top:-25px;">3549,00 TL</h5> 
+                                    <button  onclick="arttir()" class="button button2" class="button button2" >
+                                      <a v-on:click ="click"  style="text-decoration: none;color: #000;">SEPETE EKLE</a>
+                                      <button v-bind:title="message" class="button button3" >&#9825</button>                    
+                                </div>
+                              
+                          
+                          </div>
+                        </div>
+                      </div>
+                        <div  class="responsive">
+                            <div class="div1">
+                          <div  class="gallery">
+                            <a target="_blank" href="#">
+                                <img id="vue-app125"  v-bind:title="message85" src="Photos/0018930_samsung-55-ru7440-4k-uhd-tv_415.jpeg"  width="220" height="150"/>
+                                   
+                            </a>   
+                             <p class="yazilarürün5" style="margin-top:105px ; margin-left: 15px;">
+                                <a href="#" style=" color: #000;font-size: 15px;" > Samsung 43'' RU7400 4K UHD SMART TV</a>
+                              </p>
+                                  <div id="vue-app105" > 
+                                        <h5 style="margin-left: 40px; margin-top:50px;text-decoration:line-through;">4449,00 TL</h5>                                          
+                                        <h5 style="margin-left: 170px; margin-top:-25px;">3799,00 TL</h5> 
+                                      <button class="button button2" >
+                                        <a v-on:click ="click" style="text-decoration: none;color: #000;">ÜRÜNÜ İNCELE</a>
+                                                     
+                                </div>
+                          </div>
+                        </div>
+                      </div>
+                        <div class="responsive">
+                            <div class="div1">
+                          <div class="gallery">
+                            <a target="_blank" href="#">
+                                <img id="vue-app126"  v-bind:title="message86" src="Photos/0017304_samsung-43-ru7100-4k-uhd-tv_415.jpeg"  width="220" height="150"/>
+                                       
+                            </a>
+                            <p class="yazilarürün5" style="margin-top:105px ; margin-left: 15px;">
+                                <a href="#" style=" color: #000;font-size: 15px;" > Samsung  49'' RU7100 4K UHD SMART TV</a></p>
+                                            <div id="vue-app110" >
+                                                  <h5 style="margin-left: 40px; margin-top:50px;text-decoration:line-through;">5199,00 TL</h5>
+                                                  <h5 style="margin-left: 170px; margin-top:-25px;">4349,00 TL</h5> 
+                                                <button  onclick="arttir()" class="button button2" class="button button2" >
+                                                  <a v-on:click ="click"  style="text-decoration: none;color: #000;">SEPETE EKLE</a>
+                                                  <button v-bind:title="message" class="button button3" >&#9825</button>               
+                                </div>
+                         
+                          </div>
+                        </div>
+                      </div>
+                        <div class="responsive">
+                            <div class="div1">
+                          <div class="gallery">
+                            <a target="_blank" href="#">
+                                <img id="vue-app127"  v-bind:title="message87" src="Photos/0017332_samsung-49-ru7300-curved-4k-uhd-tv_415.jpeg"  width="220" height="150"/>
+                                   
+                            </a>
+                            <p class="yazilarürün4" style="margin-top:105px ; margin-left: 15px;">
+                                <a href="#" style=" color: #000;font-size: 15px;" > Samsung 49'' RU7300 Curved  4K UHD SMART TV </a></p>
+                                        <div id="vue-app105" >
+                                              <h5 style="margin-left: 40px; margin-top:50px;text-decoration:line-through;">5299,00 TL</h5>
+                                              <h5 style="margin-left: 170px; margin-top:-25px;">3799,00 TL</h5> 
+                                            <button  onclick="arttir()" class="button button2" class="button button2" >
+                                              <a v-on:click ="click"  style="text-decoration: none;color: #000;"> SEPETE EKLE</a>
+                                                         
+                                </div>
+                        
+                          </div>
+                        </div>
+                      </div>
+                        <div class="responsive">
+                            <div class="div1">
+                          <div class="gallery">
+                            <a target="_blank" href="#">
+                                <img id="vue-app128"  v-bind:title="message88" src="Photos/0018930_samsung-55-ru7440-4k-uhd-tv_415.jpeg"  width="220" height="150"/>
+                              </a>
+                            <p class="yazilarürün6" style="margin-top:105px ; margin-left: 15px;">
+                                <a href="#" style=" color: #000;font-size: 15px;" > Samsung 50'' RU7400 4K UHD TV </a>
+                                    </p>
+                                        <div id="vue-app111" > 
+                                              <h5 style="margin-left: 40px; margin-top:50px;text-decoration:line-through;">5699,00 TL</h5>                                          
+                                              <h5 style="margin-left: 170px; margin-top:-25px;">4299,00 TL</h5> 
+                                            <button  onclick="arttir()" class="button button2" class="button button2" >
+                                              <a v-on:click ="click"  style="text-decoration: none;color: #000;">SEPETE EKLE</a>
+                                              <button v-bind:title="message" class="button button3" >&#9825</button> 
+                                                                   
+                                </div>
+                           
+                          </div>
+                        </div>
+                      </div>
+                        <div class="responsive">
+                            <div class="div1">
+                          <div class="gallery">
+                            <a target="_blank" href="#">
+                                <img id="vue-app129"  v-bind:title="message89" src="Photos/0017304_samsung-43-ru7100-4k-uhd-tv_415.jpeg"  width="220" height="150"/>
+                              </a>
+                            <p class="yazilarürün6" style="margin-top:108px ; margin-left: 15px;">
+                                <a href="#" style=" color: #000;font-size: 15px;" > Samsung 55'' RU7100 4K UHD TV </a></p>
+                                            <div id="vue-app105" >
+                                                  <h5 style="margin-left: 40px; margin-top:50px;text-decoration:line-through;">5999,00 TL</h5>
+                                                  <h5 style="margin-left: 170px; margin-top:-25px;">4999,00 TL</h5> 
+                                                <button  onclick="arttir()" class="button button2" class="button button2" >
+                                                  <a v-on:click ="click"  style="text-decoration: none;color: #000;">SEPETE EKLE </a>
+                                                              
+                                </div>
+                           
+                          </div>
+                        </div>
+                        </div>
+                        <div  class="responsive">
+                            <div class="div1">
+                          <div  class="gallery">
+                            <a target="_blank" href="#">
+                                <img id="vue-app130"  v-bind:title="message90" src="Photos/0018930_samsung-55-ru7440-4k-uhd-tv_415.jpeg"  width="220" height="150"/>
+                              </a>
+                            <p class="yazilarürün2">
+                                <a href="#" style=" color: #000;font-size: 15px;" > Samsung 55'' RU7400 4K UHD TV </a></p>
+                                <div id="vue-app112" >
+                                      <h5 style="margin-left: 40px; margin-top:50px;text-decoration:line-through;">6499,00 TL</h5>
+                                      <h5 style="margin-left: 170px; margin-top:-25px;">56499,00 TL</h5> 
+                                    <button  onclick="arttir()" class="button button2" class="button button2" >
+                                      <a v-on:click ="click" style="text-decoration: none;color: #000;"> SEPETE EKLE </a>
+                                      <button v-bind:title="message" class="button button3" >&#9825</button>          
+                                                    
+                                </div>
+  
+                       
+                          </div>
+                        </div>
+                      </div>
+                        <div class="responsive">
+                            <div class="div1">
+                          <div  class="gallery">
+                            <a target="_blank" href="#">
+                                <img id="vue-app131"  v-bind:title="message91" src="Photos/0018930_samsung-55-ru7440-4k-uhd-tv_415.jpeg"  width="220" height="150"/>
+                              </a>
+                            <p class="yazilarürün2">
+                                <a href="#" style=" color: #000;font-size: 15px;" >Samsung 55'' RU7440 4K UHD TV </a>
+                              </p>
+                                  <div id="vue-app113" >  
+                                          <h5 style="margin-left: 40px; margin-top:50px;text-decoration:line-through;">6899,00 TL</h5>                                         
+                                        <h5 style="margin-left: 170px; margin-top:-25px;">5799,00 TL</h5> 
+                                      <button  onclick="arttir()" class="button button2" class="button button2" >
+                                        <a v-on:click ="click"  style="text-decoration: none;color: #000;"> SEPETE EKLE </a>
+                                        <button v-bind:title="message" class="button button3" >&#9825</button> 
+                                                       
+                                                   
+                                </div>
+                          
+                          </div>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+
+
+
+                        <div class="pagination" style="margin-left: 1100px;">
+                            <a href="#">&laquo;</a>
+                            <a href="#">1</a>
+                            <a href="#">2</a>
+                            <a href="#">&raquo;</a>
+                          </div>
+                          
+
+
+
+                          
+                        
+
+                        <!--Reference: https://shop.samsung.com/tr/ -->
+  
+                         <!--
+                          Footer div'inde iletişim ve bilgileri içeren bir alt kısım oluşturuldu. 
+                          İçindeki footer-content div'ine footer-section-siteharitası,footer-section-faydalıbilgiler,
+                          footer-section-destek ve footer-section-sosyalmedya isimlerini içeren 4 adet alt div hazırlandı.
+                           Bu divlere uygun linkler yazıldı ve gerekli sosyal medya iconları konuldu..                                                 
+                          -->
+                          <button class="accordion2" ></button>
+                        <div class="panel4" >
+                        <div class="footer">
+                            <div class="footer-content">
+                              <!-- Alt menü kısmının içinde linkler bulunduran div.-->
+                                <div class="footer-section-siteharitası">
+                                    <h4 class="site"><span>Site Haritası</span></h4>
+                                   
+                                    <li class="altmenu1"><a class="altmenu1-a" href="#">Samsung Hakkında</a></li>
+                                    <li class="altmenu1"><a class="altmenu1-a" href="#">Yatırımcılar</a></li>
+                                    <li class="altmenu1"><a class="altmenu1-a" href="#">Basın Bilgileri</a></li>
+                                    <li class="altmenu1"><a class="altmenu1-a" href="#">Mağazalar</a></li>
+                                    <li class="altmenu1"><a class="altmenu1-a" href="#">Bize Ulaşın</a></li>
+                                    <li class="altmenu1"><a class="altmenu1-a" href="#">Sosyal Sorumluluk</a></li>              
+                                </div>
+                                <!-- Alt menü kısmının içinde linkler bulunduran div.-->
+                                <div class="footer-section-faydalıbilgiler">
+                                     <h4 class="site"><span>Faydalı Bilgiler</span></h4>
+                                   
+                                     <li class="altmenu1"><a class="altmenu1-a" href="#">Samsung Mağazaları</a></li>
+                                     <li class="altmenu1"><a class="altmenu1-a" href="#">Bize Ulaşın</a></li>
+                                     <li class="altmenu1"><a class="altmenu1-a" href="#">Kampanyalar</a></li>
+                                      
+                                </div>
+                                <!-- Alt menü kısmının içinde linkler bulunduran div.-->
+                                <div class="footer-section-destek">
+                                     <h4 class="site"><span>Desteğe İhtiyacınız Var Mı?</span></h4>
+                                   
+                                     <li class="altmenu1"><a class="altmenu1-a" href="#">Telefon</a></li>
+                                     <li class="altmenu1"><a class="altmenu1-a" href="#">Canlı Destek</a></li>
+                                     <li class="altmenu1"><a class="altmenu1-a" href="#">E-Posta</a></li>
+                                     <li class="altmenu1"><a class="altmenu1-a" href="#">Sık Sorulan Sorular</a></li>
+                                </div>
+                                <!-- Sosyal medya ikonlarını ve linklerini içinde bulunduran div-->
+                                <div class="footer-section-sosyalmedya">
+                                     <h4 class="site"><span>Sosyal Medyada Takip Edin</span></h4>
+                                     <a href="https://www.facebook.com/SamsungTurkey/">
+                                         <img style="height:55px; width:55px;" class="facebook" src="Photos/indir.png" alt="facebook">
+                                     
+                                     </a>
+                                     <a href="https://twitter.com/SamsungTurkiye" >   
+                                         <img style="height:55px; width:55px;" class="twitter" src="Photos/indir (1).png" alt="twitter">
+                                     </a>
+                                     <a href="https://www.youtube.com/user/SamsungTurkiye" >
+                                         <img style="height:55px; width:55px;" class="youtube" src="Photos/indir (2).png" alt="youtube">                   
+                                     </a>
+                                     <a href="https://www.instagram.com/SamsungTurkiye/">
+                                         <img style="height:55px; width:55px;" class="instagram" src="Photos/indir (3).png" alt="instagram">
+                                     
+                                     </a>
+                 
+                                </div>
+                            </div>
+                 
+                        </div>
+           <div>
+  
+      </div>
+  </div>
+  
+  <script type="text/javascript">
+    var acc = document.getElementsByClassName("accordion2");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            /* Toggle between adding and removing the "active" class,
+            to highlight the button that controls the panel */
+            this.classList.toggle("active");
+
+            /* Toggle between hiding and showing the active panel */
+            var panel4 = this.nextElementSibling;
+            if (panel4.style.display === "block") {
+                panel4.style.display = "none";
+            } else {
+                panel4.style.display = "block";
+            }
+        });
+    }
+</script>
+  <!--
+  Footer2 div'inde Footer gibi bir alt kısım oluşturuldu. 
+  İçindeki footer2-content divine bilgiler ve iconlar için
+  footer2-section,footerı2-ımage,footer2-text,databinding,robotdegilim,
+  footer2-text2 ve designedby adında divler oluşturuldu.
+  Bu divlere uygun şekilde linkler yazıldı ve gerekli sosyal medya ve kredi kartı iconları konuldu.                                                 
+  -->
+  <div class="footer2">
+    <div class="footer2-content">
+      <!-- Alt menü kısmının içinde linkler bulunduran div.-->
+        <div class="footer2-section">
+           
+            <li class="altmenu"><a class="altmenu-a" href="#">Gizlilik ve Güvenlik</a></li>
+            <li class="altmenu"><a class="altmenu-a"  href="#">Sosyal Sorumluluk</a></li>
+            <li class="altmenu"><a class="altmenu-a" href="#">Erişebilirlik</a></li>
+            <li class="altmenu"><a  class="altmenu-a" href="#">Kullanım Şartları</a></li>
+                        
+        </div>
+        <div class="footerı2-ımage">
+             <img class="vısa" src="Photos/ind4.png" alt="vısaa">
+             <img class="mastercard" src="Photos/ind.png" alt="mastercardd">
+             <img class="amerıcanexpress" src="Photos/ind1.png" alt="amerıcan">
+             <img class="payu" src="Photos/ind2.png" alt="pay">
+        </div>
+        <!-- Alt menü kısmında içinde paragraf bulunduran div.-->
+        <div class="footer2-text">
+            <p class="altmenuyazı">Bu web sitesi en iyi Chrome, Firefox, Safari, Edge gibi güncel tarayıcılar ile görüntülenir.</p>
+  
+  
+        </div>
+        <!-- Email type'ını ve kaydol linkini içinde bulunduran div.-->
+        <div class="databinding">
+           
+             <input class="input-group-field" type="email" placeholder="E-posta adresiniz" style="font-family:SamsungSharpSans-Medium; border-radius: 5px;-webkit-border-radius: 5px;
+             -moz-border-radius: 5px;height: 50px;width: 250px;margin-right: -100px; ;" required>
+             <a class="kaydol"  href="#">Kaydol</a>
+              
+         </div>
+          <!-- Ben robot değilim kısmı için checkbox ve label oluşturulan  div.-->
+         <div class="robotdegilim">
+             
+                 <input type="checkbox" id="checkboxrobot" style="height: 25px;width: 25px;margin-top: 25px;margin-left: 25px;;" v-model="checked">
+                 <label for="checkbox" style="font-size: 18;margin-left: 35px;;" >Ben Robot Değilim</label>
+                 <img  src="robotdegilimımg.PNG" style="margin-left:240px; margin-top:-65px;width:60px; height:60px;" />
+           
+         </div>
+         <!-- Alt menü içinde paragraf bulunduran div.-->
+         <div class="footer2-text2">
+             <p class="altmenuyazı">Copyright © 1995-2019 SAMSUNG All Rights Reserved.</p>
+         </div>
+         <!-- Alt menü içinde link ve resim bulunduran div.-->
+         <div class="designedby">
+                 <li class="designed"><a class="designed-a" href="#">designed by</a></li>
+                 <img class="kreatif" src="Photos/kreatif-logo.png" alt="kreaatif">
+  
+         </div>
+     </div>
+    <script src="code.js"></script>
+  
+  </body>
+  
+  </html>
+  
+      

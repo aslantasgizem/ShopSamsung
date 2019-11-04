@@ -175,7 +175,7 @@
       <a href="#">MOBIL </a>
       <div>
         <div class="nav2-column"> <!--Kategori içindeki alt kategoriler oluşturuldu.-->
-          <h3>ONE CIKAN  MOBIL URUNLER  </h3>
+          <h3><a href="Mobil.html" style="color: #000000;"> ONE CIKAN  MOBIL URUNLER </a> </h3>
           <ul> 
             <li><a href="#">Galaxy M30s   </a></li> <!-- Linkler oluşturuldu.-->
             <li><a href="#">Galaxy Note10|10+   </a></li>
@@ -219,7 +219,7 @@
       </div>
     </li>
     <li>
-      <a href="#">TV - AV</a>
+      <a href="Tv.html">TV - AV</a>
       <div>
         <div class="nav2-column">
           <h3>ONE CIKAN TV - AV URUNLERI</h3>
@@ -537,12 +537,8 @@
   
                   <div class="altmenüler" > 
                     
-                       <!--
-                        Footer div'inde iletişim ve bilgileri içeren bir alt kısım oluşturuldu. 
-                        İçindeki footer-content div'ine footer-section-siteharitası,footer-section-faydalıbilgiler,
-                        footer-section-destek ve footer-section-sosyalmedya isimlerini içeren 4 adet alt div hazırlandı.
-                         Bu divlere uygun linkler yazıldı ve gerekli sosyal medya iconları konuldu..                                                 
-                        -->
+                      <button class="accordion2" ></button>
+                        <div class="panel4" >
                         <div class="footer">
                             <div class="footer-content">
                               <!-- Alt menü kısmının içinde linkler bulunduran div.-->
@@ -596,9 +592,31 @@
                             </div>
                  
                         </div>
-  <div>
+           <div>
   
+      </div>
   </div>
+  
+  <script type="text/javascript">
+    var acc = document.getElementsByClassName("accordion2");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            /* Toggle between adding and removing the "active" class,
+            to highlight the button that controls the panel */
+            this.classList.toggle("active");
+
+            /* Toggle between hiding and showing the active panel */
+            var panel4 = this.nextElementSibling;
+            if (panel4.style.display === "block") {
+                panel4.style.display = "none";
+            } else {
+                panel4.style.display = "block";
+            }
+        });
+    }
+</script>
   
   <!--
   Footer2 div'inde Footer gibi bir alt kısım oluşturuldu. 

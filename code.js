@@ -15,7 +15,6 @@ click:function(){
     });
 
 
-
 // Reference : https://github.com/romainsimon/vue-simple-search-dropdown
 //Dropdown menünün içine yazılacak olan Ürünler listelendi.    
 
@@ -845,7 +844,8 @@ new Vue({
         message70: 'Samsung Galaxy Note10+ 256GB (Fildişi Beyazı)',
        
     },
-})    
+}) 
+
 
 new Vue({
     el:'#vue-app101',
@@ -868,4 +868,410 @@ new Vue({
        
     },
 })    
+
+new Vue({
+  el:'#vue-app104',
+  data: {
+      message: 'Favorilere Ekle',
+     
+  },
+})    
+new Vue({
+  el:'#vue-app105',
+  data: {
+      message: 'Favorilere Ekle',
+     
+  },
+})    
+new Vue({
+  el:'#vue-app106',
+  data: {
+      message: 'Favorilere Ekle',
+     
+  },
+})    
+new Vue({
+  el:'#vue-app107',
+  data: {
+      message: 'Favorilere Ekle',
+     
+  },
+})    
+new Vue({
+  el:'#vue-app108',
+  data: {
+      message: 'Favorilere Ekle',
+     
+  },
+})    
+new Vue({
+  el:'#vue-app109',
+  data: {
+      message: 'Favorilere Ekle',
+     
+  },
+})    
+new Vue({
+  el:'#vue-app110',
+  data: {
+      message: 'Favorilere Ekle',
+     
+  },
+})    
+new Vue({
+  el:'#vue-app111',
+  data: {
+      message: 'Favorilere Ekle',
+     
+  },
+})    
+new Vue({
+  el:'#vue-app112',
+  data: {
+      message: 'Favorilere Ekle',
+     
+  },
+})    
+new Vue({
+  el:'#vue-app113',
+  data: {
+      message: 'Favorilere Ekle',
+     
+  },
+})    
+new Vue({
+  el:'#vue-app114',
+  data: {
+      message: 'Favorilere Ekle',
+     
+  },
+})    
+new Vue({
+  el:'#vue-app115',
+  data: {
+      message75: 'Samsung 43 RU7090 4K UHD SMART TV',
+     
+  },
+})    
+new Vue({
+  el:'#vue-app116',
+  data: {
+      message76: 'Samsung 50 RU7090 4K UHD SMART TV',
+     
+  },
+})    
+
+new Vue({
+  el:'#vue-app117',
+  data: {
+      message77: ' Samsung 55  RU7090 4K UHD SMART TV',
+     
+  },
+})    
+
+new Vue({
+  el:'#vue-app118',
+  data: {
+      message78: 'Samsung 65 RU7090 4K UHD SMART TV',
+     
+  },
+})    
+
+new Vue({
+  el:'#vue-app119',
+  data: {
+      message79: 'Samsung 65  Q900R QLED 8K TV',
+     
+  },
+})    
+
+new Vue({
+  el:'#vue-app120',
+  data: {
+      message80: 'Samsung 75  Q900R QLED 8K TV',
+     
+  },
+})    
+
+new Vue({
+  el:'#vue-app121',
+  data: {
+      message81: 'Samsung 82  RU7090 4K UHD SMART TV',
+     
+  },
+})    
+
+new Vue({
+  el:'#vue-app122',
+  data: {
+      message82: ' Samsung 98  Q900R QLED 8K TV ',
+     
+  },
+})    
+
+new Vue({
+  el:'#vue-app123',
+  data: {
+      message83: ' Samsung  Q70R Harman Kardon Soundbar',
+     
+  },
+})    
+
+new Vue({
+  el:'#vue-app124',
+  data: {
+      message84: 'Samsung 43  RU7100 4K UHD SMART TV',
+     
+  },
+})    
+
+new Vue({
+  el:'#vue-app125',
+  data: {
+      message85: 'Samsung 43  RU7400 4K UHD SMART TV',
+     
+  },
+})    
+
+new Vue({
+  el:'#vue-app126',
+  data: {
+      message86: ' Samsung  49 RU7100 4K UHD SMART TV',
+     
+  },
+})    
+
+new Vue({
+  el:'#vue-app127',
+  data: {
+      message87: 'Samsung 49  RU7300 Curved  4K UHD SMART TV',
+     
+  },
+})    
+
+new Vue({
+  el:'#vue-app128',
+  data: {
+      message88: ' Samsung 50  RU7400 4K UHD TV ',
+     
+  },
+})    
+
+new Vue({
+  el:'#vue-app129',
+  data: {
+      message89: ' Samsung 55  RU7100 4K UHD TV ',
+     
+  },
+})    
+
+new Vue({
+  el:'#vue-app130',
+  data: {
+      message90: 'Samsung 55 RU7400 4K UHD TV',
+     
+  },
+})    
+
+new Vue({
+  el:'#vue-app131',
+  data: {
+      message91: 'Samsung 55  RU7440 4K UHD TV',
+     
+  },
+})    
+
+new Vue({
+  el:'#vue-app132',
+  data: {
+      message92: 'Samsung 58 RU7100 4K UHD TV ',
+     
+  },
+})    
+
+new Vue({
+  el:'#vue-app133',
+  data: {
+      message93: 'Samsung 65  RU7100 4K UHD SMART TV',
+     
+  },
+})    
+
+new Vue({
+  el:'#vue-app134',
+  data: {
+      message94: 'Samsung 65 RU7300 Curved 4K UHD SMART TV',
+     
+  },
+})    
+
+
+
+new Vue({
+    el:'#vue-app135',
+    data: {
+        message95: 'Samsung Galaxy A50 64GB (Prizma Beyaz) SM-A505F',
+       
+    },
+}) 
+
+new Vue({
+    el:'#vue-app136',
+    data: {
+        message96: 'Samsung Galaxy A50 64GB (Prizma Mavisi) SM-A505F',
+       
+    },
+}) 
+
+new Vue({
+    el:'#vue-app137',
+    data: {
+        message97: 'Samsung Galaxy A50 64GB (Prizma Siyah) SM-A505F',
+       
+    },
+}) 
+
+new Vue({
+    el:'#vue-app138',
+    data: {
+        message98: 'Samsung Galaxy A30 64GB (Sedef Beyazı) SM-A305F',
+       
+    },
+}) 
+
+new Vue({
+    el:'#vue-app139',
+    data: {
+        message99: 'Samsung Galaxy A30 64GB (Sedef Mavisi) SM-A305F',
+       
+    },
+}) 
+new Vue({
+    el:'#vue-app140',
+    data: {
+        message100: 'Samsung Galaxy A30 64GB (Sedef Siyahı) SM-A305F',
+       
+    },
+}) 
+new Vue({
+    el:'#vue-app141',
+    data: {
+        message101: 'Samsung Galaxy A30s 64GB Çift SIM Siyah',
+       
+    },
+}) 
+
+new Vue({
+    el:'#vue-app142',
+    data: {
+        message102: 'Samsung Galaxy S10e 128GB (Prizma Yeşil)',
+       
+    },
+}) 
+new Vue({
+    el:'#vue-app143',
+    data: {
+        message103: 'Samsung Galaxy M20 32GB SM-M205FZBATUR',
+       
+    },
+}) 
+new Vue({
+    el:'#vue-app144',
+    data: {
+        message104: 'Samsung Galaxy M20 32GB SM-M205FDAATUR',
+       
+    },
+}) 
+new Vue({
+    el:'#vue-app145',
+    data: {
+        message105: 'Samsung Galaxy M30s  (Çift SIM) Karbon Siyahı',
+       
+    },
+}) 
+new Vue({
+    el:'#vue-app146',
+    data: {
+        message106: 'Samsung Galaxy M30s  (Çift SIM) Pasifik Mavisi',
+       
+    },
+}) 
+
+new Vue({
+    el:'#vue-app147',
+    data: {
+        message107: 'Samsung Galaxy Note10 256GB  (Ay Tozu Grisi)',
+       
+    },
+}) 
+new Vue({
+    el:'#vue-app148',
+    data: {
+        message108: 'Samsung Galaxy Note10 256GB  (Duman Siyahı)',
+       
+    },
+}) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+new Vue({
+    el:'#vue-app101',
+    data: {
+        message: 'Favorilere Ekle',
+       
+    },
+})    
+new Vue({
+    el:'#vue-app102',
+    data: {
+        message: 'Favorilere Ekle',
+       
+    },
+})    
+new Vue({
+    el:'#vue-app103',
+    data: {
+        message: 'Favorilere Ekle',
+       
+    },
+})    
+
+
+
+      Vue.use(Dropdown);
+      new Vue({
+        el: '#app9',
+        data () {
+          return {
+            options: [
+              { name: 'İsim: A dan Z ye', id: 'isim' },
+              { name: 'İsim: Z den A ya', id: 'isim1' },
+              { name: 'Fiyat: Düşük --> Yüksek', id: 'fiyat' },
+              { name: 'Fiyat: Yüksek --> Düşük', id: 'fiyat1' },
+              { name: 'Özel Sıralama', id: 'ö' },
+                        
+            ],
+            selected: { name: null, id: null }
+          }
+        },
+        
+      });
+  
+
+//Checkbox 
+    // Kontrol edilmesi:
+    vm.toggle === 'yes'
+    // Kontrol edilmemesi:
+    vm.toggle === 'no'
+
 

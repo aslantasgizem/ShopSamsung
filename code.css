@@ -64,11 +64,39 @@ p.text-shop{
     padding: 0 6px;
     float: left;
     width: 24.99999%;
+    margin-left:60px;
+  }
+
+
+  .responsive0 {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
     margin-left:80px;
   }
+ 
 /*Ürünlerin bulunduğu kategori*/
-  .kategori2{
+
+.kategori0{
     margin-top: 50px;
+   
+
+  }
+  .kategori2{
+    margin-top: -1100px;
+    height: 3450px;
+    margin-left:350px;
+    width: 1000px;
+   
+
+  }
+
+  .kategori3{
+    margin-top: -850px;
+    height: 3450px;
+    margin-left:350px;
+    width: 1000px;
+   
 
   }
   .satirboslugu{
@@ -78,6 +106,11 @@ p.text-shop{
   .bosluk{
 
     line-height: 50px;
+  }
+
+  .bosluk1{
+
+    line-height: 100px;
   }
   /*Altmenü alanı1*/
   .footer{
@@ -578,7 +611,7 @@ p.text-shop{
     background-color: white; 
     color: black; 
     border: 1px solid #000;
-    width: 150px;
+    width: 140px;
     
 }
 /* Reference: https://www.w3schools.com/css/css3_buttons.asp */
@@ -592,7 +625,10 @@ p.text-shop{
     background-color: white; 
     color: black; 
     border: 1px solid #000;
-    width: 50px;
+    width: 41px;
+    margin-left: 200px;
+    margin-top: -45px;
+    
     
 }
   /* Mouse butonun üzerine gelince renk değiştirme */
@@ -1180,4 +1216,292 @@ divleri için alan yükseliği belirtildi. */
     height: 40;
     width: 50;
     margin-left: 20px;
+}
+
+.mobilmenu ul{
+    list-style-type: none;
+
+    
+
+}
+.mobilmenu ul a{
+    color: black;
+    
+
+}
+
+
+.yazilarürün{
+    margin-top:160px ;
+    margin-left:40px;
+    font-weight: bold;
+    
+
+}
+.yazilarürün1{
+    margin-top:170px ;
+    margin-left:40px;
+    font-weight: bold;
+    
+
+}
+
+.yazilarürün2{
+    margin-top:120px ;
+    margin-left:30px;
+    font-weight: bold;
+    
+
+}
+.yazilarürün3{
+    margin-top:140px ;
+    margin-left:40px;
+    font-weight: bold;
+    
+
+}
+.yazilarürün4{
+    margin-top:163px ;
+    margin-left:40px;
+    font-weight: bold;
+    
+
+}
+.yazilarürün5{
+    margin-top:-8px ;
+    margin-left:40px;
+    font-weight: bold;
+    
+
+}
+.yazilarürün6{
+    margin-top:10px ;
+    margin-left:40px;
+    font-weight: bold;
+    
+
+}
+.ürünyazirenk{
+    color:black;
+
+}
+  h1.app9 {
+    font-weight: 50;
+    font-size: 1.0em;
+  }
+  p.app9 {
+    font-size: .8em;
+    color: #000;
+    
+  }
+
+  #app9{
+    margin-left:1050px ;
+    margin-top: -60px;
+  }
+
+
+  .checkboxfiltre{
+
+    margin-left: 45px;
+
+  }
+
+  .div1{
+
+    margin-top: 70px;
+  }
+
+  .pagination a {
+    color:blue;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+  }
+  
+  .pagination a.active {
+
+    color: black;
+  }
+  
+  .pagination a:hover:not(.active) {background-color: #ddd;}
+
+  .yazimbl:hover{
+    color:#2a52be;
+
+  }
+
+
+  .onecıkantv{
+    height: 3250px;
+}
+.breadcrumb{
+    margin: 0;
+    padding: 5px 10px;
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+}
+.breadcrumb li {
+    display: inline-block;
+    
+}
+.anasayfa5{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    color: #000000;
+}
+.avurunleri{
+    color: darkblue;
+}
+.anasayfa6{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: #000000;
+    text-decoration: none;
+}
+.kategoriler1{
+    position: relative;
+    margin: 0 0 10px;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+    font-size: 18px;
+    color: #444;
+    cursor: pointer;
+    width: 200px;
+    margin-left: 80px;
+    text-decoration: none;
+    margin-top: 110px;
+}
+.accordion {
+    background-color: #fff;
+    color: #FFF;
+    cursor: pointer;
+    padding: 5px;
+    width: 300px;
+    text-align: left;
+    border: 1px solid white;
+    outline: none;
+    transition: 0.4s;
+    font: 15px Lato, sans-serif;
+    text-decoration: none;
+    margin-left: -20px;
+}
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    overflow: hidden;
+    text-decoration: none;
+    margin-left: -20px;
+}
+.panel1{
+    list-style-type: none;
+    text-decoration: none;
+    margin-left: -15px;
+ 
+
+}
+.kategoriler{
+    width: 430px;
+    margin-top: -3100px;
+}
+.kategoriler2{
+    margin-left: 50px;
+    margin-top: 20px;
+
+
+}
+.panel2{
+    text-decoration: none;
+    color: #000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.panel2:hover{
+    color: rgb(42, 42, 173);
+}
+.fıyat1{
+    list-style-type: none;
+    text-decoration: none;
+    margin-left: 90px;
+    border-bottom: 1px solid #ddd;
+    width: 220px;
+}
+.fıyat2{
+    color: #444;
+}
+.fıyat2:hover{
+    color: #444;
+}
+.fıyat3{
+    margin-left: 100px;
+}
+.onecıkanbaslık{
+    margin-top: 50px;
+    margin-left: 400px;
+    font-size: 40px;
+    width: 700px;
+    font-weight: bold;
+}
+.onecıkanbaslık1{
+    margin-left: 400px;
+    font-weight: bold;
+    
+}
+.onecıkanbaslık2{
+    margin-left: 420px;
+    margin-top: -50px;
+}
+.example2{
+    margin-left: 1100px;
+    margin-top: -40px;
+    height: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border: 1px solid white;
+    
+}
+
+.urunler1{
+    margin-left: 400px;
+    margin-top: 80px;
+    width: 300px;
+
+    
+   
+}
+.urunler2{
+    margin-left: 800px;
+    margin-top:-305px;
+    width: 300px;
+}
+.panel4{
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+.accordion2{
+    background-color: #3f3f3f;
+    color: #FFF;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: 1px solid white;
+    outline: none;
+    transition: 0.4s;
+    font: 20px Lato, sans-serif;
+}
+.active, .accordion2:hover {
+    background-color: #ccc;
+}
+.accordion2:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 15px;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
