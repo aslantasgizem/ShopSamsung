@@ -1505,3 +1505,8 @@ divleri için alan yükseliği belirtildi. */
 .active:after {
     content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
+
+.galaxym{
+
+    height: 500px;
+}
