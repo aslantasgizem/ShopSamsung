@@ -19,59 +19,54 @@
 <script src="jquery-1.10.2.min.js"></script>
 
 <link rel="stylesheet" href="https://unpkg.com/vue-multiselect@2.1.0/dist/vue-multiselect.min.css">
-
 <style>
 
 
-body {font-family: Arial, Helvetica, sans-serif;}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-</style>
-
-
+        body {font-family: Arial, Helvetica, sans-serif;}
+        
+        /* The Modal (background) */
+        .modal {
+          display: none; /* Hidden by default */
+          position: fixed; /* Stay in place */
+          z-index: 1; /* Sit on top */
+          padding-top: 100px; /* Location of the box */
+          left: 0;
+          top: 0;
+          width: 100%; /* Full width */
+          height: 100%; /* Full height */
+          overflow: auto; /* Enable scroll if needed */
+          background-color: rgb(0,0,0); /* Fallback color */
+          background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+        
+        /* Modal Content */
+        .modal-content {
+          background-color: #fefefe;
+          margin: auto;
+          padding: 20px;
+          border: 1px solid #888;
+          width: 80%;
+        }
+        
+        /* The Close Button */
+        .close {
+          color: #aaaaaa;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+          color: #000;
+          text-decoration: none;
+          cursor: pointer;
+        }
+        </style>
+        
 </head>
-
 <body>
    
- 
-
   <!--  Reference : https://vuejs.org/v2/guide/  Kodların yazımının çoğunda vuejs sitesinden yardım alındı. -->
 
   <script src="https://unpkg.com/vue"></script>
@@ -231,7 +226,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
       <a href="#">MOBIL </a>
       <div>
         <div class="nav2-column"> <!--Kategori içindeki alt kategoriler oluşturuldu.-->
-          <h3> <a href="Mobil.html" style="color: #000000;"> ONE CIKAN  MOBIL URUNLER </a>  </h3>
+          <h3>ONE CIKAN  MOBIL URUNLER  </h3>
           <ul> 
             <li><a href="#">Galaxy M30s   </a></li> <!-- Linkler oluşturuldu.-->
             <li><a href="#">Galaxy Note10|10+   </a></li>
@@ -267,7 +262,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
         <div class="nav2-column">
           <h3></h3>
           <ul>
-            <li><img src="Photos/10note.jpg" style="margin-left: 150px;"></li>
+           <li><a href="Mobil.html"><img src="Photos/10note.jpg"  style="margin-left: 150px;"> </a></li>
           </ul>
         </div>
        
@@ -275,10 +270,10 @@ body {font-family: Arial, Helvetica, sans-serif;}
       </div>
     </li>
     <li>
-      <a href="Tv.html">TV - AV</a>
+      <a href="#">TV - AV</a>
       <div>
         <div class="nav2-column">
-          <h3>ONE CIKAN TV - AV URUNLERI</h3>
+          <h3><a href="Tv.html">ONE CIKAN TV - AV URUNLERI</a></h3>
           <ul>
             <li><a href="#">QLED 8K TV</a></li>
             <li><a href="#">Samsung Harman Kardon Soundbar</a></li>
@@ -481,17 +476,21 @@ body {font-family: Arial, Helvetica, sans-serif;}
                 </div>
             </li>
     <li><a href="#">KAMPANYALAR</a></li>
-    <li></li>
     
-    <li>
-      <a href="file:///C:/Users/Tu%C4%9F%C3%A7e%20Gizem/Desktop/Samsung.com/anasayfa.htm">
-      <img class="sms" alt="samsung" height="19" src="Photos/samsung-logo.png" width="129" />
-     
-    </li>
+    <div id="samsunglogo" style="width: 129px;margin-left: 600px;margin-top:30px" >
+      <samsunglogocomponent></samsunglogocomponent>
+
+  </div>
+    
+    
       <div style=" position:absolute; z-index: 20; margin-top: -17px; "> <input type=button id="sonuc" value="0" style="margin-left: 1300px; color: #000000;"></div>
 
-      </ul>  
+    </ul>
+      
+    
   </ul>
+  
+
      <!-- Reference: https://github.com/romainsimon/vue-simple-search-dropdown -->
      
     <div id="app3" style="width: 10px; height: 50px; margin-left: 1000px; margin-top: -30px; " >
@@ -506,399 +505,720 @@ body {font-family: Arial, Helvetica, sans-serif;}
         
     </div>
     <div>
-    <!--menu5 kısmı bir ikondan oluşan dropdown menüdür.
-       İçinde uye ol, uye girisi, sifremi unuttum ve istek listesi linklerini barındırır-->
-      <ul class="menu5">
-            <li class="uyegirisi1">
-                  <a class="uyegirisi" href="#"><img class="icon1" src="Photos/header-user-icon.png" ></a>
-                 <ul class="uyegirisi2">
-                    <li>
-                      <a class="uyegirisi3" href="uyeol.html">Üye Ol</a>
-                    </li>
-                    <li>
-                      <a class="uyegirisi3" href="uyegirisi.html">Üye Girişi</a>
-                    </li>
-                    <li>
-                      <a class="uyegirisi3" href="index.html" >Şifremi Unuttum</a>
-                    </li>
-                    <li>
-                      <a class="uyegirisi3" href="#">İstek Listesi</a>
-                    </li>
-                </ul>
-            </li>
-      </ul>
+    <!--Üye kısmının componenti-->
+      <div id="dropdownuyeol" style="margin-top: 35px;" >
+          <dropdownuyeolcomponent></dropdownuyeolcomponent>
+      </div>
     </div>
-   
-   
 </div>
-
-<div>
-  
-</div>
-
 <div class="galaxym">  
-  <hr>
-<p style="margin-left: 30px;">Anasayfa / </p> <h5 style="margin-left: 100px; margin-top: -40px; color: darkblue;"><b>Galaxy M Serisi</b></b></h5>
-
-  
-    <div id="app50" style="margin-top: 100px;">
-        <ul class="navigator">
-         
-         
-          <li @click="changeSlide(1)" class="new"></li>
-          <br>
-          <li @click="changeSlide(1)" class="red"></li>
-          <br>
-          <li @click="changeSlide(2)" class="green"></li>
-          <br>
-          <li @click="changeSlide(3)" class="grey"></li>
-          <br>
-          <li @click="changeSlide(4)" class="blue"></li>
-          <br>
-          <li @click="nextSlide" class="lightgrey" style="color: #000000;"> ↓ </li>
-        </ul>
-        <div class="slider-container" style="margin-top: 60px;">
-          <ul class="slider" :style="styleObject">
-            <li class="new1 slide"></li>
-            <li class="red1 slide"></li>
-            <li class="green1 slide"></li>
-            <li class="grey1 slide"></li>
-            <li class="blue1 slide"></li>
-          </ul>
-        </div> 
-      </div>
-
-
-      <div class="row" style="margin-top: -300px;">
-          <div class="indexInfoIcons">
-              <ul class="d-flex align-items-start">
-                  <li>
-
-                      <img class="d1" src="Photos/degisim-icon (1).png" alt="Degisim"/>
-                      <br>
-                      <span class="d2">Değişim Kampanyası</span>
-
-                      <img class="d3" src="Photos/installment-icon.png" alt="14 Gün Koşulsuz İade"/>
-                      <br>
-                     <div style="margin-top: -40px;"> <span class="d4">12 ay vade farksız ödeme</span></div>
-
-                      <img class="d5" src="Photos/calendar.png" alt="24/7 Kargo Takibi"/>
-                      <br>
-                     <div style="margin-top: -83px;" > <span class="d6"> 14 gün koşulsuz iade</span></div>
-                  </li>
-      <li>
-                      <p class="text-shop1">Sadece shop.samsung.com/tr <br> üzerinden yapılan alımlarda <br> geçerlidir.</p>
-                  </li>
-              </ul>
-            </div>
-      </div>
-
-<div class="mobilsag" > 
-
-<h2 style="color: black;"> <b>Galaxy M10 | M20 | M30s </b></h2>
-<p style="color: darkblue; margin-top: -70px; margin-left: 350px;">Yeni</p>
-<div style="height: 12px;"></div>
-<p style="color: #cccccc;">SM-M307FZKUTUR</p>
-<ul>
-  
-  <li> Çarpıcı 6.4'' Sonsuz-U Ekran ile, dünyaya bakış açınızı değiştirin.</li>
-  <li style="margin-top: -20px;"> İster gündüz olsun ister gece, çok yönlü 3’lü kamera ile hayatı daha canlı yakalayın.</li>
-  <li style="margin-top: -20px;"> 6,000 mAh bataryası ile, macera hiç bitmesin.</li>
-  <li style="margin-top: -20px;"> Yüz tanıma teknolojisi ve parmak izi tarayıcısı ile, telefonunuzu anında ve güvenli şekilde açın.</li>
-
-</ul>
-
-<!--Ürün Modeli Seçme-->
-<p style="margin-left: 30px;"><b>GALAXY'Nİ SEÇ</b></p>
-<div style="margin-left: 35px;">
-<button class="mobilbtns"  onclick=""> Galaxy M10 <br> 1249 TL</button>
-<button class="mobilbtns" style="margin-left: 5px;"  onclick=""> Galaxy M20 <br> 1799 TL</button>
-<button class="mobilbtns1" style="margin-left: 5px;"  onclick=""> <b>Galaxy M30s(Çift SIM)</b> <br><p style="color:blue;"> 2699 TL</p></button>
-</div>                                            
-
-<!--Hafıza Seçme-->
-<p style="margin-left: 35px;"><b>HAFIZA SEÇ</b></p>
-<div style="margin-left: 35px;">
-<button class="mobilbtns2"  onclick=""> <p style="color: blue;"> 64 GB </p> </button>
-</div>  
-
-<!--Renk Seçme-->
-<p style="margin-left: 35px;"><b>RENK SEÇ</b></p>
-<div style="margin-left: 35px;">
-<button class="renkbtns" style="margin-left: 7px;"  onclick=""> <img src="Photos/köpük.png" style="margin-top:0px; margin-left: -15px;"> <br> </button>
-<button class="renkbtns" style="margin-left: 7px;" onclick=""> <img src="photos/mavi.png" style="margin-top:0px; margin-left: -15px;"> <br> </button>
-<button class="renkbtns1" style="margin-left: 7px;"  onclick=""> <img src="photos/siyah.png" style="margin-top:0px; margin-left: -15px;">  <br> </button>
-</div>  
-
-
-
-<!--Kampanyalar-->
-
-<p style="margin-left: 35px; margin-top: 30px;"><b>KAMPANYALAR</b></p>
-<div style="height: 12px;"></div>
-<p style="color:grey ; margin-left: 30px; margin-top: -40px;">** Aşağıdaki kampanyalar birleştirilemez</p>
-
-
-<!-- Popup Kampanya-->
-
-<div style="margin-left: 35px;">
-    <button id="myBtn" class="mobilbtns3"  onclick=""> <img src="photos/degisim-icon.png" style="margin-left: -450px; margin-bottom: 70px;"/> <div style="margin-top: -140px; margin-right: 250px;"> <p> Değişim Kampanyası </p></div> <div style="margin-top: -10px; margin-right:300px;"> <a id="myLink" style="color: grey;"> <u> Nasıl Çalışır? </u> </a> </div> 
-    
-    </button>
-  
-    <div id="myModal" class="modal">
-
-        <!-- Modal content -->
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <h3 style="margin-left: 380px;">Değişim Kampanyası</h3>
-          <hr style="color: grey;">
-          <button  class="mobilbtns4"  onclick=""> <p style="margin-left: -350px;"> SAMSUNG</p> 
-            <div style="height: 50px; width: 250px; margin-left: 230px; margin-top: -70px; ">
-            <p style="font-size: 15px; margin-left: 15px; margin-top: 20px; "> 2250 TL'ye  
-            <p style="font-size: 15px; margin-left: 15px; margin-top: -30px; "> kadar indirim </p> </p> 
-
-          </button>
-          <div style="height: 5px;"></div>
-          <button  class="mobilbtns4" style="margin-left: 470px; margin-top: -85px;" onclick=""> <p style="margin-left: -350px;"> APPLE</p> 
-            <div style="height: 50px; width: 250px; margin-left: 230px; margin-top: -70px; ">
-                <p style="font-size: 15px; margin-left: 15px; margin-top: 20px; "> 2550 TL'ye  
-                <p style="font-size: 15px; margin-left: 15px; margin-top: -30px; "> kadar indirim </p> </p> 
-    
-          </button>
-          <div style="height: 5px;"></div>
-          <button  class="mobilbtns4" style="margin-top: 10px;"  onclick=""><p style="margin-left: -350px;"> HUAWEI</p> 
-            <div style="height: 50px; width: 250px; margin-left: 230px; margin-top: -70px; ">
-                <p style="font-size: 15px; margin-left: 15px; margin-top: 20px; "> 1600 TL'ye  
-                <p style="font-size: 15px; margin-left: 15px; margin-top: -30px; "> kadar indirim </p> </p> 
-    
-          </button>
-          <div style="height: 5px;"></div>
-          <button  class="mobilbtns4" style="margin-left: 470px; margin-top: -85px;"  onclick=""><p style="margin-left: -380px;"> LG</p>
-            <div style="height: 50px; width: 250px; margin-left: 230px; margin-top: -70px; ">
-                <p style="font-size: 15px; margin-left: 15px; margin-top: 20px; "> 1700 TL'ye  
-                <p style="font-size: 15px; margin-left: 15px; margin-top: -30px; "> kadar indirim </p> </p> 
-    
-          </button>
-          <div style="height: 5px;"></div>
-          <button  class="mobilbtns4"  style="margin-top: 10px;"  onclick=""><p style="margin-left: -350px;"> SONY</p> 
-            <div style="height: 50px; width: 250px; margin-left: 230px; margin-top: -70px; ">
-                <p style="font-size: 15px; margin-left: 15px; margin-top: 20px; "> 1400 TL'ye  
-                <p style="font-size: 15px; margin-left: 15px; margin-top: -30px; "> kadar indirim </p> </p> 
-    
-          </button>
-          <div style="height: 70px;">
-            <button  class=" button button2" style="margin-top: 30px; margin-left: 300px; width: 190px;">
-                <a v-on:click ="click" href="#" style="text-decoration: none;color: #000;" > İPTAL </a>
-            </button>  
-          </div>
-          <div style="height: 70px;">
-              <button class="button button4" style="margin-top: -40px; margin-left: 600px; width: 190px;">
-                  <a v-on:click ="click" href="#" style="text-decoration: none;color: blue;" > DEVAM </a>
-
-
-
-
-                  
-              </button>  
-            </div>
-        </div>
-
-      <!--Buton Popup bitiş-->
-      </div>
-      <!--Modal Kampanya Link-->
-
-
+        <hr>
+      <p style="margin-left: 30px;">Anasayfa / </p> <h5 style="margin-left: 100px; margin-top: -40px; color: darkblue;"><b>Galaxy M Serisi</b></b></h5>
       
-<hr style="width: 550px; margin-left: -200px; margin-top: 20px ; background-color: #cccccc; ">
-
-
-<!--Özet-->
-<p style="margin-left: 0px; margin-top: 30px;"><b>ÖZET</b></p>
-<div style="height: 250px; width: 530px; margin-left: 0px; ; border: 1px solid #cccccc "> <p style="font-size: 12px; margin-left: 15px; margin-top: 20px; color:grey"> Galaxy M30s (Çift SIM) / 64 GB - Karbon <p style="font-size: 12px; margin-left: 15px; margin-top: -30px; color: grey;"> Siyahı </p> </p> <p style="margin-left: 450px; margin-top: -70px;"> <b>2699 TL</b> </p> 
-
-<hr style="width: 500px; margin-left: 0px; margin-top: 60px; ">
-<p style="margin-left: 15px; font-size: 18px;">Toplam</p>
-<p style="margin-left: 440px; margin-top: -50px; font-size: 20px;"> 2699 TL</p>
-</div>
-
-
-</div>  
-
-<!--end div mobilsag-->
-</div>
-<!--End div galaxy m-->
-</div>
-
-<button class="accordion2" ></button>
-<div class="panel4" >
-<div class="footer">
-    <div class="footer-content">
-      <!-- Alt menü kısmının içinde linkler bulunduran div.-->
-        <div class="footer-section-siteharitası">
-            <h4 class="site"><span>Site Haritası</span></h4>
+        
+          <div id="app50" style="margin-top: 80px;">
+              <ul class="navigator">
+               
+                <li @click="prevSlide" class="lightgrey" style="color:blue"> &laquo; </li>
+                <br>
+                <li @click="changeSlide(1)" class="new"></li>
+                <br>
+                <li @click="changeSlide(2)" class="red"></li>
+                <br>
+                <li @click="changeSlide(3)" class="green"></li>
+                <br>
+                <li @click="changeSlide(4)" class="grey"></li>
+                <br>
+                <li @click="changeSlide(5)" class="blue"></li>
+                <br>
+                <li @click="nextSlide" class="lightgrey" style="color:blue"> &raquo; </li>
+              </ul>
+              <div class="slider-container" style="margin-top: 60px;">
+                <ul class="slider" :style="styleObject">
+                  <li class="new1 slide"></li>
+                  <li class="red1 slide"></li>
+                  <li class="green1 slide"></li>
+                  <li class="grey1 slide"></li>
+                  <li class="blue1 slide"></li>
+                </ul>
+              </div> 
+            </div>
+      
+      
+            <div class="row" style="margin-top: -300px;">
+                <div class="indexInfoIcons">
+                    <ul class="d-flex align-items-start">
+                        <li>
+      
+                            <img class="d1" src="Photos/degisim-icon (1).png" alt="Degisim"/>
+                            <br>
+                            <span class="d2">Değişim Kampanyası</span>
+      
+                            <img class="d3" src="Photos/installment-icon.png" alt="14 Gün Koşulsuz İade"/>
+                            <br>
+                           <div style="margin-top: -40px;"> <span class="d4">12 ay vade farksız ödeme</span></div>
+      
+                            <img class="d5" src="Photos/calendar.png" alt="24/7 Kargo Takibi"/>
+                            <br>
+                           <div style="margin-top: -83px;" > <span class="d6"> 14 gün koşulsuz iade</span></div>
+                        </li>
+            <li>
+                            <p class="text-shop1">Sadece shop.samsung.com/tr <br> üzerinden yapılan alımlarda <br> geçerlidir.</p>
+                        </li>
+                    </ul>
+                  </div>
+            </div>
+      
+      <div class="mobilsag" > 
+      
+      <h2 style="color: black;"> <b>Galaxy M10 | M20 | M30s </b></h2>
+      <p style="color: darkblue; margin-top: -70px; margin-left: 350px;">Yeni</p>
+      <div style="height: 12px;"></div>
+      <p style="color: #cccccc;">SM-M307FZKUTUR</p>
+      <ul>
+        
+        <li> Çarpıcı 6.4'' Sonsuz-U Ekran ile, dünyaya bakış açınızı değiştirin.</li>
+        <li style="margin-top: -20px;"> İster gündüz olsun ister gece, çok yönlü 3’lü kamera ile hayatı daha canlı yakalayın.</li>
+        <li style="margin-top: -20px;"> 6,000 mAh bataryası ile, macera hiç bitmesin.</li>
+        <li style="margin-top: -20px;"> Yüz tanıma teknolojisi ve parmak izi tarayıcısı ile, telefonunuzu anında ve güvenli şekilde açın.</li>
+      
+      </ul>
+      
+      <!--Ürün Modeli Seçme-->
+      <p style="margin-left: 30px;"><b>GALAXY'Nİ SEÇ</b></p>
+      <div style="margin-left: 35px;">
+      <button class="mobilbtns"  onclick=""> Galaxy M10 <br> 1249 TL</button>
+      <button class="mobilbtns" style="margin-left: 5px;"  onclick=""> Galaxy M20 <br> 1799 TL</button>
+      <button class="mobilbtns1" style="margin-left: 5px;"  onclick=""> <b>Galaxy M30s(Çift SIM)</b> <br><p style="color:blue;"> 2699 TL</p></button>
+      </div>                                            
+      
+      <!--Hafıza Seçme-->
+      <p style="margin-left: 35px;"><b>HAFIZA SEÇ</b></p>
+      <div style="margin-left: 35px;">
+      <button class="mobilbtns2"  onclick=""> <p style="color: blue;"> 64 GB </p> </button>
+      </div>  
+      
+      <!--Renk Seçme-->
+      <p style="margin-left: 35px;"><b>RENK SEÇ</b></p>
+      <div style="margin-left: 35px;">
+      <button class="renkbtns" style="margin-left: 7px;"  onclick=""> <img src="Photos/köpük.png" style="margin-top:0px; margin-left: -15px;"> <br> </button>
+      <button class="renkbtns" style="margin-left: 7px;" onclick=""> <img src="photos/mavi.png" style="margin-top:0px; margin-left: -15px;"> <br> </button>
+      <button class="renkbtns1" style="margin-left: 7px;"  onclick=""> <img src="photos/siyah.png" style="margin-top:0px; margin-left: -15px;">  <br> </button>
+      </div>  
+      
+      
+      
+      <!--Kampanyalar-->
+      
+      <p style="margin-left: 35px; margin-top: 30px;"><b>KAMPANYALAR</b></p>
+      <div style="height: 12px;"></div>
+      <p style="color:grey ; margin-left: 30px; margin-top: -40px;">** Aşağıdaki kampanyalar birleştirilemez</p>
+      
+      
+      <!-- Popup Kampanya-->
+      
+      <div style="margin-left: 35px;">
+          <button id="myBtn" class="mobilbtns3"  onclick=""> <img src="photos/degisim-icon.png" style="margin-left: -450px; margin-bottom: 70px;"/> <div style="margin-top: -140px; margin-right: 250px;"> <p> Değişim Kampanyası </p></div> <div style="margin-top: -10px; margin-right:300px;"> <a id="myLink" style="color: grey;"> <u> Nasıl Çalışır? </u> </a> </div> 
+          
+          </button>
+        
+          <div id="myModal" class="modal">
+      
+              <!-- Modal content -->
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3 style="margin-left: 380px;">Değişim Kampanyası</h3>
+                <hr style="color: grey;">
+                <button  class="mobilbtns4"  onclick=""> <p style="margin-left: -350px;"> SAMSUNG</p> 
+                  <div style="height: 50px; width: 250px; margin-left: 230px; margin-top: -70px; ">
+                  <p style="font-size: 15px; margin-left: 15px; margin-top: 20px; "> 2250 TL'ye  
+                  <p style="font-size: 15px; margin-left: 15px; margin-top: -30px; "> kadar indirim </p> </p> 
+      
+                </button>
+                <div style="height: 5px;"></div>
+                <button  class="mobilbtns4" style="margin-left: 470px; margin-top: -85px;" onclick=""> <p style="margin-left: -350px;"> APPLE</p> 
+                  <div style="height: 50px; width: 250px; margin-left: 230px; margin-top: -70px; ">
+                      <p style="font-size: 15px; margin-left: 15px; margin-top: 20px; "> 2550 TL'ye  
+                      <p style="font-size: 15px; margin-left: 15px; margin-top: -30px; "> kadar indirim </p> </p> 
+          
+                </button>
+                <div style="height: 5px;"></div>
+                <button  class="mobilbtns4" style="margin-top: 10px;"  onclick=""><p style="margin-left: -350px;"> HUAWEI</p> 
+                  <div style="height: 50px; width: 250px; margin-left: 230px; margin-top: -70px; ">
+                      <p style="font-size: 15px; margin-left: 15px; margin-top: 20px; "> 1600 TL'ye  
+                      <p style="font-size: 15px; margin-left: 15px; margin-top: -30px; "> kadar indirim </p> </p> 
+          
+                </button>
+                <div style="height: 5px;"></div>
+                <button  class="mobilbtns4" style="margin-left: 470px; margin-top: -85px;"  onclick=""><p style="margin-left: -380px;"> LG</p>
+                  <div style="height: 50px; width: 250px; margin-left: 230px; margin-top: -70px; ">
+                      <p style="font-size: 15px; margin-left: 15px; margin-top: 20px; "> 1700 TL'ye  
+                      <p style="font-size: 15px; margin-left: 15px; margin-top: -30px; "> kadar indirim </p> </p> 
+          
+                </button>
+                <div style="height: 5px;"></div>
+                <button  class="mobilbtns4"  style="margin-top: 10px;"  onclick=""><p style="margin-left: -350px;"> SONY</p> 
+                  <div style="height: 50px; width: 250px; margin-left: 230px; margin-top: -70px; ">
+                      <p style="font-size: 15px; margin-left: 15px; margin-top: 20px; "> 1400 TL'ye  
+                      <p style="font-size: 15px; margin-left: 15px; margin-top: -30px; "> kadar indirim </p> </p> 
+          
+                </button>
+                <div style="height: 70px;">
+                  <button  class=" button button2" style="margin-top: 30px; margin-left: 300px; width: 190px;">
+                      <a v-on:click ="click" href="#" style="text-decoration: none;color: #000;" > İPTAL </a>
+                  </button>  
+                </div>
+                <div style="height: 70px;">
+                    <button class="button button4" style="margin-top: -40px; margin-left: 600px; width: 190px;">
+                        <a v-on:click ="click" href="#" style="text-decoration: none;color: blue;" > DEVAM </a>
+      
+      
+      
+      
+                        
+                    </button>  
+                  </div>
+              </div>
+      
+            <!--Buton Popup bitiş-->
+            </div>
+            <!--Modal Kampanya Link-->
+      
+      
             
-            <li class="altmenu1"><a class="altmenu1-a" href="#">Samsung Hakkında</a></li>
-            <li class="altmenu1"><a class="altmenu1-a" href="#">Yatırımcılar</a></li>
-            <li class="altmenu1"><a class="altmenu1-a" href="#">Basın Bilgileri</a></li>
-            <li class="altmenu1"><a class="altmenu1-a" href="#">Mağazalar</a></li>
-            <li class="altmenu1"><a class="altmenu1-a" href="#">Bize Ulaşın</a></li>
-            <li class="altmenu1"><a class="altmenu1-a" href="#">Sosyal Sorumluluk</a></li>              
-        </div>
-        <!-- Alt menü kısmının içinde linkler bulunduran div.-->
-        <div class="footer-section-faydalıbilgiler">
-              <h4 class="site"><span>Faydalı Bilgiler</span></h4>
-            
-              <li class="altmenu1"><a class="altmenu1-a" href="#">Samsung Mağazaları</a></li>
-              <li class="altmenu1"><a class="altmenu1-a" href="#">Bize Ulaşın</a></li>
-              <li class="altmenu1"><a class="altmenu1-a" href="#">Kampanyalar</a></li>
-              
-        </div>
-        <!-- Alt menü kısmının içinde linkler bulunduran div.-->
-        <div class="footer-section-destek">
-              <h4 class="site"><span>Desteğe İhtiyacınız Var Mı?</span></h4>
-            
-              <li class="altmenu1"><a class="altmenu1-a" href="#">Telefon</a></li>
-              <li class="altmenu1"><a class="altmenu1-a" href="#">Canlı Destek</a></li>
-              <li class="altmenu1"><a class="altmenu1-a" href="#">E-Posta</a></li>
-              <li class="altmenu1"><a class="altmenu1-a" href="#">Sık Sorulan Sorular</a></li>
-        </div>
-        <!-- Sosyal medya ikonlarını ve linklerini içinde bulunduran div-->
-        <div class="footer-section-sosyalmedya">
-              <h4 class="site"><span>Sosyal Medyada Takip Edin</span></h4>
-              <a href="https://www.facebook.com/SamsungTurkey/">
-                  <img style="height:55px; width:55px;" class="facebook" src="Photos/indir.png" alt="facebook">
-              
-              </a>
-              <a href="https://twitter.com/SamsungTurkiye" >   
-                  <img style="height:55px; width:55px;" class="twitter" src="Photos/indir (1).png" alt="twitter">
-              </a>
-              <a href="https://www.youtube.com/user/SamsungTurkiye" >
-                  <img style="height:55px; width:55px;" class="youtube" src="Photos/indir (2).png" alt="youtube">                   
-              </a>
-              <a href="https://www.instagram.com/SamsungTurkiye/">
-                  <img style="height:55px; width:55px;" class="instagram" src="Photos/indir (3).png" alt="instagram">
-              
-              </a>
+      <hr style="width: 550px; margin-left: -200px; margin-top: 20px ; background-color: #cccccc; ">
+      
+      
+      <!--Özet-->
+      <p style="margin-left: 0px; margin-top: 30px;"><b>ÖZET</b></p>
+      <div style="height: 250px; width: 530px; margin-left: 0px; ; border: 1px solid #cccccc "> <p style="font-size: 12px; margin-left: 15px; margin-top: 20px; color:grey"> Galaxy M30s (Çift SIM) / 64 GB - Karbon <p style="font-size: 12px; margin-left: 15px; margin-top: -30px; color: grey;"> Siyahı </p> </p> <p style="margin-left: 450px; margin-top: -70px;"> <b>2699 TL</b> </p> 
+      
+      <hr style="width: 500px; margin-left: 0px; margin-top: 60px; ">
+      <p style="margin-left: 15px; font-size: 18px;">Toplam</p>
+      <p style="margin-left: 440px; margin-top: -50px; font-size: 20px;"> 2699 TL</p>
+      </div>
+      
+      
+      </div>  
+      
+      <!--end div mobilsag-->
+      </div>
+      <!--End div galaxy m-->
+      </div>
+      
+      
+      
 
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="mserisi-ozellikler" sty >
+    <div id="verticle"></div>
+    <div class="mserisi-ozellikler1">
+            <img class="js-img-src" alt="Hikayelerinizi paylaşmanızı sağlayan üçlü arka kamera" width="65" height="65" data-src-pc="https://images.samsung.com/is/content/samsung/tr-feature-triple-camera-to-share-your-stories-184096026.svg" data-src-mobile="https://images.samsung.com/is/content/samsung/tr-feature-triple-camera-to-share-your-stories-184096026.svg" src="https://images.samsung.com/is/content/samsung/tr-feature-triple-camera-to-share-your-stories-184096026.svg">
+            <p style="margin-left: -20px;" >Üçlü Arka Kamera</p>
+    </div>
+    
+    <div id="verticle" style="left: 50%;margin-top: -170px;" ></div>
+    <div class="mserisi-ozellikler2" >
+    <img class="js-img-src" alt="Yüksek hız ve oynatma için performans yükseltici donanım" width="65" height="65" data-src-pc="https://images.samsung.com/is/content/samsung/tr-feature-performance-boosting-hardware-for-fast-speeds-and-streams-184096030.svg" data-src-mobile="https://images.samsung.com/is/content/samsung/tr-feature-performance-boosting-hardware-for-fast-speeds-and-streams-184096030.svg" src="https://images.samsung.com/is/content/samsung/tr-feature-performance-boosting-hardware-for-fast-speeds-and-streams-184096030.svg">
+    <p>8 Çekirdek</p>
+    </div>
+    <div id="verticle" style="left: 75%;margin-top: -170px;" ></div>
+    <div class="mserisi-ozellikler3" >
+            <img class="js-img-src" alt="Gün boyu yetecek güç" width="53" height="53" data-src-pc="https://images.samsung.com/is/content/samsung/tr-feature-power-to-get-through-your-day-184096036.svg" data-src-mobile="https://images.samsung.com/is/content/samsung/tr-feature-power-to-get-through-your-day-184096036.svg" src="https://images.samsung.com/is/content/samsung/tr-feature-power-to-get-through-your-day-184096036.svg">
+            <p>6.000 mAh Pil</p>
+    </div>
+    <div class="mserisi-ozellikler4" >
+        <h1>162.1mm (...</h1>
+        <h4>Boyut (Ana_Ekran)</h4>
+
+    </div>
+    <div class="mserisi-ozellikler5">
+        <img  alt="uekranp" style="margin-left: 40px;margin-top: 100px;z-index: 20; " src="Photos/tr-feature-infinity-u-display-for-a-rich-viewing-experience-184096020.jpg">
+        <div class="uekranp1">
+               <h1 style="font-size: 60px;font-weight: bold;" >Zengin bir izleme deneyimi</h1>
+               <h1 style="font-size: 60px;font-weight: bold; margin-left: 150px;" >için Sonsuz-U ekran</h1>
+               <p style="font-size:18px;" >Galaxy M30s'nin büyük ekranı, daha gelişmiş bir izleme deneyimi sunuyor. 6,4 inç Full HD+ Super AMOLED Sonsuz-U ekran,</p>
+               <p style="font-size:18px;" >oyun oynamanız ve keşfetmeniz için daha fazla alan sağlayarak, kendinizi en sevdiğiniz oyunlara ve vlog’lara kaptırmanızı</p>
+               <p style="font-size:18px;margin-left: 400px;" >sağlıyor.</p>
+               <p style="color: #636363;font-size: 12px;margin-left: 370px;;" >* Görüntüler, örnek amaçlıdır.</p>
+               <p  style="color: #636363;font-size: 12px;margin-left: 270px;">** Sonsuz Ekran: Neredeyse tamamen çerçevesiz, uçtan uca ön ekran.</p>
+               <p  style="color: #636363;font-size: 12px;margin-left: 200px;">*** Gerçek görülebilir alan, yuvarlak köşeler ve kamera deliği nedeniyle daha küçüktür.</p>
+               <p  style="color: #636363;font-size: 12px;margin-left: 150px;">**** Diyagonal olarak ölçüldüğünde ekran boyutu tam dikdörtgen halinde 6,4 inç, yuvarlak köşeler hesaba katıldığında ise 6,2 inçtir.</p>
         </div>
     </div>
+    <div class="mserisi-ozellikler6" >
+        <h1 class="tasarım1" >Seçkin ve etkileyici tasarım</h1>
+        <div class="tasarım2" >
+            <h4>8,9 mm’lik gövde ve konforlu tutuş, Galaxy M30s için sadece bir başlangıç. Galaxy M30s’nin asıl baş</h4>
+            <h4>  döndürücü özelliği, parlak tonlarıdır. Bu benzersiz, dikkat çekici ve modern tasarım, üç renk</h4>
+            <h4>seçeneğiyle sunulmaktadır: siyah, beyaz ve mavi.</h4>
+       </div>
+       <img src="https://images.samsung.com/is/image/samsung/tr-feature-premium-design-with-a-futuristic-finish-184096032?$FB_TYPE_A_JPG$" alt="tasarım3" style="margin-left: 50px;margin-top: 50px;" >
+       <h6 style="font-weight: 20px;margin-left: 600px;margin-top: 60px;" >* Renkler, ülke veya operatöre bağlı olarak değişebilir.</h6>
 
-</div>
-<div>
+    </div>
+    <div class="mserisi-ozellikler7" >
+        <div class="uclukamera" >
+            <h1 style="font-size: 50px;font-weight: bold;" >Hikayelerinizi paylaşmanızı sağlayan üçlü arka kamera</h1>
+            <p style="font-size: 18px;" >İstediğiniz her görüntüyü istediğiniz gibi kaydetmenin üç yolu. Her anı tam olarak gördüğünüz gibi çekmek için Ultra Geniş Açılı Kamera, gün içinde yaşadığınız anıları anında ve net bir şekilde yakalamak için 48MP kamerayı kullanın veya önemli olana odaklanmak için 5MP Derinlik Kamerasıyla arka planı bulanıklaştırın.</p>
+        </div>
+        <img  class="uclukamera3" src="https://images.samsung.com/is/image/samsung/tr-feature-galaxy-m30s-m307-184615502?$FB_TYPE_C_JPG$" alt="uclukamera2">
 
-</div>
+    </div>
+    <div class="mserisi-ozellikler8" >
+        <h1 class="ultragenis">Her anı ultra geniş açılı kamerayla yakalayın</h1>
+        <div class="ultragenis2">
+                <p style="line-height: 20px;" >Ultra Geniş Açılı Kamera, fotoğraflarda daha fazla ayrıntı görün. 80 derecelik geniş açı ve 123 derecelik ultra geniş açıyla her</p>
+                <p style="line-height: 20px;margin-left: 20px;">sahneyi tam olarak gördüğünüz şekilde çekin ve hiçbir anı ve ayrıntıyı kaçırmayın. Üstelik, harika bir panorama çekimi</p>
+                <p style="line-height: 20px;margin-left: 350px;">yapmak artık daha da kolay.</p>
+        
+        </div>
+        <!--geniş açı ve ultra ge-->
+        <div class="ultragenis3">
+            <div class="buttonarea" >
+                <button  class="ultragenis4" onclick="genisaci()"></button>
+                <button class="ultragenis5" onclick="ultragenisaci()"></button>
+            </div>  
+            <img id="img-area" style="margin-left: 190px;margin-top: 100px;" src="https://images.samsung.com/is/image/samsung/tr-feature-galaxy-m30s-m307-184748593?$FB_TYPE_E_JPG$" alt="genis">
+            <p style="color: #636363;font-size: 12px;margin-left: 700px;line-height: 2;"  >* Görüntüler örnek olarak sunulmuştur.</p>
+            <p style="color: #636363;font-size: 12px;margin-left: 600px;line-height: 1;"  >** Ultra geniş açılı fotoğraf ve video yalnızca arka kamera için desteklenir.</p>
+        </div>
+        <div class="mserisi-ozellikler9" >
+            <h1 class="odakkamera" >Her şeyi derinlemesine keşfetmenizi sağlayan bir</h1> <h1 style="font-size: 80px;font-weight: bold;margin-left:600px;margin-top: 10px;" >kamera</h1>
+            <p style="font-size: 18px;margin-left: 300px;margin-top: 100px;" >5MP Derinlik Kamerası, çekimi yapmadan önce ve yaptıktan sonra alan derinliğini ayarlamanızı sağlar. Gelişmiş Derinlik</p>
+            <p style="font-size: 18px;margin-left: 370px;margin-top: -10px;" >Kamerası, daha profesyonel bir görünüm için istenmeyen arka plan parazitlerini ortadan kaldırır.</p>
+            <button class="odakacik"></button>
+            <li style=" list-style-type: none;" ><a style="text-decoration: none;color:#636363;list-style-type: none;font-size: 14px;margin-left: 780px;margin-top:-40px; ;" href="#">Canlı odak kapalı</a></li>
+            <button class="odakkapali"></button>
+            <li  style=" list-style-type: none;margin-top: 0px;" ><a  style="text-decoration: none;color:#636363;list-style-type: none;font-size: 14px;margin-left: 600px; margin-bottom: -350px;"  href="#">Canlı odak açık</a></li>
+        </div>
+        <div class="mserisi-ozellikler10" >
+            <h1 style="font-size: 60px;font-weight: bold;margin-left: 400px;margin-top: 150px;" >Kendinizi yeni bir ışıkta</h1>
+            <h1 style="font-size: 60px;font-weight: bold;margin-left: 350px">görmenizi sağlayan bir selfie</h1>
+            <h1 style="font-size: 60px;font-weight: bold;margin-left: 620px">kamerası</h1>
+            <p style="font-size: 18px;margin-left: 300px;margin-top: 50px;line-height: 20px;">Galaxy M30s’nin 16MP ön kamerasıyla kendinizi en güzel açılardan çekin. Tüm gözlerin üzerinizde</p>
+            <p style="font-size: 18px;margin-left: 300px;line-height: 20px;" >olmasını sağlamak için Selfie odağıyla arka planı hafifçe bulanıklaştırın ve ister bir kafede, ister parkta</p>
+            <p  style="font-size: 18px;margin-left: 600px;line-height: 20px;" >en güzel pozunuzu yakalayın.</p>
+            <img src="Photos/tr-feature-a-selfie-camera-to-see-yourself-in-a-new-light-184096042.jpg" alt="selfiekamera" style="margin-top: 100px;margin-left: 50px;">
+            <p style="color: #636363;font-size: 12px;margin-left: 650px;line-height: 2;margin-top: 50px;">* Görüntüler, örnek olarak sunulmuştur.</p>
+        </div>
+
+        <div class="mserisi-ozellikler11">
+                <h1 style="font-size: 60px;font-weight: bold;margin-left: 350px;margin-top: 150px;line-height: 55px;" >Yüksek hız ve oynatma için</h1>
+                <h1 style="font-size: 60px;font-weight: bold;margin-left: 300px;line-height: 5px;">performans yükseltici donanım</h1>
+                <p style="font-size: 18px;margin-left: 350px;margin-top: 50px;line-height: 20px;" >Güçlü bir sekiz çekirdekli işlemci ve 4GB RAM ile grafik ağırlıklı oyunları ve canlı yayınları yüksek</p>
+                <p style="font-size: 18px;margin-left: 350px;line-height: 20px;" >hızlarda oynayın ve izleyin. 64GB dahili bellek ve 512GB’a kadar harici depolama kapasitesiyle içerik</p>
+                <p  style="font-size: 18px;margin-left: 500px;line-height: 20px;" >izlemek, indirmek ve paylaşmak için fazlasıyla yeriniz olacak.</p>
+                <img style="margin-top: 100px;margin-left: 50px;" src="https://images.samsung.com/is/image/samsung/tr-feature-galaxy-m30s-m307-185283668?$FB_TYPE_A_JPG$" alt="yuksekhiz">
+                <p style="color: #636363;font-size: 10px;margin-left: 500px;line-height: 0%;margin-top: 50px;">* RAM ve dahili bellek kapasitesi, ülke veya bölgeye göre değişebilir.</p>
+                <p style="color: #636363;font-size: 10px;margin-left: 500px;line-height: 0%;margin-top: 50px;">** Gerçek depolama kapasitesi, önceden yüklenmiş yazılımlara bağlı olarak değişebilir.</p>
+                <p style="color: #636363;font-size: 10px;margin-left: 500px;line-height: 0%;margin-top: 50px;">*** MicroSD kartı ayrıca satılır.</p>
+        </div>
+        <div class="mserisi-ozellikler12" >
+                <h1 style="font-size: 60px;font-weight: bold;margin-left: 400px;margin-top: 150px;" >Gün boyu yetecek güç</h1>
+                <p style="font-size: 18px;margin-left: 350px;margin-top: 50px;line-height: 5px;">Günlerinizi ister film izlemek, ister görüntülü konuşmak olsun sevdiğiniz şeyleri yaparak</p>
+                <p style="font-size: 18px;margin-left: 300px;margin-top: 50px;line-height: 5px;">geçiriyorsunuz ve size ayak uyduracak bir telefona ihtiyacınız var. Galaxy M30s’in 6.000mAh (normal)</p>
+                <p style="font-size: 18px;margin-left: 350px;margin-top: 50px;line-height: 5px;">pile ve 15W Hızlı Şarj özelliğine sahip olmasının nedeni de bu. M30s’nin uzun ömürlü piliyle</p>
+                <p style="font-size: 18px;margin-left: 570px;margin-top: 50px;line-height: 5px;">bağlantıyı asla kaybetmeyin.</p>
+                <img src="https://images.samsung.com/is/image/samsung/tr-feature-galaxy-m30s-m307-185283729?$FB_TYPE_A_JPG$" alt="güç" style="margin-top: 150px;" >
+                <p class="güc" >* Normal değer, üçüncü taraf laboratuvar koşullarında test edilmiştir. Normal değer, IEC 61960 standardına göre test edilen pil örnekleri arasındaki kapasite farkı göz önünde bulundurularak hesaplanan tahmini ortalama değerdir. Nominal (minimum) kapasite 5.830 mAh’dir. Gerçek pil ömrü, ağ ortamına, kullanıcı ayarlarına, kullanım modellerine, kalan kapasiteye ve diğer faktörlere bağlı olarak değişebilir.</p>
+
+        </div>
+        <div class="mserisi-ozellikler13">
+            <h1 style="font-size: 60px;font-weight: bold;margin-left: 300px;margin-top: 150px;" >Game Booster ile avantaj sizde</h1>
+            <p style="font-size: 18px;margin-left: 350px;margin-top: 50px;line-height: 2px;">Game Booster ile performansınızı en yüksek seviyeye çıkarın. Özel arayüzü ve kolay erişilir menüsüyle</p>
+            <p style="font-size: 18px;margin-left: 350px;margin-top: 50px;line-height: 2px;">dikkat dağıtıcı unsurları ortadan kaldırın ve oyun performansınızı artırın. Frame Booster ile grafiklere</p>
+            <p style="font-size: 18px;margin-left: 380px;margin-top: 50px;line-height: 2px;">kusursuz ve canlı bir hareket sağlayın. Game Booster, pil, sıcaklık ve bellek optimizasyonu için</p>
+            <p style="font-size: 18px;margin-left: 500px;margin-top: 50px;line-height: 2px;">kullanım modellerinizi öğrenirken, oyunun en iyisi siz olun.</p>
+            <img src="https://images.samsung.com/is/image/samsung/tr-feature-galaxy-m30s-m307-184616049?$FB_TYPE_A_JPG$" alt="game" style="margin-top: 100px;" >
+
+        </div>
+        <div class="mserisi-ozellikler14">
+            <h1 style="font-size: 60px;font-weight: bold;margin-left: 400px;margin-top: 150px;">Kullanışlı mobil güvenlik</h1>
+            <hr/>
+            <div class="parmakizi">
+                <img src="https://images.samsung.com/is/image/samsung/tr-feature-fingerprint-sensor-184096016" alt="parmakizi1" style="margin-top: 50px;margin-left:-50px;">
+                <img src="https://images.samsung.com/is/image/samsung/tr-feature-fingerprint-sensor-184096016" alt="parmakizi1" style="float: left;" >
+            </div>
+            <div class="parmakizi2" >
+                <h4 style="color: darkblue;font-size: 20px;" >Parmak izi sensörü</h4>
+                <p style="color: darkblue;font-size: 20px;">Güvenebileceğiniz güvenlikle mobil erişimi basitleştirin. Galaxy M30s, desteklenen uygulamalara giriş yapmanızı ve cihazınızı kolayca açmanızı sağlayan arka parmak izi tarayıcısına sahiptir.</p>
+            </div>
+            <div class="yuztanıma">
+                <img src="https://images.samsung.com/is/image/samsung/tr-feature-face-recognition-184096012" alt="yuztanıma1" style="height: 60px;width:60px;margin-left:80px;margin-top: 50px;" >
+                <div class="yuztanıma2">
+                    <h4 style="color: #ccc;font-size: 20px;">Yüz tanımlama</h4>
+                    <p style="color: #ccc;font-size: 20px;" >Artık telefonunuzu sadece yüzünüze tutarak anında açabilirsiniz. Yüz Tanıma teknolojisi, kişisel verilerinizin yanlış ellere geçmediğinden emin olmanızı garanti ederek yalnızca sizin için mobil erişim sağlar.</p>
+                 </div>
+            </div>
+            <img src="https://images.samsung.com/is/image/samsung/tr-feature-fingerprint-sensor-184096014?$FB_TYPE_D_PNG$" alt="yuztanıma3" style="margin-left: 800px;margin-top: -500px;" >
+            <p style="color: #636363;font-size: 10px;margin-top:70px">* Yüz Tanımlama teknolojisinin doğruluğu, çevre koşullarına bağlı olarak değişebilir.</p>
+           <hr/>
+        </div>
+        <div class="mserisi-ozellikler15">
+            <h1 style="font-size: 60px;font-weight: bold;margin-left: 300px;margin-top: 150px;">Kolay kullanım için sezgisel</h1>
+            <h1 style="font-size: 60px;font-weight: bold;margin-left: 600px;margin-top: 10px;">tasarım</h1>
+            <p  style="font-size: 18px;margin-left: 350px;margin-top: 50px;">One UI Core, gerçekten önemli olan şeylere odaklanmanıza yardımcı olur. Donanım ve yazılım</p>
+            <p  style="font-size: 18px;margin-left: 350px;margin-top: 10px;">birlikte çalışarak, içerik ve özellikleri kolayca erişebilmeniz için parmaklarınızın ucuna taşır. Gece</p>
+            <p  style="font-size: 18px;margin-left: 400px;margin-top: 10px;">Modu, yorucu bir günden sonra gözlerinizi dinlendirebilmeniz için karanlık moda geçerek</p>
+            <p  style="font-size: 18px;margin-left: 650px;margin-top: 10px;">rahatlamanızı sağlar.</p>
+            <img src="https://images.samsung.com/is/image/samsung/tr-feature-galaxy-m30s-m307-184733391?$FB_TYPE_A_JPG$" alt="oneıucore" style="margin-top: 50px;" >
+            <p style="color: #636363;font-size: 10px;margin-top:70px;margin-left: 500px;">* One UI Core özellik, uygulama ve hizmetlerinin kullanılabilirliği cihaza, işletim sistemine ve ülkeye göre değişebilir.</p>
+            <p style="color: #636363;font-size: 10px;margin-top:-10px;margin-left: 620px;">** Cihaz ve ekran görüntüleri örnek olarak sunulmuştur.</p>
+        </div>
+        <div class="mserisi-ozellik16">
+            <h1 style="font-size: 60px;font-weight: bold;margin-left: 400px;margin-top: 150px;">Desteğimizle cihazınız her</h1>
+            <h1 style="font-size: 60px;font-weight: bold;margin-left: 500px;">zaman yeni kalsın</h1>
+            <p style="font-size: 18px;margin-left: 400px;margin-top: 50px;">Bir Galaxy akıllı telefon seçtiğinizde, gönül rahatlığının keyfini çıkarın. Samsung Members</p>
+            <p style="font-size: 18px;margin-left: 350px;margin-top: 5px;">uygulamasının etkileşimli teşhis ve optimizasyon özellikleri, cihazlarınızın performansını ayarlamanızı</p>
+            <p style="font-size: 18px;margin-left: 370px;margin-top: 5px;">kolaylaştırırken, ek yardıma ihtiyaç duyduğunuzda yardım hattımız sorunları gidermenizi sağlar.</p>
+            <img src="https://images.samsung.com/is/image/samsung/tr-feature-galaxy-m30s-m307-184773623?$FB_TYPE_A_JPG$" alt="samsungmembers" style="margin-top: 50px;margin-left: 50px;" >
+            <p style="color: #636363;font-size: 10px;margin-top:10px;margin-left: 500px;">* Samsung Members uygulamasında kullanılabilen işlev ve özellikler ülkeye göre değişebilir.</p>
+            <p style="color: #636363;font-size: 10px;margin-top:-20px;margin-left: 570px;">** Cihaz görüntüsü ve resimler, örnek olarak sunulmuştur.</p>
+
+
+        </div>
+        <div class="mserisi-ozellik17">
+
+       
+            <div class="anaekran"  >
+                <h1 style="font-size: 50px;" >162.1mm (6.4")</h1>
+                 <h4>Boyut (Ana_Ekran)</h4>
+            </div>
+            <div class="anakeran2" >
+                <h1 style="font-size: 50px;">188</h1>
+                <h4 >Ağırlık (gr)</h4>
+            </div>
+            <div id="verticle" style="left: 50%;height: 350px;margin-top: -300px;" ></div><!--sayfanın konumlandırılan kısımlarına dikey çizgi oluşturur-->
+            <div class="anaekran3" >
+                <h1  style="font-size: 50px;">2.3GHz, 1.7GHz</h1>
+                <h4  >İşlemci</h4>
+           </div>
+           <div class="anaekran4"  >
+                <h1 style="font-size: 50px;">131 saate kad...</h1>
+                <h4  >Müzik Dinleme Süresi (Saat)</h4>  
+           </div>
+        </div>
+           <button class="accordion3"  >
+                <li><a style="color: #000000;"  class="panel3" > Tüm Teknik Özellikleri Göster</a>
+        </button>
+        <!--"Tüm Özellikleri Göster"linkine basıldığında açılan div-->
+        <div class="panel5" >
+        <div class="mserisiozellik18">
+            <p style="font-weight: bold;font-size: 20px;margin-left: 150px;" >İşlemci</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 150px;margin-top:30px;">CPU Hızı</p>
+            <p style="font-size: 14px;margin-left: 150px;margin-top: -20px;color:gray ">2.3GHz, 1.7GHz</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 500px;margin-top:-85px;">CPU Tipi</p>
+            <p style="font-size: 14px;margin-left: 500px;margin-top:-20px;color:gray ">Sekiz Çekirdek</p>
+
+            <p style="font-weight: bold;font-size: 20px;margin-left: 150px;margin-top: 50px;" >Ekran</p>
+            <p  style="font-weight: bold;font-size: 14px;margin-left: 150px;margin-top:30px;" >Boyut (Ana_Ekran)</p>
+            <p style="font-size: 14px;margin-left: 150px;margin-top: -20px;color:gray ">162.1mm (6.4")</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 500px;margin-top:-85px;">Çözünürlük (Ana Ekran)</p>
+            <p style="font-size: 14px;margin-left: 500px;margin-top:-20px;color:gray ">2340 x 1080 (FHD+)</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 900px;margin-top:-85px;">Teknoloji(Ana Ekran)</p>
+            <p style="font-size: 14px;margin-left: 900px;margin-top:-20px;color:gray ">Super AMOLED</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 150px;margin-top:30px;">Renk Derinliği (Ana Ekran)</p>
+            <p style="font-size: 14px;margin-left: 150px;margin-top:-20px;color:gray ">16M</p>
+
+            <p style="font-weight: bold;font-size: 20px;margin-left: 150px;margin-top: 50px;" >Kamera</p>
+            <p  style="font-weight: bold;font-size: 14px;margin-left: 150px;margin-top:30px;" >Arka Kamera - Çözünürlük (Çoklu)</p>
+            <p style="font-size: 14px;margin-left: 150px;margin-top: -20px;color:gray ">48.0 MP + 8.0 MP + 5.0 MP</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 500px;margin-top:-85px;">Arka Kamera - F Değeri (Çoklu)</p>
+            <p style="font-size: 14px;margin-left: 500px;margin-top:-20px;color:gray ">F2.0 , F2.2 , F2.2</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 900px;margin-top:-85px;">Arka Kamera - Otomatik Odaklama</p>
+            <p style="font-size: 14px;margin-left: 900px;margin-top:-20px;color:gray ">Var</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 150px;margin-top:30px;">Arka Kamera - Optik Görüntü Sabitleyici</p>
+            <p style="font-size: 14px;margin-left: 150px;margin-top:-20px;color:gray ">Yok</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 500px;margin-top:-90px;">Arka Kamera Zoom</p>
+            <p style="font-size: 14px;margin-left: 500px;margin-top:-20px;color:gray ">Digital Zoom 4x'e kadar</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 900px;margin-top:-90px;">Ön Kamera - Çözünürlük</p>
+            <p style="font-size: 14px;margin-left: 900px;margin-top:-20px;color:gray ">16.0 MP</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 150px;margin-top:30px;">Ön Kamera - F Değeri</p>
+            <p style="font-size: 14px;margin-left: 150px;margin-top:-20px;color:gray ">F2.0</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 500px;margin-top:-90px;">Ön Kamera - Otomatik Odaklama</p>
+            <p style="font-size: 14px;margin-left: 500px;margin-top:-20px;color:gray ">Yok</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 900px;margin-top:-90px;">Ön Kamera - Optik Görüntü Sabitleyici</p>
+            <p style="font-size: 14px;margin-left: 900px;margin-top:-20px;color:gray ">Yok</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 150px;margin-top:30px;">Arka Kamera - Flaş</p>
+            <p style="font-size: 14px;margin-left: 150px;margin-top:-20px;color:gray ">Var</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 500px;margin-top:-90px;">Ön Kamera - Flaş</p>
+            <p style="font-size: 14px;margin-left: 500px;margin-top:-20px;color:gray ">Yok</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 900px;margin-top:-90px;">Video Kayıt Çözünürlüğü</p>
+            <p style="font-size: 14px;margin-left: 900px;margin-top:-20px;color:gray ">UHD 4K (3840 x 2160)@30fps</p>
+            <p  style="font-weight: bold;font-size: 14px;margin-left: 150px;margin-top:30px;">Ağır Çekim</p>
+            <p style="font-size: 14px;margin-left: 150px;margin-top:-20px;color:gray ">240fps @HD</p>
+
+            <p style="font-weight: bold;font-size: 20px;margin-left: 150px;margin-top: 50px;">Hafıza</p>
+            <p  style="font-weight: bold;font-size: 14px;margin-left: 150px;margin-top:30px;" >RAM Boyutu (GB)</p>
+            <p style="font-size: 14px;margin-left: 150px;margin-top: -20px;color:gray ">4</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 500px;margin-top:-85px;">ROM Boyutu (GB)</p>
+            <p style="font-size: 14px;margin-left: 500px;margin-top:-20px;color:gray ">64</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 900px;margin-top:-85px;">Kullanılabilir Hafıza (GB) *</p>
+            <p style="font-size: 14px;margin-left: 900px;margin-top:-20px;color:gray ">50.6</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 150px;margin-top:30px;">Harici Hafıza Desteği</p>
+            <p style="font-size: 14px;margin-left: 150px;margin-top:-20px;color:gray ">MikroSD (512GB'a kadar)</p>
+
+            <p style="font-weight: bold;font-size: 20px;margin-left: 150px;margin-top: 50px;" >Ağ/Şebeke</p>
+            <p  style="font-weight: bold;font-size: 14px;margin-left: 150px;margin-top:30px;" >SIM Sayısı</p>
+            <p style="font-size: 14px;margin-left: 150px;margin-top: -20px;color:gray ">Çift SIM</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 500px;margin-top:-85px;">Sim Boyutu</p>
+            <p style="font-size: 14px;margin-left: 500px;margin-top:-20px;color:gray ">Nano SIM</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 900px;margin-top:-85px;">SIM Yuvası Tipi</p>
+            <p style="font-size: 14px;margin-left: 900px;margin-top:-20px;color:gray ">SIM 1 + SIM 2 + MicroSD</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 150px;margin-top:30px;">Infra</p>
+            <p style="font-size: 14px;margin-left: 150px;margin-top:-20px;color:gray ">2G GSM, 3G WCDMA, 4G LTE FDD, 4G LTE TDD</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 500px;margin-top:-90px;">2G GSM</p>
+            <p style="font-size: 14px;margin-left: 500px;margin-top:-20px;color:gray ">GSM850, GSM900, DCS1800, PCS1900</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 900px;margin-top:-90px;">3G UMTS</p>
+            <p style="font-size: 14px;margin-left: 900px;margin-top:-20px;color:gray ">B1(2100), B2(1900), B5(850), B8(900)</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 150px;margin-top:30px;">4G FDD LTE</p>
+            <p style="font-size: 14px;margin-left: 150px;margin-top:-20px;color:gray ">B1(2100), B3(1800), B5(850), B7(2600)</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 500px;margin-top:-90px;">4G TDD LTE</p>
+            <p style="font-size: 14px;margin-left: 500px;margin-top:-20px;color:gray ">B38(2600), B40(2300), B41(2500)</p>
+
+            <p style="font-weight: bold;font-size: 20px;margin-left: 150px;margin-top: 50px;" >Bağlantılar</p>
+            <p  style="font-weight: bold;font-size: 14px;margin-left: 150px;margin-top:30px;" >ANT+</p>
+            <p style="font-size: 14px;margin-left: 150px;margin-top: -20px;color:gray ">Hayır</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 500px;margin-top:-85px;">USB Arabirim)</p>
+            <p style="font-size: 14px;margin-left: 500px;margin-top:-20px;color:gray ">USB Type-C</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 900px;margin-top:-85px;">USB Version</p>
+            <p style="font-size: 14px;margin-left: 900px;margin-top:-20px;color:gray ">USB 2.0</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 150px;margin-top:30px;">Lokasyon Teknolojisi</p>
+            <p style="font-size: 14px;margin-left: 150px;margin-top:-20px;color:gray ">GPS, Glonass, Beidou, Galileo</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 500px;margin-top:-90px;">Earjack</p>
+            <p style="font-size: 14px;margin-left: 500px;margin-top:-20px;color:gray ">3.5mm Stereo</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 900px;margin-top:-90px;">MHL</p>
+            <p style="font-size: 14px;margin-left: 900px;margin-top:-20px;color:gray ">Yok</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 150px;margin-top:30px;">Wi-Fi</p>
+            <p style="font-size: 14px;margin-left: 150px;margin-top:-20px;color:gray ">802.11 a/b/g/n/ac 2.4+5GHz</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 500px;margin-top:-90px;">Wi-Fi Direct</p>
+            <p style="font-size: 14px;margin-left: 500px;margin-top:-20px;color:gray ">Evet</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 900px;margin-top:-90px;">Bluetooth Versiyon</p>
+            <p style="font-size: 14px;margin-left: 900px;margin-top:-20px;color:gray ">Bluetooth v5.0 (LE up to 2 Mbps)</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 150px;margin-top:30px;">NFC</p>
+            <p style="font-size: 14px;margin-left: 150px;margin-top:-20px;color:gray ">Var</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 500px;margin-top:-90px;">PC Senk.</p>
+            <p style="font-size: 14px;margin-left: 500px;margin-top:-20px;color:gray ">Smart Switch (PC versiyon)</p>
+
+            <p style="font-weight: bold;font-size: 20px;margin-left: 150px;margin-top: 50px;" >İS</p>
+            <p style="font-size: 14px;margin-left: 150px;margin-top: -20px;color:gray ">Android</p>
+
+            <p style="font-weight: bold;font-size: 20px;margin-left: 150px;margin-top: 50px;" >Genel Özellikler</p>
+            <p  style="font-weight: bold;font-size: 14px;margin-left: 150px;margin-top:30px;" >Tip</p>
+            <p style="font-size: 14px;margin-left: 150px;margin-top: -20px;color:gray ">Dokunmatik</p>
+
+            <p style="font-weight: bold;font-size: 20px;margin-left: 150px;margin-top: 50px;" >Sensörler</p>
+            <p style="font-size: 14px;margin-left: 150px;margin-top: -20px;color:gray ">İvme Ölçer, Parmakizi Sensörü, Cayro Sensörü, Jeomanyetik Sensör, Mesafe Sensörü, Sanal Işık Algılama</p>
+
+            <p style="font-weight: bold;font-size: 20px;margin-left: 150px;margin-top: 50px;" >Fiziksel Özellikler</p>
+            <p  style="font-weight: bold;font-size: 14px;margin-left: 150px;margin-top:30px;" >Boyutlar (YxGxD, mm)</p>
+            <p style="font-size: 14px;margin-left: 150px;margin-top: -20px;color:gray ">159.0 x 75.1 x 8.9</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 500px;margin-top:-85px;">Ağırlık (gr)</p>
+            <p style="font-size: 14px;margin-left: 500px;margin-top:-20px;color:gray ">188</p>
+
+            <p style="font-weight: bold;font-size: 20px;margin-left: 150px;margin-top: 50px;" >Batarya</p>
+            <p  style="font-weight: bold;font-size: 14px;margin-left: 150px;margin-top:30px;" >İnternet Kullanım Zamanı(LTE) (Saat)</p>
+            <p style="font-size: 14px;margin-left: 150px;margin-top: -20px;color:gray ">22 saate kadar</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 500px;margin-top:-85px;">İnternet Kullanım Zamanı(Wi-Fi) (Saat)</p>
+            <p style="font-size: 14px;margin-left: 500px;margin-top:-20px;color:gray ">22 saate kadar</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 900px;margin-top:-85px;">Video Oynatma Süresi (Saat)</p>
+            <p style="font-size: 14px;margin-left: 900px;margin-top:-20px;color:gray ">29 saate kadar</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 150px;margin-top:30px;">Pil Kapasitesi (mAh, Tipik)</p>
+            <p style="font-size: 14px;margin-left: 150px;margin-top:-20px;color:gray ">6000</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 500px;margin-top:-90px;">Çıkarılabilir</p>
+            <p style="font-size: 14px;margin-left: 500px;margin-top:-20px;color:gray ">Hayır</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 900px;margin-top:-90px;">Müzik Dinleme Süresi (Saat)</p>
+            <p style="font-size: 14px;margin-left: 900px;margin-top:-20px;color:gray ">131 saate kadar </p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 150px;margin-top:30px;">Konuşma Süresi (4G LTE) (Saat)</p>
+            <p style="font-size: 14px;margin-left: 150px;margin-top:-20px;color:gray ">49 e kadar</p>
+
+            <p style="font-weight: bold;font-size: 20px;margin-left: 150px;margin-top: 50px;" >Ses ve Video</p>
+            <p  style="font-weight: bold;font-size: 14px;margin-left: 150px;margin-top:30px;" >Stereo Desteği</p>
+            <p style="font-size: 14px;margin-left: 150px;margin-top: -20px;color:gray ">Yok</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 500px;margin-top:-85px;">Video İzleme Formatı</p>
+            <p style="font-size: 14px;margin-left: 500px;margin-top:-20px;color:gray ">MP4, M4V, 3GP, 3G2, WMV,</p>
+            <p style="font-size: 14px;margin-left: 500px;margin-top:-20px;color:gray ">ASF, AVI, FLV, MKV, WEBM</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 900px;margin-top:-105px;">Video Oynatma Çözünürlüğü</p>
+            <p style="font-size: 14px;margin-left: 900px;margin-top:-20px;color:gray ">UHD 4K (3840 x 2160)@60fps</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 150px;margin-top:30px;">Müzik Oynatma Formatı</p>
+            <p style="font-size: 14px;margin-left: 150px;margin-top:-20px;color:gray ">MP3, M4A, 3GA, AAC, OGG,</p>
+            <p style="font-size: 14px;margin-left: 150px;margin-top:-20px;color:gray ">OGA, WAV, WMA, AMR, AWB,</p>
+            <p style="font-size: 14px;margin-left: 150px;margin-top:-20px;color:gray ">FLAC, MID, MIDI, XMF, MXMF,</p>
+            <p style="font-size: 14px;margin-left: 150px;margin-top:-20px;color:gray ">IMY, RTTTL, RTX, OTA</p>
+
+            <p style="font-weight: bold;font-size: 20px;margin-left: 150px;margin-top: 50px;" >Servisler ve Uygulamalar</p>
+            <p  style="font-weight: bold;font-size: 14px;margin-left: 150px;margin-top:30px;" >Gear Desteği</p>
+            <p style="font-size: 14px;margin-left: 150px;margin-top: -20px;color:gray ">Galaxy Watch, Gear Circle</p>
+            <p style="font-size: 14px;margin-left: 150px;margin-top: -20px;color:gray ">(Manager Support), Gear Fit,</p>
+            <p style="font-size: 14px;margin-left: 150px;margin-top: -20px;color:gray ">Gear Fit2, Gear Fit2 Pro, Gear</p>
+            <p style="font-size: 14px;margin-left: 150px;margin-top: -20px;color:gray ">Sport, Gear1, Gear2, Gear2 Neo,</p>
+            <p style="font-size: 14px;margin-left: 150px;margin-top: -20px;color:gray ">Gear S, Gear S2, Gear S3, Gear</p>
+            <p style="font-size: 14px;margin-left: 150px;margin-top: -20px;color:gray ">IconX, Gear IconX (2018)</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 500px;margin-top:-225px;">Samsung DeX Desteği</p>
+            <p style="font-size: 14px;margin-left: 500px;margin-top:-20px;color:gray ">Hayır</p>
+            <p style="font-weight: bold;font-size: 14px;margin-left: 900px;margin-top:-85px;">Mobile TV</p>
+            <p style="font-size: 14px;margin-left: 900px;margin-top:-20px;color:gray ">Hayır</p>
+        </div>
+    </div>
+    <!--açılır kapanan divin alt kısmındaki divdir.burada linkin üstüne gelindiğinde mesaj çıkmaktadır.-->
+    <div id="mserisi-ozellikler19" >
+            <li  id="sarb2" v-bind:title="message95" style="text-decoration: none;list-style-type: none;margin-left: 50px;font-size: 20px;" ><a style="color: #000000;" href="#" id="sarb" > SAR Bilgisi</a>
+    </div>
+    </div>
 </div>
 
 <script type="text/javascript">
-var acc = document.getElementsByClassName("accordion2");
-var i;
+    var acc = document.getElementsByClassName("accordion3");
+    var i;
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-      /* Toggle between adding and removing the "active" class,
-      to highlight the button that controls the panel */
-      this.classList.toggle("active");
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            /* "Active" sınıfını ekleme ve çıkarma arasında geçiş yapma,
+            paneli kontrol eden düğme */
+            this.classList.toggle("active");
 
-      /* Toggle between hiding and showing the active panel */
-      var panel4 = this.nextElementSibling;
-      if (panel4.style.display === "block") {
-          panel4.style.display = "none";
-      } else {
-          panel4.style.display = "block";
-      }
-  });
-}
+            /* Paneli gizleme ve gösterme kısmı arasındaki geçiş */
+            var panel5 = this.nextElementSibling;
+            if (panel5.style.display === "block") {
+                panel5.style.display = "none";
+            } else {
+                panel5.style.display = "block";
+            }
+        });
+    }
 </script>
-<!--
-Footer2 div'inde Footer gibi bir alt kısım oluşturuldu. 
-İçindeki footer2-content divine bilgiler ve iconlar için
-footer2-section,footerı2-ımage,footer2-text,databinding,robotdegilim,
-footer2-text2 ve designedby adında divler oluşturuldu.
-Bu divlere uygun şekilde linkler yazıldı ve gerekli sosyal medya ve kredi kartı iconları konuldu.                                                 
--->
+
+
+<!--açılıp kapanı footer-->
+
+     <div id="demo">
+        <button v-on:click="show = !show"> Footer</button>
+            <transition name="fade">
+                <p v-if="show">
+                    <div class="footer">
+                        <div class="footer-content">
+                            <!-- Alt menü kısmının içinde linkler bulunduran component.-->
+                            <div id="siteharitası">
+                                <siteharitasıcomponent></siteharitasıcomponent>
+                            </div>
+                              <!-- Alt menü kısmının içinde linkler bulunduran component.-->
+                            <div id="faydalıbilgiler">
+                                 <faydalıbilgilercomponent></faydalıbilgilercomponent>
+                            </div>
+                              <!-- Alt menü kısmının içinde linkler bulunduran component.-->
+                            <div id="destek">
+                                <destekcomponent></destekcomponent>
+                            </div>
+        
+                              <!-- Sosyal medya ikonlarını ve linklerini içinde bulunduran component-->
+                            <div id="sosyalmedya">
+                                <sosyalmedyacomponent></sosyalmedyacomponent>
+                            </div>
+                        </div>
+                    </div>
+                </p>
+ 
+             </transition>
+        </div>
+<div>
+
+</div>
+</div>
+
+
+<!--footercontent component-->
 <div class="footer2">
-  <div class="footer2-content">
-    <!-- Alt menü kısmının içinde linkler bulunduran div.-->
-      <div class="footer2-section">
-         
-          <li class="altmenu"><a class="altmenu-a" href="#">Gizlilik ve Güvenlik</a></li>
-          <li class="altmenu"><a class="altmenu-a"  href="#">Sosyal Sorumluluk</a></li>
-          <li class="altmenu"><a class="altmenu-a" href="#">Erişebilirlik</a></li>
-          <li class="altmenu"><a  class="altmenu-a" href="#">Kullanım Şartları</a></li>
-                      
-      </div>
-      <div class="footerı2-ımage">
-           <img class="vısa" src="Photos/ind4.png" alt="vısaa">
-           <img class="mastercard" src="Photos/ind.png" alt="mastercardd">
-           <img class="amerıcanexpress" src="Photos/ind1.png" alt="amerıcan">
-           <img class="payu" src="Photos/ind2.png" alt="pay">
-      </div>
-      <!-- Alt menü kısmında içinde paragraf bulunduran div.-->
-      <div class="footer2-text">
-          <p class="altmenuyazı">Bu web sitesi en iyi Chrome, Firefox, Safari, Edge gibi güncel tarayıcılar ile görüntülenir.</p>
+        <div id="footercontent">
+                <footercontentcomponent></footercontentcomponent>
+        </div>
+</div>
 
 
-      </div>
-      <!-- Email type'ını ve kaydol linkini içinde bulunduran div.-->
-      <div class="databinding">
-         
-           <input class="input-group-field" type="email" placeholder="E-posta adresiniz" style="font-family:SamsungSharpSans-Medium; border-radius: 5px;-webkit-border-radius: 5px;
-           -moz-border-radius: 5px;height: 50px;width: 250px;margin-right: -100px; ;" required>
-           <a class="kaydol"  href="#">Kaydol</a>
-            
-       </div>
-        <!-- Ben robot değilim kısmı için checkbox ve label oluşturulan  div.-->
-       <div class="robotdegilim">
-           
-               <input type="checkbox" id="checkboxrobot" style="height: 25px;width: 25px;margin-top: 25px;margin-left: 25px;;" v-model="checked">
-               <label for="checkbox" style="font-size: 18;margin-left: 35px;;" >Ben Robot Değilim</label>
-               <img  src="robotdegilimımg.PNG" style="margin-left:240px; margin-top:-65px;width:60px; height:60px;" />
-         
-       </div>
-       <!-- Alt menü içinde paragraf bulunduran div.-->
-       <div class="footer2-text2">
-           <p class="altmenuyazı">Copyright © 1995-2019 SAMSUNG All Rights Reserved.</p>
-       </div>
-       <!-- Alt menü içinde link ve resim bulunduran div.-->
-       <div class="designedby">
-               <li class="designed"><a class="designed-a" href="#">designed by</a></li>
-               <img class="kreatif" src="Photos/kreatif-logo.png" alt="kreaatif">
+<!--Galaxy M serisi sayfasındaki sabit kalan div-->
 
-       </div>
-   </div>
+<div class="fiyat">
+        <hr/>
+         <p style="margin-left: 650px; font-size: 19px;">Toplam:</p>
+         <h1 style="margin-left: 750px;margin-top: -50px; color: black;" >2699 TL</h1>
+         <div class="kaydeta">
+                 <button class="kaydet1" style="margin-left: 300px;margin-top: -70px; width:5px; height: 50px;"><p class="kaydet22"  required="required">SEPETE </p> <p style="margin-top: -52px; margin-left: 12px;    text-decoration: none;
+                  color:#ccc;">EKLE</p></button>
+         </div>
+     
+</div>
+
+
+
+<script>new Vue({
+  el: '#app50',
+  data: {
+    activeSlide: 1
+  },
+  computed: {
+    styleObject: function() {
+      const width = 0 - ((this.activeSlide-1) * 700)
+      return {
+        transform: 'translateX('+width+'px)'
+      }
+    }
+  },
+  methods: {
+    changeSlide: function(num) {
+      this.activeSlide = num
+    },
+    nextSlide: function() { 
+      if(this.activeSlide < 5) this.activeSlide++
+    },
+    prevSlide: function() {
+      if(this.activeSlide > 1) this.activeSlide--
+    }
+  }
+})</script>
+<script>  // Get the modal
+  var modal = document.getElementById("myModal");
+
+  
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+
+
   <script src="code.js"></script>
 
-
-
-  <script>  // Get the modal
-      var modal = document.getElementById("myModal");
-
-      
-      // Get the button that opens the modal
-      var btn = document.getElementById("myBtn");
-
-      
-      // Get the <span> element that closes the modal
-      var span = document.getElementsByClassName("close")[0];
-      
-      // When the user clicks the button, open the modal 
-      btn.onclick = function() {
-        modal.style.display = "block";
-      }
-      
-      // When the user clicks on <span> (x), close the modal
-      span.onclick = function() {
-        modal.style.display = "none";
-      }
-      
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function(event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
-      }
-    </script>
 </body>
 
 </html>
