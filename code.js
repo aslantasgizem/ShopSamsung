@@ -15,6 +15,7 @@ new Vue({
       });
   
   
+  
   // Reference : https://github.com/romainsimon/vue-simple-search-dropdown
   //Dropdown menünün içine yazılacak olan Ürünler listelendi.    
   
@@ -844,8 +845,7 @@ new Vue({
           message70: 'Samsung Galaxy Note10+ 256GB (Fildişi Beyazı)',
          
       },
-  }) 
-  
+  })    
   
   new Vue({
       el:'#vue-app101',
@@ -875,477 +875,236 @@ new Vue({
         message: 'Favorilere Ekle',
        
     },
-  })    
-  new Vue({
+})    
+new Vue({
     el:'#vue-app105',
     data: {
         message: 'Favorilere Ekle',
        
     },
-  })    
-  new Vue({
+})    
+new Vue({
     el:'#vue-app106',
     data: {
         message: 'Favorilere Ekle',
        
     },
-  })    
-  new Vue({
+})    
+new Vue({
     el:'#vue-app107',
     data: {
         message: 'Favorilere Ekle',
        
     },
-  })    
-  new Vue({
+})    
+new Vue({
     el:'#vue-app108',
     data: {
         message: 'Favorilere Ekle',
        
     },
-  })    
-  new Vue({
+})    
+new Vue({
     el:'#vue-app109',
     data: {
         message: 'Favorilere Ekle',
        
     },
-  })    
-  new Vue({
+})    
+new Vue({
     el:'#vue-app110',
     data: {
         message: 'Favorilere Ekle',
        
     },
-  })    
-  new Vue({
+})    
+new Vue({
     el:'#vue-app111',
     data: {
         message: 'Favorilere Ekle',
        
     },
-  })    
-  new Vue({
+})    
+new Vue({
     el:'#vue-app112',
     data: {
         message: 'Favorilere Ekle',
        
     },
-  })    
-  new Vue({
+})    
+new Vue({
     el:'#vue-app113',
     data: {
         message: 'Favorilere Ekle',
        
     },
-  })    
-  new Vue({
+})    
+new Vue({
     el:'#vue-app114',
     data: {
         message: 'Favorilere Ekle',
        
     },
-  })    
-  new Vue({
+})    
+new Vue({
     el:'#vue-app115',
     data: {
         message75: 'Samsung 43 RU7090 4K UHD SMART TV',
        
     },
-  })    
-  new Vue({
+})    
+new Vue({
     el:'#vue-app116',
     data: {
         message76: 'Samsung 50 RU7090 4K UHD SMART TV',
        
     },
-  })    
-  
-  new Vue({
+})    
+
+new Vue({
     el:'#vue-app117',
     data: {
         message77: ' Samsung 55  RU7090 4K UHD SMART TV',
        
     },
-  })    
-  
-  new Vue({
+})    
+
+new Vue({
     el:'#vue-app118',
     data: {
         message78: 'Samsung 65 RU7090 4K UHD SMART TV',
        
     },
-  })    
-  
-  new Vue({
+})    
+
+new Vue({
     el:'#vue-app119',
     data: {
         message79: 'Samsung 65  Q900R QLED 8K TV',
        
     },
-  })    
-  
-  new Vue({
+})    
+
+new Vue({
     el:'#vue-app120',
     data: {
         message80: 'Samsung 75  Q900R QLED 8K TV',
        
     },
-  })    
-  
-  new Vue({
+})    
+
+new Vue({
     el:'#vue-app121',
     data: {
         message81: 'Samsung 82  RU7090 4K UHD SMART TV',
        
     },
-  })    
-  
-  new Vue({
+})    
+
+new Vue({
     el:'#vue-app122',
     data: {
         message82: ' Samsung 98  Q900R QLED 8K TV ',
        
     },
-  })    
-  
-  new Vue({
+})    
+
+new Vue({
     el:'#vue-app123',
     data: {
         message83: ' Samsung  Q70R Harman Kardon Soundbar',
        
     },
-  })    
-  
-  new Vue({
+})    
+
+new Vue({
     el:'#vue-app124',
     data: {
         message84: 'Samsung 43  RU7100 4K UHD SMART TV',
        
     },
-  })    
-  
-  new Vue({
+})    
+
+new Vue({
     el:'#vue-app125',
     data: {
         message85: 'Samsung 43  RU7400 4K UHD SMART TV',
        
     },
-  })    
-  
-  new Vue({
+})    
+
+new Vue({
     el:'#vue-app126',
     data: {
         message86: ' Samsung  49 RU7100 4K UHD SMART TV',
        
     },
-  })    
-  
-  new Vue({
+})    
+
+new Vue({
     el:'#vue-app127',
     data: {
         message87: 'Samsung 49  RU7300 Curved  4K UHD SMART TV',
        
     },
-  })    
-  
-  new Vue({
+})    
+
+new Vue({
     el:'#vue-app128',
     data: {
         message88: ' Samsung 50  RU7400 4K UHD TV ',
        
     },
-  })    
-  
-  new Vue({
+})    
+
+new Vue({
     el:'#vue-app129',
     data: {
         message89: ' Samsung 55  RU7100 4K UHD TV ',
        
     },
-  })    
-  
-  new Vue({
+})    
+
+new Vue({
     el:'#vue-app130',
     data: {
         message90: 'Samsung 55 RU7400 4K UHD TV',
        
     },
-  })    
-  
-  new Vue({
+})    
+
+new Vue({
     el:'#vue-app131',
     data: {
         message91: 'Samsung 55  RU7440 4K UHD TV',
        
     },
-  })    
-  
-  new Vue({
+})    
+
+new Vue({
     el:'#vue-app132',
     data: {
         message92: 'Samsung 58 RU7100 4K UHD TV ',
        
     },
-  })    
-  
-  new Vue({
+})    
+
+new Vue({
     el:'#vue-app133',
     data: {
         message93: 'Samsung 65  RU7100 4K UHD SMART TV',
        
     },
-  })    
-  
-  new Vue({
+})    
+
+new Vue({
     el:'#vue-app134',
     data: {
         message94: 'Samsung 65 RU7300 Curved 4K UHD SMART TV',
        
     },
-  })    
-  
-  
-  
-  new Vue({
-      el:'#vue-app135',
-      data: {
-          message95: 'Samsung Galaxy A50 64GB (Prizma Beyaz) SM-A505F',
-         
-      },
-  }) 
-  
-  new Vue({
-      el:'#vue-app136',
-      data: {
-          message96: 'Samsung Galaxy A50 64GB (Prizma Mavisi) SM-A505F',
-         
-      },
-  }) 
-  
-  new Vue({
-      el:'#vue-app137',
-      data: {
-          message97: 'Samsung Galaxy A50 64GB (Prizma Siyah) SM-A505F',
-         
-      },
-  }) 
-  
-  new Vue({
-      el:'#vue-app138',
-      data: {
-          message98: 'Samsung Galaxy A30 64GB (Sedef Beyazı) SM-A305F',
-         
-      },
-  }) 
-  
-  new Vue({
-      el:'#vue-app139',
-      data: {
-          message99: 'Samsung Galaxy A30 64GB (Sedef Mavisi) SM-A305F',
-         
-      },
-  }) 
-  new Vue({
-      el:'#vue-app140',
-      data: {
-          message100: 'Samsung Galaxy A30 64GB (Sedef Siyahı) SM-A305F',
-         
-      },
-  }) 
-  new Vue({
-      el:'#vue-app141',
-      data: {
-          message101: 'Samsung Galaxy A30s 64GB Çift SIM Siyah',
-         
-      },
-  }) 
-  
-  new Vue({
-      el:'#vue-app142',
-      data: {
-          message102: 'Samsung Galaxy S10e 128GB (Prizma Yeşil)',
-         
-      },
-  }) 
-  new Vue({
-      el:'#vue-app143',
-      data: {
-          message103: 'Samsung Galaxy M20 32GB SM-M205FZBATUR',
-         
-      },
-  }) 
-  new Vue({
-      el:'#vue-app144',
-      data: {
-          message104: 'Samsung Galaxy M20 32GB SM-M205FDAATUR',
-         
-      },
-  }) 
-  new Vue({
-      el:'#vue-app145',
-      data: {
-          message105: 'Samsung Galaxy M30s  (Çift SIM) Karbon Siyahı',
-         
-      },
-  }) 
-  new Vue({
-      el:'#vue-app146',
-      data: {
-          message106: 'Samsung Galaxy M30s  (Çift SIM) Pasifik Mavisi',
-         
-      },
-  }) 
-  
-  new Vue({
-      el:'#vue-app147',
-      data: {
-          message107: 'Samsung Galaxy Note10 256GB  (Ay Tozu Grisi)',
-         
-      },
-  }) 
-  new Vue({
-      el:'#vue-app148',
-      data: {
-          message108: 'Samsung Galaxy Note10 256GB  (Duman Siyahı)',
-         
-      },
-  }) 
-  
-  new Vue({
-      el:'#vue-app101',
-      data: {
-          message: 'Favorilere Ekle',
-         
-      },
-  })    
-  new Vue({
-      el:'#vue-app102',
-      data: {
-          message: 'Favorilere Ekle',
-         
-      },
-  })    
-  new Vue({
-      el:'#vue-app103',
-      data: {
-          message: 'Favorilere Ekle',
-         
-      },
-  })    
-  
-  
-  
-        Vue.use(Dropdown);
-        new Vue({
-          el: '#app9',
-          data () {
-            return {
-              options: [
-                { name: 'İsim: A dan Z ye', id: 'isim' },
-                { name: 'İsim: Z den A ya', id: 'isim1' },
-                { name: 'Fiyat: Düşük --> Yüksek', id: 'fiyat' },
-                { name: 'Fiyat: Yüksek --> Düşük', id: 'fiyat1' },
-                { name: 'Özel Sıralama', id: 'ö' },
-                          
-              ],
-              selected: { name: null, id: null }
-            }
-          },
-          
-        });
-    
-  
-  //Checkbox 
-      // Kontrol edilmesi:
-      vm.toggle === 'yes'
-      // Kontrol edilmemesi:
-      vm.toggle === 'no'
-  
-  
-  
-  
-  // register modal component
-  Vue.component('modal', {
-      template: '#modal-template'
-    })
-    
-    // start app
-    new Vue({
-      el: '#app2',
-      data: {
-        showModal: false
-      }
-    })
-  
-  
-  //Footer kısmının componenti
-  Vue.component('siteharitasıcomponent', {
-     
-      template: '<div class="footer-section-siteharitası"><h4 class="site"><span>Site Haritası</span></h4><li class="altmenu1"><a class="altmenu1-a" href="#">Samsung Hakkında</a></li><li class="altmenu1"><a class="altmenu1-a" href="#">Yatırımcılar</a></li><li class="altmenu1"><a class="altmenu1-a" href="#">Basın Bilgileri</a></li><li class="altmenu1"><a class="altmenu1-a" href="#">Mağazalar</a></li><li class="altmenu1"><a class="altmenu1-a" href="#">Bize Ulaşın</a></li><li class="altmenu1"><a class="altmenu1-a" href="#">Sosyal Sorumluluk</a></li>              </div>'
-    })
-    new Vue({ el: '#siteharitası' })
-  
-    Vue.component('faydalıbilgilercomponent', {
-        template:'<div class="footer-section-faydalıbilgiler"><h4 class="site"><span>Faydalı Bilgiler</span></h4><li class="altmenu1"><a class="altmenu1-a" href="#">Samsung Mağazaları</a></li><li class="altmenu1"><a class="altmenu1-a" href="#">Bize Ulaşın</a></li><li class="altmenu1"><a class="altmenu1-a" href="#">Kampanyalar</a></li></div>'
-    })
-    new Vue({ el: '#faydalıbilgiler' })
-  
-  Vue.component('destekcomponent', {
-        template:'<div class="footer-section-destek"><h4 class="site"><span>Desteğe İhtiyacınız Var Mı?</span></h4><li class="altmenu1"><a class="altmenu1-a" href="#">Telefon</a></li><li class="altmenu1"><a class="altmenu1-a" href="#">Canlı Destek</a></li><li class="altmenu1"><a class="altmenu1-a" href="#">E-Posta</a></li><li class="altmenu1"><a class="altmenu1-a" href="#">Sık Sorulan Sorular</a></li></div>'
-    })
-    new Vue({ el:'#destek' })
-  
-  Vue.component('sosyalmedyacomponent', {
-        template:'<div class="footer-section-sosyalmedya"><h4 class="site"><span>Sosyal Medyada Takip Edin</span></h4><a href="https://www.facebook.com/SamsungTurkey/"><img style="height:55px; width:55px;" class="facebook" src="Photos/indir.png" alt="facebook"> </a><a href="https://twitter.com/SamsungTurkiye" >    <img style="height:55px; width:55px;" class="twitter" src="Photos/indir (1).png" alt="twitter"></a><a href="https://www.youtube.com/user/SamsungTurkiye" > <img style="height:55px; width:55px;" class="youtube" src="Photos/indir (2).png" alt="youtube">                   </a><a href="https://www.instagram.com/SamsungTurkiye/"><img style="height:55px; width:55px;" class="instagram" src="Photos/indir (3).png" alt="instagram"></a></div>'
-    })
-    new Vue({ el:'#sosyalmedya' })
-  
-  //Footercontent kısmının componenti
-  Vue.component('footercontentcomponent', {
-        template:'<div class="footer2-content"><div class="footer2-section"> <li class="altmenu"><a class="altmenu-a" href="#">Gizlilik ve Güvenlik</a></li> <li class="altmenu"><a class="altmenu-a"  href="#">Sosyal Sorumluluk</a></li><li class="altmenu"><a class="altmenu-a" href="#">Erişebilirlik</a></li><li class="altmenu"><a  class="altmenu-a" href="#">Kullanım Şartları</a></li></div><div class="footerı2-ımage"><img class="vısa" src="Photos/ind4.png" alt="vısaa"><img class="mastercard" src="Photos/ind.png" alt="mastercardd"><img class="amerıcanexpress" src="Photos/ind1.png" alt="amerıcan"><img class="payu" src="Photos/ind2.png" alt="pay"></div><div class="footer2-text"><p class="altmenuyazı">Bu web sitesi en iyi Chrome, Firefox, Safari, Edge gibi güncel tarayıcılar ile görüntülenir.</p></div><div class="databinding"><input class="input-group-field" type="email" placeholder="E-posta adresiniz" style="font-family:SamsungSharpSans-Medium; border-radius: 5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;height: 50px;width: 250px;margin-right: -100px; ;" required><a class="kaydol"  href="#">Kaydol</a></div><div class="robotdegilim"><input type="checkbox" id="checkboxrobot" style="height: 25px;width: 25px;margin-top: 25px;margin-left: 25px;;" v-model="checked"><label for="checkbox" style="font-size: 18;margin-left: 35px;;" >Ben Robot Değilim</label><img  src="robotdegilimımg.PNG" style="margin-left:240px; margin-top:-65px;width:60px; height:60px;" /></div><div class="footer2-text2"></div><p class="altmenuyazı">Copyright © 1995-2019 SAMSUNG All Rights Reserved.</p></div><div class="designedby"><li class="designed"><a class="designed-a" href="#">designed by</a></li><img class="kreatif" src="Photos/kreatif-logo.png" alt="kreaatif"></div></div>'
-    })
-    new Vue({ el:'#footercontent' })
-  
-  //Üst menüdeki üye kısmının componenti
-  Vue.component('dropdownuyeolcomponent', {
-      template:'<ul class="menu5"><li class="uyegirisi1"><a class="uyegirisi" href="#"><img class="icon1" src="Photos/header-user-icon.png" ></a><ul class="uyegirisi2"><li><a class="uyegirisi3" href="uyeol.html">Üye Ol</a> </li><li><a class="uyegirisi3" href="uyegirisi.html">Üye Girişi</a> </li><li><a class="uyegirisi3" href="index.html" >Şifremi Unuttum</a> </li> <li><a class="uyegirisi3" href="#">İstek Listesi</a></li></ul> </li></ul>'
-  })
-  new Vue({ el:'#dropdownuyeol' })
-  
-  //Samsung Logo componenti
-  Vue.component('samsunglogocomponent',{
-      template:'<li><a href="file:///C:/Users/Tu%C4%9F%C3%A7e%20Gizem/Desktop/Samsung.com/anasayfa.htm"><img class="sms" alt="samsung" height="19" src="Photos/samsung-logo.png" width="129" /></li>'
-  })
-  new Vue({ el:'#samsunglogo' })
-  
-  //galaxy m serisi ürününü detay sayfasındaki 80 ve 120 derece butonlarına basıldığında konumun aynı kalıp resmin değişmesi 
-  var img = document.getElementById("img-area");
-      function genisaci(){
-          img.src='https://images.samsung.com/is/image/samsung/tr-feature-galaxy-m30s-m307-184748593?$FB_TYPE_E_JPG$';
-      }
-      function ultragenisaci(){
-          img.src='https://images.samsung.com/is/image/samsung/tr-feature-galaxy-m30s-m307-184748594?$FB_TYPE_E_JPG$';
-      }
-  
-  //açılır kapanır footer
-  new Vue({
-      el: '#demo',
-      data: {
-           show: true
-       }
-  })
-  
-  //ürün sayfasındaki "Sar Bilgisi" üstüne gelindiğinde çıkan mesaj
-  new Vue({
-      el:'#sarb2',
-      data: {
-          message95: 'Yeni Bir Pencerede Aç',
-         
-      },
-  })
-  
-  
+})
+
 //Footer kısmının componenti
 Vue.component('siteharitasıcomponent', {
    
