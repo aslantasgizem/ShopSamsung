@@ -1275,3 +1275,45 @@ new Vue({
     vm.toggle === 'no'
 
 
+
+    new Vue({
+        el: '#app50',
+        data: {
+          activeSlide: 1
+        },
+        computed: {
+          styleObject: function() {
+            const width = 0 - ((this.activeSlide-1) * 700)
+            return {
+              transform: 'translateX('+width+'px)'
+            }
+          }
+        },
+        methods: {
+          changeSlide: function(num) {
+            this.activeSlide = num
+          },
+          nextSlide: function() { 
+            if(this.activeSlide < 4) this.activeSlide++
+          },
+          prevSlide: function() {
+            if(this.activeSlide > 1) this.activeSlide--
+          }
+        }
+      })
+
+
+// register modal component
+Vue.component('modal', {
+    template: '#modal-template'
+  })
+  
+  // start app
+  new Vue({
+    el: '#app2',
+    data: {
+      showModal: false
+    }
+  })
+
+
