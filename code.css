@@ -3622,3 +3622,24 @@ p.text-shop1{
     overflow: hidden;
 }
 
+/* 
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+a img {
+    opacity: 0.99;
+}
+a img {
+    border: none;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+} */
+
+img.n10:hover{
+
+    -webkit-filter: opacity(50%) ;
+
+  }
