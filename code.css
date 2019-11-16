@@ -395,8 +395,6 @@ p.text-shop{
 	padding: 0;
 	border: none;
     outline: none;
-    
-
 }
 
 
@@ -3035,29 +3033,29 @@ divleri için alan yükseliği belirtildi. */
   h1.app9 {
     font-weight: 50;
     font-size: 1.0em;
-  }
+}
   p.app9 {
     font-size: .8em;
     color: #000;
     
-  }
+}
 
   #app9{
     margin-left:1050px ;
     margin-top: -60px;
-  }
+}
 
 
   .checkboxfiltre{
 
     margin-left: 45px;
 
-  }
+}
 
   .div1{
 
     margin-top: 70px;
-  }
+}
 
   .pagination a {
     color:blue;
@@ -3065,19 +3063,19 @@ divleri için alan yükseliği belirtildi. */
     padding: 8px 16px;
     text-decoration: none;
     transition: background-color .3s;
-  }
+}
   
   .pagination a.active {
 
     color: black;
-  }
+}
   
   .pagination a:hover:not(.active) {background-color: #ddd;}
 
   .yazimbl:hover{
     color:#2a52be;
 
-  }
+}
 
 
   .onecıkantv{
@@ -3643,3 +3641,4 @@ img.n10:hover{
     -webkit-filter: opacity(50%) ;
 
   }
+

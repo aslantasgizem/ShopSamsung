@@ -1,0 +1,241 @@
+<html>
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>Samsung.com</title>
+    <script type="text/javascript" src="https://unpkg.com/vue@latest"></script>
+    <script type="text/javascript" src="https://unpkg.com/vue-simple-search-dropdown@latest/dist/vue-simple-search-dropdown.min.js"></script>
+        
+    <link rel="stylesheet" type="text/css" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="magazalar.css"/>
+    <link href="magazalar.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"/>
+    
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.min.js"></script>
+    <script src="https://www.geoplugin.net/javascript.gp"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.6.1/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-google-maps/0.1.20/vue-google-maps.js"></script>
+    
+    
+  </head>
+
+  <body>
+      <script>
+
+          var myModel = {
+            zoom: 14,
+            mapStyles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#46bcec"},{"visibility":"on"}]}],
+            center: { 
+              lat: 30.4154, 
+              lng: -97.7982 },
+            currentLocation: {
+              current_lat : 1.38,
+              current_long : 103.8
+            },
+            markers: [{
+                  position: { lat: 30.4154, lng: -97.7982 },
+                  opacity: 1,
+                  draggable: true,
+                  enabled: true,
+                  clicked: 0,
+                  rightClicked: 0,
+                  dragended: 0,
+                  ifw: false,
+                  ifw2text: "This text is bad please change me :( "
+                },
+                {
+                  position: { lat: 30.3005428, lng: -97.7218185 },
+                  opacity: 1,
+                  draggable: true,
+                  enabled: true,
+                  clicked: 0,
+                  rightClicked: 0,
+                  dragended: 0,
+                  ifw: false,
+                  ifw2text: "This text is bad please change me :( "
+                }]
+          };
+          
+          VueGoogleMap.load({
+              'key': 'AIzaSyAKGnSuVvogk-efwG_qIVHnL8IdbOEhrXM',
+          })
+          
+          Vue.component('google-map', VueGoogleMap.Map);
+          
+          Vue.component('marker', VueGoogleMap.Marker);
+          
+          Vue.component('info-window', VueGoogleMap.InfoWindow);
+          
+          var myViewModel = new Vue({
+            el: 'body',
+            data: myModel, 
+            methods: {
+              getlocation: function (event) {
+                this.center.lat = parseFloat(geoplugin_latitude());
+                this.center.lng = parseFloat(geoplugin_longitude());
+                $('#current-location').val(geoplugin_city() + ',' + geoplugin_region());
+                
+                this.zoom = 15;
+              }
+            }
+          });
+          
+          $(document).foundation();
+          
+            </script>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="magazalar.js"></script>
+    <google-map style="width: 100%; height: 100%; position: absolute; left:0; top:0; z-index: 0;"
+    :center.sync="center"
+    :zoom.sync="zoom"
+    :options="{styles: mapStyles, scrollwheel: scrollwheel}"
+>
+   <marker 
+      v-for="m in markers"
+      :position.sync="m.position"
+      :clickable="true"
+      :draggable="false"
+      @g-click="center=m.position"
+    >
+   <info-window
+      :opened.sync="m.ifw"
+      :content="m.ifw2text"
+      ></info-window>
+  </marker>
+</google-map>
+
+<div id="search-container" class="row">
+  <div class="small-12 columns">
+  <div id="my_view">
+  <div class="search-header">
+    <h3>MAĞAZA BULUCU</h3>
+    <div class="input-group">
+  <span class="input-group-label"><i class="fa fa-search"></i></span>
+  <input id="current-location" class="input-group-field" type="text">
+  <div class="input-group-button">
+    <input type="submit" class="button" value="Search">
+  </div>
+</div>
+    <div>
+        <div>
+            <label for="volume" style=" margin-left: 150px;">50 km</label>
+            <input type="range" id="start" name="volume"
+                   min="0" max="11">
+            <label for="volume">0</label>
+            
+            <label for="volume" style=" margin-left: 340px; margin-top: -25px; ">100</label>
+          </div>
+        
+    </div>
+    </div>
+  
+    
+    <div class="locations">
+      <table class="location-table" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+            <div class="location-header">SAMSUNG Mobile-Kızılay AVM</div>
+            <div class="location-header">ANKARA, 0.21km</div>
+            
+            <div class="location-type">ATATURK BULVARI NO:96 KIZILAY</div>
+            <div class="location-type">AVM, ANKARA, ÇANKAYA, 06400</div>
+          </td>
+          
+        </tr>
+        <tr>
+          
+          <td>
+            <div class="location-lobby-header">Telefon: 03123103033</div>
+            <div class="location-lobby-header">E-posta :  samsungzemin@gmail.com</div>
+            <img src="photos/store1.png" style="margin-left:280px; margin-top: -110px;"/>
+          </td>
+          
+        </tr>
+    
+
+        
+      </table>
+      <table class="location-table" cellspacing="0" cellpadding="0">
+          <tr>
+            <td>
+              <div class="location-header">SAMSUNG Mobile - Çankaya</div>
+              <div class="location-header">ANKARA, 0.21 km</div>
+              
+              <div class="location-type">Necatibey Cd. No: 7/A-B Sıhhiye,</div>
+              <div class="location-type">ANKARA, Çankaya, 6420</div>
+            </td>
+            
+          </tr>
+          <tr>
+            
+            <td>
+              <div class="location-lobby-header">Telefon : 0312 397 10 38</div>
+              <div class="location-lobby-header">E-posta : samsungnecatibey@gmail.com</div>
+              <img src="photos/store2.png" style="margin-left:280px; margin-top: -110px;"/>
+            </td>
+            
+          </tr>
+      
+  
+          
+        </table>
+        <table class="location-table" cellspacing="0" cellpadding="0">
+            <tr>
+              <td>
+                <div class="location-header">SAMSUNG-Cepa AVM</div>
+                <div class="location-header">ANKARA, 1.24 km</div>
+                
+                <div class="location-type">Eskişehir Yolu 7. Km. Kat:2,</div>
+                <div class="location-type">ANKARA, Çankaya, 06520</div>
+              </td>
+              
+            </tr>
+            <tr>
+              
+              <td>
+                <div class="location-lobby-header">ANKARA, Çankaya, 06520</div>
+                <div class="location-lobby-header">E-posta : info@kutup.net</div>
+                <img src="photos/store3.png" style="margin-left:280px; margin-top: -110px;"/>
+              </td>
+              
+            </tr>
+        
+    
+            
+          
+
+    </div>
+</div>
+    
+  </div>
+</div>
+
+
+ 
+<script>
+import VueSlider from 'vue-slider-component'
+import 'vue-slider-component/theme/antd.css'
+ 
+export default {
+  components: {
+    VueSlider
+  },
+  data () {
+    return {
+      value: 0
+    }
+  }
+}
+</script>
+
+
+
+  </body>
+</html>
