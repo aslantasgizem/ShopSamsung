@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Samsung.com</title>
+<script type="text/javascript" src="https://unpkg.com/vue@latest"></script>
+<script type="text/javascript" src="https://unpkg.com/vue-simple-search-dropdown@latest/dist/vue-simple-search-dropdown.min.js"></script>
+    
+<link rel="stylesheet" type="text/css" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="CanlıDestek.css"/>
+<link href="CanlıDestek.js">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<script src ="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-multiselect@2.1.0"></script>
+<link rel="stylesheet" href="https://unpkg.com/vue-multiselect@2.1.0/dist/vue-multiselect.min.css">
+<script src="https://unpkg.com/vue"></script>
+<script src="https://unpkg.com/vueperslides"></script>
+<link href="https://unpkg.com/vueperslides/dist/vueperslides.css" rel="stylesheet">
+<!--icon kullanmak için kütüphane-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+  <!--LOGO ve başlık kısmı-->
+    <div class="canlıdestek">
+      <img src="Photos/logo2.PNG" alt="logo" class="logo1" >
+      <h1 class="logo2">Canlı Destek</h1>
+    </div>
+    <div class="canlıdestek2">
+        <div class="canlıdestek3" style="text-align:left;font-family:Arial, Helvetica, sans-serif;font-size: 14px;">Değerli müşterimiz;<br>
+          Samsung olarak aşağıdaki kategorilerde sizlere Canlı Destek hizmeti sağlamaktan mutluluk duyuyoruz.<br>
+          Size daha iyi bir hizmet sunabilmek için ise görüşmeye başlamadan önce ad, telefon numarası gibi bazı bilgilerinizi rica edeceğiz.<br>
+          Canlı Destek Görüşmesine bağlanabilmeniz için web tarayıcınızın JAVA eklentisinin aktif olması gerektiğini de hatırlatmak isteriz.
+              
+        </div>
+        
+    </div>
+    <hr/>
+    <div class="canlıdestek4">
+      <h3 style="font-weight: bold;margin-left:600px;" >Kategori Seçin</h3>
+
+    </div>
+    <!--slider foto galeri-->
+    <div id="app">
+        <div class="container">
+          <div id="slide">
+            <div v-for="(item, index) in items" :key="index">
+             <img :src="item.src"  />
+             
+             </div>
+           </div>
+          <div class="control">
+            <!--geri tuşu-->
+            <p @click="previous" class="prev">
+              <
+            </p>
+            <!--ileri tuşu-->
+            <P @click="next" class="next">
+              >
+            </P>
+          </div>
+        </div>
+        
+        
+      </div>
+      <!--Müşteri bilgisi div'i-->
+      <div class="canlıdestek5">
+        <h3 class="canlıdestek6">Müşteri Bilgisi</h3>
+        <!--İsim yazma kısmı-->
+        <div class="canlıdestek7" >
+        <label for="adsoyad" style="font-family:Palatino Linotype" >Ad</label><label for="yıldız" style="color: red;width: 1100px;" >(*)</label>
+        <input type="text" name="adsoyad1" id="adsoyad1" required>
+      </div>
+      <br>
+      <!--Soyadı kısmı-->
+      <div class="canlıdestek7" >
+          <label for="adsoyad"style="font-family:Palatino Linotype" >Soyad</label><label for="yıldız" style="color: red;width: 1100px;" >(*)</label>
+          <input type="text" name="adsoyad1" id="adsoyad1" required>
+        </div>
+        <br>
+        <!--E-posta kısmı-->
+        <div class="canlıdestek7" >
+            <label for="adsoyad"style="font-family:Palatino Linotype" >E-posta</label><label for="yıldız" style="color: red;width: 1100px;" >(*)</label>
+            <input type="text" name="adsoyad1" id="adsoyad1" required>
+          </div>
+          <br>
+          <!--Telefon numarası kısmı-->
+          <div class="canlıdestek7" >
+              <label for="adsoyad"style="font-family:Palatino Linotype" >Cep Telefonu Numarası</label><label for="yıldız" style="color: red;width: 900px;" >(*)</label>
+              <input type="text" name="adsoyad1" id="adsoyad1" required>
+              <p style="font-size: 11px;" >Numaranız 0 ile başlamalı ve 11 hane olmalıdır.</p>
+            </div>
+            <!--Ürün model kodu kısmı-->
+            <div id="canlıdestek8" >
+                <label for="adsoyad" style="width: 1000px;font-family:Palatino Linotype;">Ürün Model Kodu(Opsiyonel)</label>
+                <input type="text" name="adsoyad1" id="adsoyad1" required>
+                <!--Arama butonu kısmı.Butona basıldığında vue ile mesaj çıkmaktadır.-->
+                <button  v-on:click="greet" ><i class=" fa fa-search"></i></button>
+            </div>
+            <!--serinumarası kısmı-->
+            <div class="canlıdestek9">
+                <label for="adsoyad" style="width: 1000px;font-family:Palatino Linotype;" >Seri Numarası (Opsiyonel)</label>
+                <input type="text" name="adsoyad1" id="adsoyad1" required>
+            </div>
+            <!--Satın alma tarihi kısmı-->
+            <div class="canlıdestek10" >
+                <label for="adsoyad"  style="width: 1000px;font-family:Palatino Linotype;" >Satın alma tarihi (Opsiyonel)</label>
+                <!--Selectbox kısmı-->
+                <select>
+                    <option value="volvo">Seçiniz</option>
+                    <option value="saab">1 yıl</option>
+                    <option value="opel">1-2 yıl</option>
+                    <option value="audi">2 yıl üzeri</option>
+                    <option value="saab">bilinmiyor</option>
+                </select>
+            </div>
+            <!--Destek talep kısmı-->
+            <div class="canlıdestek11" >
+                <label for="destek" style="font-family:Palatino Linotype"  >Destek talebinizin nedeninden kısaca bahseder misiniz?</label>
+                <label for="destek1" style="color: red;">(*)</label>
+                <textarea rows="6" cols="50" style="margin-top: 20px;"></textarea>
+
+            </div>
+      </div>
+      <div class="canlıdestek12" >
+          <label for="destek1" style="color: red;">(*)</label>
+          <label for="alanlar1" style="font-size: 11px;font-family:Palatino Linotype;" >Doldurulması zorunlu alanlar</p>
+      </div>
+      <div class="canlıdestek13">
+          <input type="checkbox" name="vehicle1" ><a href="#"> Samsung Gizlilik Sözleşmesini</a> onaylayınız.<br>
+      </div>
+      <!--Butona basıldığında vue ile mesaj çıkmaktadır.-->
+      <div id="canlıdestek14">
+        <button v-on:click="greet" class="baslat">Başlat</button>
+      </div>
+      <!--yararlı bağlantılar kısmı-->
+      <div class="canlıdestek15">
+        <h4 style="margin-left: 610px;margin-top: 30px;font-size: 16px;" >Yararlı Bağlantılar</h4>
+        <div class="canlıdestek17" >
+          <!--Buton kısmı-->
+        <button class="canlıdestek16" >FOTA</button>
+        <button class="canlıdestek16">Canlı Destek</button>
+        <button class="canlıdestek16">SmartSwitch</button>
+      </div>
+
+      </div>
+   
+    <script src="CanlıDestek.js"></script>
+
+</body>
+</html>
