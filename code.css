@@ -3642,3 +3642,183 @@ img.n10:hover{
 
   }
 
+
+
+/*telefon destek css */
+.telefon1{
+    margin-left:5px;
+    width: 1000px;
+}
+.telefon4{
+
+    border: 0px solid #808080;
+    height: 750px;
+    width: 95%;
+    margin-left: 20px;
+
+}
+.telefon5{
+    margin-left: 80px;
+    margin-top: -70px;
+    
+}
+.accordion4{
+    cursor: pointer;
+    outline: none;
+    transition: 0.4s;
+    font: 15px Lato, sans-serif;
+    width: 200px;
+    
+}
+.panel4{
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+	overflow: hidden;
+}
+.canlıdestek2{
+    margin-left: 80px;
+    margin-top: -50px;
+}
+.eposta2{
+    margin-left: 80px;
+    margin-top: -45px;
+}
+.footer{
+    background: #e9e9e9;
+    color: #000;
+    height: 250px;
+    width: 2000;
+    position: relative;
+    margin-right: 500px;
+    
+    
+    
+}
+/*yeni footer*/
+.footer3{
+    background: #e9e9e9;
+    color: #000;
+    height: 350px;
+    width: 100%;
+    position: relative; /* normal şekilde dizilirler */
+   
+}
+.footer3.footer-content{
+    border: 1 px solid #ccc;
+    height: 350px;
+    display: flex;  /* soldan sağa yatay olarak esnek şekilde  */
+
+
+}
+.footer3  .footer-content .footer-section{
+    flex: 1;
+    border: 1 px solid #000;
+    padding: 25px;
+
+}
+.footer3  .footer-content .footer-section-siteharitası{
+    width: 200px;
+    padding: 50px;
+    position: relative;
+    float: left;
+    margin-left: 75px;
+    margin-top: 50px;
+}
+/* Alt menüyü içeren footer kısmında ki divlerin yerlerini , büyüklüklerini belirler.*/
+.footer3  .footer-content .footer-section-siteharitası{
+    width: 200px;
+    padding: 20px;
+    position: relative;
+    float: left;
+    margin-top: 50px;
+
+
+}
+/* Alt menüyü içeren footer kısmında ki divlerin yerlerini , büyüklüklerini belirler.*/
+.footer3  .footer-content .footer-section-faydalıbilgiler{
+    width: 200px;
+    padding: 20px;
+    position: relative;
+    float: left;
+    margin-top: 50px;
+}
+/* Alt menüyü içeren footer kısmında ki divlerin yerlerini , büyüklüklerini belirler.*/
+.footer3  .footer-content .footer-section-destek{
+    width: 200px;
+    padding: 20px;
+    position: relative;
+    float: left;
+    margin-top: 50px;
+
+}
+/* Alt menüyü içeren footer kısmında ki divlerin yerlerini , büyüklüklerini belirler.*/
+.footer3  .footer-content .footer-section-sosyalmedya{
+    width: 300px;
+    padding: 20px;
+    position: relative;
+    float: left;
+    margin-top: 50px;
+
+}
+.fhak{
+    background: #e9e9e9;
+    color: #000;
+    height: 80px;
+    width: 100%;
+    font-size: 12px;
+    line-height: 12px;
+
+
+}
+.altmenüler{
+    border: 1px solid #808080;
+    margin-top: -20px;
+
+}
+.altmenu2{
+    list-style-type: none;
+   
+}
+.altmenu2-a{
+	color: #696969;
+	text-decoration: none;
+    display: block; /*Alt satıra geçmesi için*/
+    font-family: SamsungOne;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.71;
+	
+}
+.footer4{
+    background: #525252;;
+    color: #000;
+    height: 70px;
+    position: relative;
+}
+.facebook1{
+    background:transparent url(Photos/f2.PNG) no-repeat left top;
+    height: 42px;
+    width: 42px;
+    margin-left: 300px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+.twitter1{
+    background:transparent url(Photos/t1.PNG) no-repeat left top;
+    height: 42px;
+    width: 42px;
+
+}
+.instagram1{
+    background:transparent url(Photos/i1.PNG) no-repeat left top;
+    height: 42px;
+    width: 42px;
+
+}
+.youtube1{
+    background:transparent url(Photos/y1.PNG) no-repeat left top;
+    height: 42px;
+    width: 42px;
+
+}
