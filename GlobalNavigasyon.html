@@ -8,8 +8,8 @@
 <script type="text/javascript" src="https://unpkg.com/vue-simple-search-dropdown@latest/dist/vue-simple-search-dropdown.min.js"></script>
     
 <link rel="stylesheet" type="text/css" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-<link rel="stylesheet" href="Erisilebilirlik.css"/>
-<link href="Erisilebilirlik.js">
+<link rel="stylesheet" href="GlobalNavigasyon.css"/>
+<link href="GlobalNavigasyon.js">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
@@ -473,7 +473,7 @@
   <div style="height: 2700px;">
 
     <hr> <!--Horizontal çizgi-->
-    <h5 style="color: grey; text-decoration: none; margin-left: 45px; font-family:'Times New Roman', Times, serif"> Home / Erişilebilirlik / Web Erişilebilirliği / <b>Arama</b> </h5>
+    <h5 style="color: grey; text-decoration: none; margin-left: 45px; font-family:'Times New Roman', Times, serif"> Home / Erişilebilirlik / Web Erişilebilirliği  </h5>
     <hr>
 
 
@@ -485,18 +485,18 @@
      <img src="photos/cizgi.png" style="margin-left: 1120px; margin-top: 0px;"/>
      <img src="photos/weberisebilirligi.png" style="margin-top: 30px;"/>
      <div style="height:85px; background-color:black"> 
-        <a style="margin-left: 150px; color:white; margin-top:0px;" href="GlobalNavigasyon.html"> <h5 class="global" style="margin-left: 150px;"> GLOBAL NAVİGASYON  </h5>
-            <a href="Erisilebilirlik.html"> <h5 class="arama" style="margin-left: 600px; margin-top: -25px;  color:white;">  ARAMA  </h5>
+        <a style="margin-left: 150px; color:white; margin-top:0px; " href="GlobalNavigasyon.html"> <h5 class="global" style="margin-left: 150px;"> GLOBAL NAVİGASYON  </h5>
+            <a href="Erisilebilirlik.html" > <h5 class="arama" style="margin-left: 600px; margin-top: -25px;  color:white;">  ARAMA  </h5>
                <a href="BaglantiyiAtla.html"> 
                  <h5 class="baglantı" style="margin-left: 950px; margin-top: -25px;  color:white;">  BAĞLANTIYI ATLA  </h5> </a>
             </a></a>
        
     </div>
 
-        <h1 style="margin-left: 500px; margin-top: 80px; color: black; font-size: 45px;" ><b>Arama Kılavuzu</b></h1>
-        <p  style="margin-left: 560px; font-size: 15px;"> Web Sitemizde Arama Kullanımı </p>
+        <h1 style="margin-left: 500px; margin-top: 80px; color: black; font-size: 45px;" ><b>Küresel Navigasyon Kılavuzu</b></h1>
+        <p  style="margin-left: 560px; font-size: 15px;">Web Sitemizdeki Küresel Navigasyon Çubuğunun Kullanımı </p>
 
-     <h2 style="margin-top: 150px; margin-left: 320px; color: black;"><b>Küresel Navigasyon Çubuğumuzdaki aramanın kullanımı</b></h2>
+     <h2 style="margin-top: 150px; margin-left: 320px; color: black;"><b>Küresel Navigasyon Çubuğumuzdaki alt menülerin bulunması</b></h2>
 
 <div id="app" >
             <ul class="navigator">
@@ -505,8 +505,7 @@
               <li @click="changeSlide(2)"style="background-color: grey;"></li>
               <li @click="changeSlide(3)" style="background-color: grey;"></li>
               <li @click="changeSlide(4)" style="background-color: grey;"></li>
-              <li @click="changeSlide(5)" style="background-color: grey;"></li>
-              <li @click="changeSlide(6)" style="background-color: grey;"></li>
+
               <li @click="nextSlide" style="background-color: grey;"> &raquo; </li>
             </ul>
             <div class="slider-container">
@@ -515,13 +514,12 @@
                 <li class="blue slide"></li>
                 <li class="grey slide"></li>
                 <li class="red slide"></li>
-                <li class="orange slide"></li>
-                <li class="purple slide"></li>
+
               </ul>
             </div>
           </div>
 
-<h2 style="margin-top: 70px; margin-left: 280px; color: black;"><b>Mobil Küresel Navigasyon Çubuğumuzdaki aramanın kullanımı</b></h2>
+<h2 style="margin-top: 70px; margin-left: 280px; color: black;"><b>Mobil Küresel Navigasyon Çubuğumuzdaki alt menülerin bulunması</b></h2>
 
 <div id="app1" >
         <ul class="navigator1">
@@ -532,6 +530,7 @@
           <li @click="changeSlide(4)" style="background-color: grey;"></li>
           <li @click="changeSlide(5)" style="background-color: grey;"></li>
           <li @click="changeSlide(6)" style="background-color: grey;"></li>
+          <li @click="changeSlide(7)" style="background-color: grey;"></li>
           <li @click="nextSlide" style="background-color: grey;"> &raquo; </li>
         </ul>
         <div class="slider1-container1">
@@ -542,6 +541,7 @@
             <li class="red1 slide1"></li>
             <li class="orange1 slide1"></li>
             <li class="purple1 slide1"></li>
+            <li class="purple11 slide1"></li>
           </ul>
         </div>
       </div>
@@ -599,7 +599,7 @@
               </div>
 
 
-        <script src="Erisilebilirlik.js"></script>
+        <script src="GlobalNavigasyon.js"></script>
 <script>
 
 
@@ -621,7 +621,7 @@ new Vue({
         this.activeSlide = num
       },
       nextSlide: function() { 
-        if(this.activeSlide < 6) this.activeSlide++
+        if(this.activeSlide < 4) this.activeSlide++
       },
       prevSlide: function() {
         if(this.activeSlide > 1) this.activeSlide--
@@ -650,7 +650,7 @@ new Vue({
                 this.activeSlide = num
               },
               nextSlide: function() { 
-                if(this.activeSlide < 6) this.activeSlide++
+                if(this.activeSlide < 7) this.activeSlide++
               },
               prevSlide: function() {
                 if(this.activeSlide > 1) this.activeSlide--
