@@ -548,61 +548,41 @@
             }
         </script>
     </div>
-    <div class="altmenüler">
-      
-            <div class="footer3">
-                  <div class="footer-content">
-                      <div class="footer-section-siteharitası">
-                          <h4 class="site" style="font-weight: bold;font-size: 14px;" ><span>ÜRÜNLER & SERVİSLER</span></h4>
-                         
-                          <li class="altmenu2"><a class="altmenu2-a" href="#">Akıllı Telefonlar</a></li>
-                          <li  class="altmenu2"><a class="altmenu2-a" href="#">Tabletler</a></li>
-                          <li class="altmenu2"><a class="altmenu2-a" href="#">Giyilebilir Cihazlar</a></li>
-                          <li class="altmenu2"><a class="altmenu2-a" href="#">Mobil Cihaz Aksesuarları</a></li>
-                          <li class="altmenu2"><a class="altmenu2-a" href="#">TV</a></li>
-                          <li class="altmenu2"><a class="altmenu2-a" href="#">Audio & Video</a></li>
-                          <li class="altmenu2"><a class="altmenu2-a" href="#">Monitör</a></li>               
-                      </div>
-                      <div class="footer-section-faydalıbilgiler">
-                           
-                         
-                           <li class="altmenu2"><a class="altmenu2-a" href="#">Buzdolabı</a></li>
-                           <li class="altmenu2"><a class="altmenu2-a" href="#">Pişiriciler</a></li>
-                           <li class="altmenu2"><a class="altmenu2-a" href="#">Çamaşır Makineleri</a></li>
-                           <li class="altmenu2"><a class="altmenu2-a" href="#">Bulaşık Makineleri</a></li>
-                           <li class="altmenu2"><a class="altmenu2-a" href="#">Klima</a></li>
-                           <li class="altmenu2"><a class="altmenu2-a" href="#">Elektrikli Süpürge</a></li>
-                           <li class="altmenu2"><a class="altmenu2-a" href="#">SSD</a></li>
-                           
-                            
-                      </div>
-                      <div class="footer-section-destek">
-                           <h4 class="site"  style="font-weight: bold;font-size: 14px;" ><span>ALIŞVERİŞ</span></h4>
-                         
-                           <li class="altmenu2"><a class="altmenu2-a" href="#">Kampanyalar</a></li>
-                           <li class="altmenu2"><a class="altmenu2-a" href="#">Samsung Deneyim Mağazası</a></li>
+<!--açılıp kapanı footer-->
 
-                      </div>
-                      <div class="footer-section-sosyalmedya">
-                           <h4 class="site"  style="font-weight: bold;font-size: 14px;" ><span>DESTEK</span></h4>
-                           <li class="altmenu2"><a class="altmenu2-a" href="#">Telefon</a></li>
-                           <li class="altmenu2"><a class="altmenu2-a" href="#">Canlı Destek</a></li>
-                           <li class="altmenu2"><a class="altmenu2-a" href="#">E-posta</a></li>
-                           <li class="altmenu2"><a class="altmenu2-a" href="#">Mağazalar</a></li>
-                           <li class="altmenu2"><a class="altmenu2-a" href="#">Bize Ulaşın</a></li>
-                      </div>
-                      <div class="footer-section-sosyalmedya">
-                            <h4 class="site"  style="font-weight: bold;font-size: 14px;" ><span>HAKKIMIZDA</span></h4>
-                            <li class="altmenu2"><a class="altmenu2-a" href="#">Hakkımızda</a></li>
-                            <li class="altmenu2"><a class="altmenu2-a" href="#">Yatırımcılar</a></li>
-                            <li class="altmenu2"><a class="altmenu2-a" href="#">Basın Bilgileri</a></li>
-                            <li class="altmenu2"><a class="altmenu2-a" href="#">Sosyal Sorumlulukr</a></li>
-                           
-                       </div>
-                  </div>
-                  
-       
-              </div>
+<div id="demo">
+    <button v-on:click="show = !show"> Footer</button>
+        <transition name="fade">
+            <p v-if="show">
+                <div class="footer">
+                    <div class="footer-content">
+                        <!-- Alt menü kısmının içinde linkler bulunduran component.-->
+                        <div id="siteharitası">
+                            <siteharitasıcomponent></siteharitasıcomponent>
+                        </div>
+                          <!-- Alt menü kısmının içinde linkler bulunduran component.-->
+                        <div id="faydalıbilgiler">
+                             <faydalıbilgilercomponent></faydalıbilgilercomponent>
+                        </div>
+                          <!-- Alt menü kısmının içinde linkler bulunduran component.-->
+                        <div id="destek">
+                            <destekcomponent></destekcomponent>
+                        </div>
+    
+                          <!-- Sosyal medya ikonlarını ve linklerini içinde bulunduran component-->
+                        <div id="sosyalmedya">
+                            <sosyalmedyacomponent></sosyalmedyacomponent>
+                        </div>
+                    </div>
+                </div>
+            </p>
+  
+         </transition>
+    </div>
+  <div>
+  
+  </div>
+  </div>
               <div class="fhak" > 
                 <p>Telif Hakkı © 1995-2019 SAMSUNG Tüm Hakları Saklıdır.</p>
                 <p>Websitesi Google Chrome, Mozilla Firefox , Explorer 11 ve Explorer'ın üst versiyonlarını desteklemektedir.</p>

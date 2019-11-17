@@ -1419,17 +1419,17 @@ new Vue({
 //Footer kısmının componenti
 Vue.component('siteharitasıcomponent', {
    
-    template: '<div class="footer-section-siteharitası"><h4 class="site"><span>Site Haritası</span></h4><li class="altmenu1"><a class="altmenu1-a" href="#">Samsung Hakkında</a></li><li class="altmenu1"><a class="altmenu1-a" href="#">Yatırımcılar</a></li><li class="altmenu1"><a class="altmenu1-a" href="#">Basın Bilgileri</a></li><li class="altmenu1"><a class="altmenu1-a" href="#">Mağazalar</a></li><li class="altmenu1"><a class="altmenu1-a" href="#">Bize Ulaşın</a></li><li class="altmenu1"><a class="altmenu1-a" href="#">Sosyal Sorumluluk</a></li>              </div>'
+    template: '<div class="footer-section-siteharitası"><h4 class="site"><span>Site Haritası</span></h4><li class="altmenu1"><a class="altmenu1-a" href="#">Samsung Hakkında</a></li><li class="altmenu1"><a class="altmenu1-a" href="#">Yatırımcılar</a></li><li class="altmenu1"><a class="altmenu1-a" href="#">Basın Bilgileri</a></li><li class="altmenu1"><a class="altmenu1-a" href="Magazalar.html">Mağazalar</a></li><li class="altmenu1"><a class="altmenu1-a" href="#">Bize Ulaşın</a></li><li class="altmenu1"><a class="altmenu1-a" href="#">Sosyal Sorumluluk</a></li>              </div>'
   })
   new Vue({ el: '#siteharitası' })
 
   Vue.component('faydalıbilgilercomponent', {
-      template:'<div class="footer-section-faydalıbilgiler"><h4 class="site"><span>Faydalı Bilgiler</span></h4><li class="altmenu1"><a class="altmenu1-a" href="#">Samsung Mağazaları</a></li><li class="altmenu1"><a class="altmenu1-a" href="#">Bize Ulaşın</a></li><li class="altmenu1"><a class="altmenu1-a" href="#">Kampanyalar</a></li></div>'
+      template:'<div class="footer-section-faydalıbilgiler"><h4 class="site"><span>Faydalı Bilgiler</span></h4><li class="altmenu1"><a class="altmenu1-a" href="#">Samsung Mağazaları</a></li><li class="altmenu1"><a class="altmenu1-a" href="#">Bize Ulaşın</a></li><li class="altmenu1"><a class="altmenu1-a" href="Kampanyalar.html">Kampanyalar</a></li></div>'
   })
   new Vue({ el: '#faydalıbilgiler' })
 
 Vue.component('destekcomponent', {
-      template:'<div class="footer-section-destek"><h4 class="site"><span>Desteğe İhtiyacınız Var Mı?</span></h4><li class="altmenu1"><a class="altmenu1-a" href="#">Telefon</a></li><li class="altmenu1"><a class="altmenu1-a" href="#">Canlı Destek</a></li><li class="altmenu1"><a class="altmenu1-a" href="#">E-Posta</a></li><li class="altmenu1"><a class="altmenu1-a" href="#">Sık Sorulan Sorular</a></li></div>'
+      template:'<div class="footer-section-destek"><h4 class="site"><span>Desteğe İhtiyacınız Var Mı?</span></h4><li class="altmenu1"><a class="altmenu1-a" href="Tel.html">Telefon</a></li><li class="altmenu1"><a class="altmenu1-a" href="CanlıDestek.html">Canlı Destek</a></li><li class="altmenu1"><a class="altmenu1-a" href="Eposta.html">E-Posta</a></li><li class="altmenu1"><a class="altmenu1-a" href="SıkSorulanSorular.html">Sık Sorulan Sorular</a></li></div>'
   })
   new Vue({ el:'#destek' })
 
@@ -1440,7 +1440,7 @@ Vue.component('sosyalmedyacomponent', {
 
 //Footercontent kısmının componenti
 Vue.component('footercontentcomponent', {
-      template:'<div class="footer2-content"><div class="footer2-section"> <li class="altmenu"><a class="altmenu-a" href="#">Gizlilik ve Güvenlik</a></li> <li class="altmenu"><a class="altmenu-a"  href="#">Sosyal Sorumluluk</a></li><li class="altmenu"><a class="altmenu-a" href="#">Erişebilirlik</a></li><li class="altmenu"><a  class="altmenu-a" href="#">Kullanım Şartları</a></li></div><div class="footerı2-ımage"><img class="vısa" src="Photos/ind4.png" alt="vısaa"><img class="mastercard" src="Photos/ind.png" alt="mastercardd"><img class="amerıcanexpress" src="Photos/ind1.png" alt="amerıcan"><img class="payu" src="Photos/ind2.png" alt="pay"></div><div class="footer2-text"><p class="altmenuyazı">Bu web sitesi en iyi Chrome, Firefox, Safari, Edge gibi güncel tarayıcılar ile görüntülenir.</p></div><div class="databinding"><input class="input-group-field" type="email" placeholder="E-posta adresiniz" style="font-family:SamsungSharpSans-Medium; border-radius: 5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;height: 50px;width: 250px;margin-right: -100px; ;" required><a class="kaydol"  href="#">Kaydol</a></div><div class="robotdegilim"><input type="checkbox" id="checkboxrobot" style="height: 25px;width: 25px;margin-top: 25px;margin-left: 25px;;" v-model="checked"><label for="checkbox" style="font-size: 18;margin-left: 35px;;" >Ben Robot Değilim</label><img  src="robotdegilimımg.PNG" style="margin-left:240px; margin-top:-65px;width:60px; height:60px;" /></div><div class="footer2-text2"></div><p class="altmenuyazı">Copyright © 1995-2019 SAMSUNG All Rights Reserved.</p></div><div class="designedby"><li class="designed"><a class="designed-a" href="#">designed by</a></li><img class="kreatif" src="Photos/kreatif-logo.png" alt="kreaatif"></div></div>'
+      template:'<div class="footer2-content"><div class="footer2-section"> <li class="altmenu"><a class="altmenu-a" href="#">Gizlilik ve Güvenlik</a></li> <li class="altmenu"><a class="altmenu-a"  href="#">Sosyal Sorumluluk</a></li><li class="altmenu"><a class="altmenu-a" href="Erisilebilirlik.html">Erişebilirlik</a></li><li class="altmenu"><a  class="altmenu-a" href="#">Kullanım Şartları</a></li></div><div class="footerı2-ımage"><img class="vısa" src="Photos/ind4.png" alt="vısaa"><img class="mastercard" src="Photos/ind.png" alt="mastercardd"><img class="amerıcanexpress" src="Photos/ind1.png" alt="amerıcan"><img class="payu" src="Photos/ind2.png" alt="pay"></div><div class="footer2-text"><p class="altmenuyazı">Bu web sitesi en iyi Chrome, Firefox, Safari, Edge gibi güncel tarayıcılar ile görüntülenir.</p></div><div class="databinding"><input class="input-group-field" type="email" placeholder="E-posta adresiniz" style="font-family:SamsungSharpSans-Medium; border-radius: 5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;height: 50px;width: 250px;margin-right: -100px; ;" required><a class="kaydol"  href="#">Kaydol</a></div><div class="robotdegilim"><input type="checkbox" id="checkboxrobot" style="height: 25px;width: 25px;margin-top: 25px;margin-left: 25px;;" v-model="checked"><label for="checkbox" style="font-size: 18;margin-left: 35px;;" >Ben Robot Değilim</label><img  src="robotdegilimımg.PNG" style="margin-left:240px; margin-top:-65px;width:60px; height:60px;" /></div><div class="footer2-text2"></div><p class="altmenuyazı">Copyright © 1995-2019 SAMSUNG All Rights Reserved.</p></div><div class="designedby"><li class="designed"><a class="designed-a" href="#">designed by</a></li><img class="kreatif" src="Photos/kreatif-logo.png" alt="kreaatif"></div></div>'
   })
   new Vue({ el:'#footercontent' })
 
@@ -1464,7 +1464,6 @@ var img = document.getElementById("img-area");
 	function ultragenisaci(){
 		img.src='https://images.samsung.com/is/image/samsung/tr-feature-galaxy-m30s-m307-184748594?$FB_TYPE_E_JPG$';
     }
-
 //açılır kapanır footer
 new Vue({
     el: '#demo',

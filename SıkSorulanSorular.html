@@ -3,10 +3,43 @@
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css">
   <meta charset="UTF-8">
+        <!--animasyon için-->
+<script src="jquery.blockUI.js"></script>
   <script src="https://unpkg.com/vue"></script>
   <link rel="stylesheet" href="SıkSorulanSorular.css"/>
 </head>
+
+<script src="http://code.jquery.com/jquery-2.0.0.js"></script>
+<script src="jquery.blockUI.js"></script>
+ <script>
+
+        $(document).ready(function() { 
+                $.blockUI({ 
+                    message: $('#ana'), 
+                    css: { 
+                        top:  ($(window).height() - 100) /2 + 'px', 
+                        left: ($(window).width() - 500) /2 + 'px', 
+                        width: '0px',
+                        opacity: 1
+                    },
+                    overlayCSS : {
+                        opacity: 1
+                    }
+                }); 
+        setTimeout($.unblockUI, 2000); 
+        }); 
+                
+        </script>
 <body>
+
+    <!--sayfa açılışında gelicek olan sayfa-->
+ <div id="ana" style="display:none;">
+    <div id="icorta">    
+    <img src="samsung-logo-png-samsung-logo-png-2104.png" style="margin-left: -50px;margin-top: -100px;" >    
+    </div>
+  </div>
+
+  
         <h1 style="font-size: 40px;font-weight: bold;color: #000;margin-left: 550px;" >Sıkça Sorulan Sorular</h1>
   <!-- our template -->
   <section id="app" class="section container">
