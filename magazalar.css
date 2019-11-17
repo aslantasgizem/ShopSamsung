@@ -7,6 +7,7 @@ body {
   height: 100%;
 }
 
+/*Search kısmı için stil düzenlemeleri*/
 #search-container {
   height: 100%;
   position: absolute;
@@ -48,16 +49,17 @@ body {
 #search-container .search-header .input-group .button:hover {
   background-color: #0084ad;
 }
-#search-container #filter-locations .accordion-title {
+/*Filter Location */
+#search-container  .accordion-title {
   color: #339ec8;
   font-weight: bold;
   border: none;
   padding: 1.25rem 21px;
 }
-#search-container #filter-locations .accordion-title:hover, #search-container #filter-locations .accordion-title:focus, #search-container #filter-locations .accordion-title:active {
+#search-container  .accordion-title:hover, #search-container  .accordion-title:focus, #search-container  .accordion-title:active {
   background-color: transparent;
 }
-#search-container #filter-locations .accordion-title:before {
+#search-container  .accordion-title:before {
   width: 15px;
   height: 15px;
   border-radius: 50%;
@@ -67,21 +69,12 @@ body {
   color: #93cbe2;
   font-weight: normal;
 }
-#search-container #filter-locations .accordion-content {
+#search-container  .accordion-content {
   border: none;
   padding: 0rem 21px;
 }
-#search-container #filter-locations .accordion-content input[type="checkbox"] {
-  border-radius: none;
-  border: 1px solid #cccccc;
-  height: 15px;
-  width: 15px;
-}
-#search-container #filter-locations .accordion-content p {
-  font-size: 0.9rem;
-  font-weight: bold;
-  margin-bottom: 0px;
-}
+
+
 #search-container #filter-locations .accordion-content label {
   color: #4a494e;
   margin-left: 4px;
@@ -104,7 +97,7 @@ body {
 #search-container #sort-by a:hover {
   color: #0084ad;
 }
-
+/*Konum , iletişim bilgilerinin yazıldığı yer*/
 .location-table {
   background-color: transparent !important;
   border: none;
@@ -117,24 +110,29 @@ body {
   border-top: 2px solid #e7e7e7;
   border-bottom: 2px solid #e7e7e7;
 }
+/*Konum Bilgilerinin yazılacağı yer*/
 .location-table tr {
   background-color: transparent !important;
   border: none;
 }
+/* Konum bilgileri girilir*/
 .location-table tr td {
   background-color: transparent !important;
   border: none;
   vertical-align: top;
   font-size: 12px;
 }
+/*Yazıların başlıkları*/
 .location-table tr td .location-header {
   font-size: 1rem;
   line-height: 1;
 }
+/*Açık adresin yazıldığı yer*/
 .location-table tr td .location-type {
   font-size: 11px;
   color: #9a9a9a;
 }
+/*Location kısmının stil düzenlemeleri*/
 .location-table tr td .location-address {
   font-size: 11px;
   color: #9a9a9a;
@@ -180,20 +178,5 @@ body {
 }
 .location-table tr td .location-more-info a:last-child {
   padding-left: 15px;
-}
-
-#my_view {
-  width: 100%;
-  width: 404px;
-  border-right: 1px solid #979797;
-  height: 100%;
-  background-color: #fff;
-  position: absolute;
-  box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.5);
-}
-
-ul {
-  list-style: none;
-  margin: 0;
 }
 

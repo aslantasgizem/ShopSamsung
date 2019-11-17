@@ -26,41 +26,9 @@
     
   </head>
   <body>
-      <script>
 
-          var myModel = {
-            zoom: 14,
-            mapStyles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#46bcec"},{"visibility":"on"}]}],
-            center: { 
-              lat: 30.4154, 
-              lng: -97.7982 },
-            currentLocation: {
-              current_lat : 1.38,
-              current_long : 103.8
-            },
-            markers: [{
-                  position: { lat: 30.4154, lng: -97.7982 },
-                  opacity: 1,
-                  draggable: true,
-                  enabled: true,
-                  clicked: 0,
-                  rightClicked: 0,
-                  dragended: 0,
-                  ifw: false,
-                  ifw2text: "This text is bad please change me :( "
-                },
-                {
-                  position: { lat: 30.3005428, lng: -97.7218185 },
-                  opacity: 1,
-                  draggable: true,
-                  enabled: true,
-                  clicked: 0,
-                  rightClicked: 0,
-                  dragended: 0,
-                  ifw: false,
-                  ifw2text: "This text is bad please change me :( "
-                }]
-          };
+    <!--Maps alanının script kısmı-->
+      <script>
           
           VueGoogleMap.load({
               'key': 'AIzaSyAKGnSuVvogk-efwG_qIVHnL8IdbOEhrXM',
@@ -68,7 +36,7 @@
           
           Vue.component('google-map', VueGoogleMap.Map);
           
-          Vue.component('marker', VueGoogleMap.Marker);
+
           
           Vue.component('info-window', VueGoogleMap.InfoWindow);
           
@@ -93,6 +61,8 @@
     <script src="magazalar.js"></script>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12060.398246047294!2d29.268165691239854!3d40.91356283454889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cadaffc1072c4d%3A0x3807e76678187174!2zU8O8bMO8bnRlcGUsIDM0OTA5IFBlbmRpay_EsHN0YW5idWw!5e0!3m2!1str!2str!4v1573857012715!5m2!1str!2str" width="600" height="450" frameborder="0" style="width: 100%; height: 100%; position: absolute; left:0; top:0; z-index: 0;" allowfullscreen=""></iframe>
 
+
+    <!--Maps -->
     <template>
         <div>
           <h1>Google Maps Demo</h1>
@@ -136,7 +106,10 @@
   <div class="small-12 columns">
   <div id="my_view">
   <div class="search-header">
+
+
     <h3>MAĞAZA BULUCU</h3>
+     <!--Search kısmı-->
     <div class="input-group">
   <span class="input-group-label"><i class="fa fa-search"></i></span>
   <input id="current-location" class="input-group-field" type="text">
@@ -146,6 +119,7 @@
 </div>
     <div>
         <div>
+           <!--Distance bar kısmı -->
             <label for="volume" style=" margin-left: 150px;">50 km</label>
             <input type="range" id="start" name="volume"
                    min="0" max="11">
@@ -157,7 +131,7 @@
     </div>
     </div>
   
-    
+    <!--Üstte gözüken menünün içindeki konum , adres , iletişim bilgileri -->
     <div class="locations">
       <table class="location-table" cellspacing="0" cellpadding="0">
         <tr>
@@ -175,6 +149,7 @@
           <td>
             <div class="location-lobby-header">Telefon: 03123103033</div>
             <div class="location-lobby-header">E-posta :  samsungzemin@gmail.com</div>
+             <!--Fotoğraf eklentisi -->
             <img src="photos/store1.png" style="margin-left:280px; margin-top: -110px;"/>
           </td>
           
@@ -196,6 +171,7 @@
             <td>
               <div class="location-lobby-header">Telefon : 0312 397 10 38</div>
               <div class="location-lobby-header">E-posta : samsungnecatibey@gmail.com</div>
+               <!--Fotoğraf eklentisi -->
               <img src="photos/store2.png" style="margin-left:280px; margin-top: -110px;"/>
             </td>
             
@@ -220,6 +196,7 @@
               <td>
                 <div class="location-lobby-header">ANKARA, Çankaya, 06520</div>
                 <div class="location-lobby-header">E-posta : info@kutup.net</div>
+                 <!--Fotoğraf eklentisi -->
                 <img src="photos/store3.png" style="margin-left:280px; margin-top: -110px;"/>
               </td>
               

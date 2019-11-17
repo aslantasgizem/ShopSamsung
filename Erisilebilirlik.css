@@ -1879,6 +1879,8 @@ margin-top:20px
     margin-top: -420px;
 }
 
+
+/*1. Slider için stil düzenleme */
   .slider-container { 
     overflow: hidden; 
     width:75% ; height: 540px; 
@@ -1887,6 +1889,8 @@ margin-top:20px
     margin-top:1000px ;
     margin-left: -80px;
   }
+
+  /*1. Slider için stil düzenleme ve resim ekleme*/
   .slider { width: 20000px; height: 2000px; overflow: hidden; transition: all .32s ease; }
   .slide { float: left; width: 1000px; height: 2500px; font-size: 40px; color: #eee; padding-top: 70px; }
   .green { background-image:url(Photos/e1.png) ; }
@@ -1895,11 +1899,12 @@ margin-top:20px
   .red { background-image:url(Photos/e4.png) ; }
   .orange { background-image:url(Photos/e5.png) ; }
   .purple { background-image:url(Photos/e6.png) ; }
-  
+  /*1. Slider için değiştirme çubuğu*/
   .navigator { 
       text-align: center; display: inline-block; margin: 15px auto; overflow: hidden; padding-bottom: 10px; 
       margin-top:600px ;
       margin-left: 500px; }
+
   .navigator li { 
     float: left;
     color: #ecf0f1; 
@@ -1911,7 +1916,7 @@ margin-top:20px
     position: relative;
    
   }
-/*2. Galeri */
+/*2. Galeri için stil düzenleme */
   .slider1-container1 { 
     overflow: hidden; 
     width:75% ; height: 420px; 
@@ -1920,6 +1925,7 @@ margin-top:20px
     margin-top:1800px ;
     margin-left: -100px;
   }
+    /*2. Slider için stil düzenleme ve resim ekleme*/
   .slider1 { width: 20000px; height: 2000px; overflow: hidden; transition: all .32s ease; }
   .slide1 { float: left; width: 1000px; height: 2000px; font-size: 40px; color: #eee; padding-top: 70px; }
   .green1 { background-image:url(Photos/e11.png) ; }
@@ -1928,7 +1934,7 @@ margin-top:20px
   .red1 { background-image:url(Photos/e14.png) ; }
   .orange1 { background-image:url(Photos/e15.png) ; }
   .purple1 { background-image:url(Photos/e16.png) ; }
-  
+    /*2. Slider için değiştirme çubuğu*/
   .navigator1 { 
       text-align: center; display: inline-block; margin: 15px auto; overflow: hidden; padding-bottom: 10px; 
       margin-top:600px ;
