@@ -1,0 +1,83 @@
+.geneldestek10{
+    font-weight: normal;
+    line-height: 28px;
+    height: 50px;
+    border-bottom: 1px solid #CCCCCC;
+    font-size: 24px;
+    margin-bottom: 26px;
+    padding: 0;
+    font-size: 16px;
+    margin-top: 50px;
+    font-family: monospace;
+    margin-left: 50px;
+}
+
+.bilgiler10{
+    margin-top: 70px;
+}
+.bilgiler11{
+    margin-top: 70px;
+    margin-left: 0px;
+}
+.bilgiler12{
+    margin-top: 150px;
+    margin-left: 0px;
+    height: 70px;
+    border-bottom: 1px solid #CCCCCC;
+}
+#select1{
+    width: 550px;
+    font-size: 12px;
+    font-family:arial;
+    font-weight: 10;
+    margin-top: 10px;
+    margin-left: 30px;
+    background-color: 	#D3D3D3;
+    border-radius: 4px;
+    margin-left: -450px;
+}
+#select2{
+    width: 550px;
+    font-size: 12px;
+    font-family:arial;
+    font-weight: 10;
+    margin-top: -30px;
+    margin-left: 250px;
+    background-color: 	#D3D3D3;
+    border-radius: 4px;
+}
+#select3{
+    width: 550px;
+    font-size: 12px;
+    font-family:arial;
+    font-weight: 10;
+    margin-top: 10px;
+    margin-left: -450px;
+    background-color: 	#D3D3D3;
+    border-radius: 4px;
+}
+.bilgiler19{
+    border-bottom: 1px solid #CCCCCC;
+    height: 150px;
+}
+.bilgiler20{
+    margin-top: 60px;
+    height: 150px;
+    border-bottom: 1px solid #CCCCCC;
+}
+.bilgiler21{
+    margin-top: 30px;
+    margin-left: 300px;
+    margin-left: 20px;
+}
+.bilgiler22{
+    border-bottom: 1px solid #CCCCCC;
+    height: 180px;
+    
+   
+}
+
+.bilgiler6{
+    border-bottom: 1px solid #CCCCCC;
+    height: 250px;
+}
