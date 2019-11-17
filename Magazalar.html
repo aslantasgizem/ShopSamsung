@@ -25,7 +25,6 @@
     
     
   </head>
-
   <body>
       <script>
 
@@ -92,25 +91,47 @@
             </script>
     <script src="https://unpkg.com/vue"></script>
     <script src="magazalar.js"></script>
-    <google-map style="width: 100%; height: 100%; position: absolute; left:0; top:0; z-index: 0;"
-    :center.sync="center"
-    :zoom.sync="zoom"
-    :options="{styles: mapStyles, scrollwheel: scrollwheel}"
->
-   <marker 
-      v-for="m in markers"
-      :position.sync="m.position"
-      :clickable="true"
-      :draggable="false"
-      @g-click="center=m.position"
-    >
-   <info-window
-      :opened.sync="m.ifw"
-      :content="m.ifw2text"
-      ></info-window>
-  </marker>
-</google-map>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12060.398246047294!2d29.268165691239854!3d40.91356283454889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cadaffc1072c4d%3A0x3807e76678187174!2zU8O8bMO8bnRlcGUsIDM0OTA5IFBlbmRpay_EsHN0YW5idWw!5e0!3m2!1str!2str!4v1573857012715!5m2!1str!2str" width="600" height="450" frameborder="0" style="width: 100%; height: 100%; position: absolute; left:0; top:0; z-index: 0;" allowfullscreen=""></iframe>
 
+    <template>
+        <div>
+          <h1>Google Maps Demo</h1>
+      
+          <GmapMap :center="center" :map-type-id="mapTypeId" :zoom="5">
+            <GmapMarker
+              v-for="(item, index) in markers"
+              :key="index"
+              :position="item.position"
+              @click="center = item.position"
+            />
+         </GmapMap>
+         
+        </div>   
+      
+      </template> 
+   
+      <script>
+      export default {
+        data() {
+          return {
+            center: { lat: -3.350235, lng: 111.995865 },
+            mapTypeId: "terrain",
+            markers: [
+              { position: { lat: -0.48585, lng: 117.1466 } },
+              { position: { lat: -6.9127778, lng: 107.6205556 } }
+            ]
+          };
+        }
+      };
+      </script>
+      
+      <style lang="scss" scoped>
+      .vue-map-container {
+        height: 450px;
+        max-width: 992px;
+        width: 100%;
+      }
+      </style>
 <div id="search-container" class="row">
   <div class="small-12 columns">
   <div id="my_view">
@@ -158,9 +179,6 @@
           </td>
           
         </tr>
-    
-
-        
       </table>
       <table class="location-table" cellspacing="0" cellpadding="0">
           <tr>
