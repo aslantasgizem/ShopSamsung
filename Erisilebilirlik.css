@@ -1506,56 +1506,7 @@ divleri için alan yükseliği belirtildi. */
     font-family: sans-serif;
     text-align: center;
   }
-  .slider-container { 
-    margin-left: -350px;
-    overflow: hidden; 
-    width: 400px; height: 400px; 
-    position: absolute; top: 50%; left: 50%; 
-    transform: translate(-50%, -50%);
-  }
-  .slider { width: 300px; height: 700px; margin-left: 0px; overflow: hidden; transition: all .32s ease; }
-  .slide { float: left; width: 300px; height: 700px; font-size: 40px; color: #eee; padding-top: 70px; }
-  .green { background-image:url(Photos/mini2y.jpeg) ; }
-  .blue { background-image:url(Photos/mini4y.jpeg) ; }
-  .grey { background-image:url(Photos/mini3y.jpeg) ; }
-  .red { background-image:url(Photos/mini1y.jpeg) ;}
-  .new{ background-image: url(Photos/newy.jpeg); }
-  .green1 { background-image:url(Photos/BBy.jpeg) ; }
-  .blue1 { background-image:url(Photos/DDy.jpeg) ; }
-  .grey1 { background-image:url(Photos/CCy.jpeg) ; }
-  .red1 { background-image:url(Photos/AAy.jpeg) ;}
-  .new1 { background-image:url(Photos/2y.jpeg) ;}
-  .lightgrey { background: white; margin-left: 90px;  }
   
-  .navigator { 
-      text-align: center; 
-      display: inline-block;
-      margin: 15px auto; 
-      overflow: hidden;
-      padding-bottom: 10px;
-      height: 700px;
-      width: 120px;
-     }
-
-  .navigator li { 
-    
-    color: #ecf0f1; 
-    border-radius: 0%; 
-    padding: 7px 11px; 
-    margin: 0 10px; cursor: pointer;
-    box-shadow: 0 3px 17px rgba(0,0,0,.3);
-    transition: all .32s ease;
-    position: relative;
-    
-  
-  }    
-
-  #app50 >ul li:hover{
-
-    border: 1px solid #000;
-  }
-
-
 .active:after {
 content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
@@ -1928,3 +1879,68 @@ margin-top:20px
     margin-top: -420px;
 }
 
+  .slider-container { 
+    overflow: hidden; 
+    width:75% ; height: 540px; 
+    position: absolute; top: 50%; left: 50%; 
+    transform: translate(-50%, -50%);
+    margin-top:1000px ;
+    margin-left: -80px;
+  }
+  .slider { width: 20000px; height: 2000px; overflow: hidden; transition: all .32s ease; }
+  .slide { float: left; width: 1000px; height: 2500px; font-size: 40px; color: #eee; padding-top: 70px; }
+  .green { background-image:url(Photos/e1.png) ; }
+  .blue { background-image:url(Photos/e2.png) ; }
+  .grey { background-image:url(Photos/e3.png) ; }
+  .red { background-image:url(Photos/e4.png) ; }
+  .orange { background-image:url(Photos/e5.png) ; }
+  .purple { background-image:url(Photos/e6.png) ; }
+  
+  .navigator { 
+      text-align: center; display: inline-block; margin: 15px auto; overflow: hidden; padding-bottom: 10px; 
+      margin-top:600px ;
+      margin-left: 500px; }
+  .navigator li { 
+    float: left;
+    color: #ecf0f1; 
+    border-radius: 50%; 
+    padding: 7px 11px; 
+    margin: 0 10px; cursor: pointer;
+    box-shadow: 0 3px 17px rgba(0,0,0,.3);
+    transition: all .32s ease;
+    position: relative;
+   
+  }
+/*2. Galeri */
+  .slider1-container1 { 
+    overflow: hidden; 
+    width:75% ; height: 420px; 
+    position: absolute; top: 50%; left: 50%; 
+    transform: translate(-50%, -50%);
+    margin-top:1800px ;
+    margin-left: -100px;
+  }
+  .slider1 { width: 20000px; height: 2000px; overflow: hidden; transition: all .32s ease; }
+  .slide1 { float: left; width: 1000px; height: 2000px; font-size: 40px; color: #eee; padding-top: 70px; }
+  .green1 { background-image:url(Photos/e11.png) ; }
+  .blue1 { background-image:url(Photos/e12.png) ; }
+  .grey1 { background-image:url(Photos/e13.png) ; }
+  .red1 { background-image:url(Photos/e14.png) ; }
+  .orange1 { background-image:url(Photos/e15.png) ; }
+  .purple1 { background-image:url(Photos/e16.png) ; }
+  
+  .navigator1 { 
+      text-align: center; display: inline-block; margin: 15px auto; overflow: hidden; padding-bottom: 10px; 
+      margin-top:600px ;
+      margin-left: 500px; }
+  .navigator1 li { 
+    float: left;
+    color: #ecf0f1; 
+    border-radius: 50%; 
+    padding: 7px 11px; 
+    margin: 0 10px; cursor: pointer;
+    box-shadow: 0 3px 17px rgba(0,0,0,.3);
+    transition: all .32s ease;
+    position: relative;
+   
+  }
