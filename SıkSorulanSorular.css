@@ -1,8 +1,8 @@
 /* margin kullanılarak resimler ve ikonların yerleri belirtildi. */
 /*Samsung Logo*/
 img.sms{
-	margin-left:50px;
-	margin-top:-85px;
+	margin-left:90px;
+	margin-top:15px;
 }
 
 /*sepet ikonu*/
@@ -12,7 +12,7 @@ img.icon2{
 }
 /*Üyelik dropdown ikonu*/
 img.icon1{
-	margin-top:35px;
+	margin-top:5px;
 	margin-left:450px
 }
 
@@ -83,9 +83,8 @@ p.text-shop{
   .footer{
     background: #e9e9e9;
     color: #000;
-    height: 450px;
-    width: 100%;
-    position: relative /* normal şekilde dizilirler */
+    height: 250px;
+    position: relative; 
     
 }
 .footer.footer-content{
@@ -1190,8 +1189,6 @@ divleri için alan yükseliği belirtildi. */
     background-color: transparent;
     display: flex;
     flex-wrap: wrap;
-    margin-top: -30px;
-    margin-left: 20px;
 }
 .breadcrumb li {
     display: inline-block;
@@ -1223,7 +1220,35 @@ divleri için alan yükseliği belirtildi. */
     text-decoration: none;
     margin-top: 110px;
 }
+.accordion {
+    background-color: #fff;
+    color: #FFF;
+    cursor: pointer;
+    padding: 5px;
+    width: 300px;
+    text-align: left;
+    border: 1px solid white;
+    outline: none;
+    transition: 0.4s;
+    font: 15px Lato, sans-serif;
+    text-decoration: none;
+    margin-left: -20px;
+}
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    overflow: hidden;
+    text-decoration: none;
+    margin-left: -20px;
+}
+.panel1{
+    list-style-type: none;
+    text-decoration: none;
+    margin-left: -15px;
+ 
 
+}
 .kategoriler{
     width: 430px;
     margin-top: -3100px;
@@ -1293,638 +1318,69 @@ divleri için alan yükseliği belirtildi. */
     margin-top:-305px;
     width: 300px;
 }
-.panel5{
-    padding: 0 18px;
-    background-color: white;
-    display: none;
-    overflow: hidden;
-}
-
-#verticle {
-    border-left: 1px solid #ccc;
-    height: 200px;
-    position: absolute;
-    left: 25%;
-    margin-left: -2px;
-    margin-top: -60px;
-}
-.mserisi-ozellikler1{
-    margin-left: 150px;
-    margin-top: -550px;
-}
-.mserisi-ozellikler2{
-    margin-left: 550px;
-    margin-top: -110px;
-}
-.mserisi-ozellikler3{
-    margin-left: 900px;
-    margin-top: -110px;
-}
-.mserisi-ozellikler4{
-    margin-left: 1200px;
-    margin-top: -110px;
-}
-.uekranp1{
-    margin-top: -1400px;
-    margin-left: 300px;
-}
-.tasarım1{
-    margin-top: 1000px;
-    font-size: 55px;
-    font-weight: bold;
-    margin-left: 370px;
-}
-.tasarım2{
-    margin-left: 350px;
-    margin-top: 50px;
-}
-.uclukamera{
-    width: 400px;
-    height: 600px;
-    margin-top: 100px;
-    margin-left: 150px;
-}
-.uclukamera3{
-    margin-left: 750px;
-    margin-top: -650px;
-}
-.ultragenis{
-    width: 900px;
-    font-size: 80px;
-    font-weight: bold;
-    margin-left: 350px;
-}
-.ultragenis2{
-    margin-top: 100px;
-    margin-left: 350px;
-    font-size: 16px;
-}
-
-.ultragenis4{
-    background:url(https://images.samsung.com/is/image/samsung/tr-feature---184096045) ;
-    height: 90px;
-    width: 90px;
-    margin-left: 600px;
-    margin-top: 80px;
-}
-.ultragenis5{
-    background:url(Photos/tr-feature---184096049.png) ;
-    height: 90px;
-    width: 90px;
-    margin-left: 200px;
-    margin-top: 80px;
-}
-.odakkamera{
-    width: 1000px;
-    font-size: 80px;
-    font-weight: bold;
-    margin-left:300px;
-    margin-top: 100px;
-}
-.odakacik{
-    background:url(Photos/tr-feature---184096052.png);
-    height: 90px;
-    width: 90px;
-    margin-left: 780px;
-    margin-top: 60px;
-}
-.odakkapali{
-    background: url(Photos/tr-feature---184096054.png);
-    height: 90px;
-    width: 90px;
-    margin-left: 600px;
-    margin-top: -135px;
-}
-.güc{
-    width: 800;
-    color: #636363;
-    font-size: 10px;
-    margin-left: 300px;
-    margin-right: 300px;
-}
-.parmakizi2{
-    margin-left: 200px;
-    margin-top: -100px;
-    width: 300px;
-}
-.parmakizi{
-    margin-left: 100px;
-}
-.yuztanıma2{
-    width: 300px;
-    margin-left:200px;
-    margin-top: -100px;
-}
-/*Açılır kapanır footer */
-.fade-enter-active, .fade-leave-active {
-    transition: opacity .5s;
-}
-.fade-enter, .fade-leave-to  {
-    opacity: 0;
-}
-.mserisi-ozellik17{
-    background: #f7f7f7;
-    height: 800px;
-    width: 1350px;
-    margin-left: 100px;
-    margin-top: 50px;
-}
-.fiyat{
-    position: fixed;
-    bottom: 0;
-    background: #ffff;
-    width: 100%;
-    margin-top: 150px;
-}
-.anaekran{
-    margin-top: 100px;
-    margin-left:200px;
-    width: 400px;
-}
-.anakeran2{
-    
-    margin-top: 300px;
-    margin-left: 270px;
-    width: 300px;
-}
-.anaekran3{
-    
-    width: 400px;
-    margin-top: -400px;
-    margin-left: 800px;
-}
-.anaekran4{
-   
-    width: 400px;
-    margin-left: 800px;
-    margin-top: 200px;
-}
-/*Galaxy m serisi detay sayfasındaki açılır kapanır div için oluşturulan buton*/
-.accordion3{
-    background: #f7f7f7;
-    color: #f7f7f7;
-    cursor: pointer;
-    padding: 5px;
-    width: 250px;
-    text-align: left;
-    border: 0.5px solid white;
-    outline: none;
-    transition: 0.4s;
-    font: 15px Lato, sans-serif;
-    text-decoration: none;
-    list-style-type: none;
-    margin-left: 600px;
-    margin-top: -150px;
-}
-
-.mserisiozellik18{
-    background: #E7E7E7;
-    width:1350px ;
-    height: 4300px;
-    margin-left: 80px;
-}
-#mserisi-ozellikler19{
-    height: 100px;
-    width: 1350px;
-    margin-left: 100px;
-    margin-top: 0px;
-    background:#E7E7E7 ;
-}
-#sarb{
-    list-style-type: none;
-    text-decoration: none;
-}
-#sarb:hover{
-    text-decoration: none;
-}
-
-.html, .body {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    margin: 0; padding: 0;
-    font-family: sans-serif;
-    text-align: center;
-  }
-  .slider-container { 
-    margin-left: -350px;
-    overflow: hidden; 
-    width: 400px; height: 400px; 
-    position: absolute; top: 50%; left: 50%; 
-    transform: translate(-50%, -50%);
-  }
-  .slider { width: 300px; height: 700px; margin-left: 0px; overflow: hidden; transition: all .32s ease; }
-  .slide { float: left; width: 300px; height: 700px; font-size: 40px; color: #eee; padding-top: 70px; }
-  .green { background-image:url(Photos/mini2y.jpeg) ; }
-  .blue { background-image:url(Photos/mini4y.jpeg) ; }
-  .grey { background-image:url(Photos/mini3y.jpeg) ; }
-  .red { background-image:url(Photos/mini1y.jpeg) ;}
-  .new{ background-image: url(Photos/newy.jpeg); }
-  .green1 { background-image:url(Photos/BBy.jpeg) ; }
-  .blue1 { background-image:url(Photos/DDy.jpeg) ; }
-  .grey1 { background-image:url(Photos/CCy.jpeg) ; }
-  .red1 { background-image:url(Photos/AAy.jpeg) ;}
-  .new1 { background-image:url(Photos/2y.jpeg) ;}
-  .lightgrey { background: white; margin-left: 90px;  }
-  
-  .navigator { 
-      text-align: center; 
-      display: inline-block;
-      margin: 15px auto; 
-      overflow: hidden;
-      padding-bottom: 10px;
-      height: 700px;
-      width: 120px;
-     }
-
-  .navigator li { 
-    
-    color: #ecf0f1; 
-    border-radius: 0%; 
-    padding: 7px 11px; 
-    margin: 0 10px; cursor: pointer;
-    box-shadow: 0 3px 17px rgba(0,0,0,.3);
-    transition: all .32s ease;
-    position: relative;
-    
-  
-  }    
-
-  #app50 >ul li:hover{
-
-    border: 1px solid #000;
-  }
-
-
-.active:after {
-content: "\2796"; /* Unicode character for "minus" sign (-) */
-}
-
-.galaxym{
-
-height: 2000px;
-}
-
-
-
-.mobilsag{
-margin-top: -750px;
-margin-left: 600px;
-width: 800px;
-height: 800px;
-}
-
-.mobilbtns{
-background-color: white;
-width: 170px;
-height: 80px;
-border: 1px solid #ccc;
-}
-.mobilbtns1{
-background-color: white;
-width: 170px;
-height: 80px;
-border: 1px solid blue;
-}
-
-.mobilbtns:hover{
-
-border: 1px solid black;
-}
-.mobilbtns2{
-background-color: white;
-width: 530px;
-height: 80px;
-border: 1px solid blue;
-}
-
-.mobilbtns3{
-background-color: white;
-width: 530px;
-height: 80px;
-border: 1px solid #ccc;
-}
-.mobilbtns3:hover{
-
-border: 1px solid black;
-
-}
-
-
-.mobilbtns4{
-background-color: white;
-width: 450px;
-height: 80px;
-border: 1px solid #ccc;
-}
-.mobilbtns4:hover{
-
-border: 1px solid black;
-
-}
-
-
-.renkbtns{
-
-width: 170px;
-height: 190px;
-background-color: white;
-border: 1px solid #ccc;
-
-
-}
-
-.renkbtns:hover{
-
-border: 1px solid black;
-
-}
-.renkbtns1{
-
-width: 170px;
-height: 190px;
-background-color: white;
-border: 1px solid blue;
-
-}
-.nasilcalisilir{
-
-color: #888888;
-}
-
-
-img.d1 {
-
-margin-left:120px;
-width: 50px;
-height: 50px;
-}
-/*14 gün iade ikonu*/
-img.d3 {
-margin-top: -100px;
-margin-left:60px;
-width: 40px;
-height: 40px;
-}
-/*kargo takibi ikonu*/
-img.d5{
-margin-top: -190px;
-margin-left:400px;
-width: 40px;
-height: 40px;
-}
-/* Ücretsiz Kargo*/
-span.d2{
-font-size:8pt;
-margin-left: 90px;
-
-}
-/*14 Gün Koşulsuz İade*/
-span.d4{
-font-size:8pt;
-margin-left: 210px;
-margin-bottom: 300px;
-}
-/*24/7 Kargo Takibi*/
-span.d6{
-font-size:8pt;
-margin-left: 370px;
-}
-
-p.text-shop1{
-margin-left:370px;
-font-size:8pt;
-margin-top:20px
-
-}
-
-/*telefon destek css */
-.telefon1{
-    margin-left:5px;
-    width: 1000px;
-}
-.telefon4{
-
-    border: 1px solid #808080;
-    height: 750px;
-    width: 95%;
-    margin-left: 40px;
-
-}
-.telefon5{
-    margin-left: 80px;
-    margin-top: -70px;
-    
-}
-.accordion4{
-    cursor: pointer;
-    outline: none;
-    transition: 0.4s;
-    font: 15px Lato, sans-serif;
-    width: 200px;
-    
-}
 .panel4{
     padding: 0 18px;
     background-color: white;
     display: none;
-	overflow: hidden;
+    overflow: hidden;
 }
-.canlıdestek2{
-    margin-left: 80px;
-    margin-top: -50px;
-}
-.eposta2{
-    margin-left: 80px;
-    margin-top: -45px;
-}
-.footer{
-    background: #e9e9e9;
-    color: #000;
-    height: 250px;
-    width: 2000;
-    position: relative;
-    margin-right: 500px;
-    
-    
-    
-}
-/*yeni footer*/
-.footer3{
-    background: #e9e9e9;
-    color: #000;
-    height: 350px;
+.accordion2{
+    background-color: #3f3f3f;
+    color: #FFF;
+    cursor: pointer;
+    padding: 18px;
     width: 100%;
-    position: relative; /* normal şekilde dizilirler */
-   
+    text-align: left;
+    border: 1px solid white;
+    outline: none;
+    transition: 0.4s;
+    font: 20px Lato, sans-serif;
 }
-.footer3.footer-content{
-    border: 1 px solid #ccc;
-    height: 350px;
-    display: flex;  /* soldan sağa yatay olarak esnek şekilde  */
-
-
+.active, .accordion2:hover {
+    background-color: #ccc;
 }
-.footer3  .footer-content .footer-section{
-    flex: 1;
-    border: 1 px solid #000;
-    padding: 25px;
-
-}
-.footer3  .footer-content .footer-section-siteharitası{
-    width: 200px;
-    padding: 50px;
-    position: relative;
-    float: left;
-    margin-left: 75px;
-    margin-top: 50px;
-}
-/* Alt menüyü içeren footer kısmında ki divlerin yerlerini , büyüklüklerini belirler.*/
-.footer3  .footer-content .footer-section-siteharitası{
-    width: 200px;
-    padding: 20px;
-    position: relative;
-    float: left;
-    margin-top: 50px;
-
-
-}
-/* Alt menüyü içeren footer kısmında ki divlerin yerlerini , büyüklüklerini belirler.*/
-.footer3  .footer-content .footer-section-faydalıbilgiler{
-    width: 200px;
-    padding: 20px;
-    position: relative;
-    float: left;
-    margin-top: 50px;
-}
-/* Alt menüyü içeren footer kısmında ki divlerin yerlerini , büyüklüklerini belirler.*/
-.footer3  .footer-content .footer-section-destek{
-    width: 200px;
-    padding: 20px;
-    position: relative;
-    float: left;
-    margin-top: 50px;
-
-}
-/* Alt menüyü içeren footer kısmında ki divlerin yerlerini , büyüklüklerini belirler.*/
-.footer3  .footer-content .footer-section-sosyalmedya{
-    width: 300px;
-    padding: 20px;
-    position: relative;
-    float: left;
-    margin-top: 50px;
-
-}
-.fhak{
-    background: #e9e9e9;
-    color: #000;
-    height: 80px;
-    width: 100%;
-    font-size: 12px;
-    line-height: 12px;
-
-
-}
-.altmenüler{
-    border: 1px solid #808080;
-    margin-top: -20px;
-
-}
-.altmenu2{
-    list-style-type: none;
-   
-}
-.altmenu2-a{
-	color: #696969;
-	text-decoration: none;
-    display: block; /*Alt satıra geçmesi için*/
-    font-family: SamsungOne;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 1.71;
-	
-}
-.footer4{
-    background: #525252;;
-    color: #000;
-    height: 70px;
-    position: relative;
-}
-.facebook1{
-    background:transparent url(Photos/f1.PNG) no-repeat left top;
-    height: 50px;
-    width: 50px;
-    margin-left: 15px;
-    -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-}
-.twitter1{
-    background:transparent url(Photos/t1.PNG) no-repeat left top;
-    height: 50px;
-    width: 50px;
-
-}
-.instagram1{
-    background:transparent url(Photos/i1.PNG) no-repeat left top;
-    height: 50px;
-    width: 50px;
-
-}
-.youtube1{
-    background:transparent url(Photos/y1.PNG) no-repeat left top;
-    height: 50px;
-    width: 50px;
-
-}
-/*e-posta*/
-.anasayfa7{
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    color: gray;
-    text-decoration: none;
-}
-.anasayfa8{
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    text-decoration: none;
-    color: gray;
-}
-.anasayfa9{
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    text-decoration: none;
-    color: gray;
-}
-.eposta3{
-    width: 100%;
-    margin-left:0px;
-}
-.geneldestek{
-    background-color: #f7f7f7;
-    height: 270px;
-    width: 400px;
-    margin-left: 300px;
-    margin-top: -100px;
-}
-.geneldestek1{
-    margin-top: 30px;
-    margin-left: 50px;
-}
-.button5 {
-    background-color: #f7f7f7;
-    color: black;
-    border: 2px solid #000;
-    border-radius: 20px;
-    width: 250px;
-    margin-top: 50px;
-    font-family: 'Times New Roman', Times, serif;
-}
-.button5:hover {
-    background-color: #000;
-    color: white;
-}
-.geneldestek2{
-    background-color: #f7f7f7;
-    height: 270px;
-    width: 400px;
-    margin-left: 710px;
-    margin-top: -420px;
+.accordion2:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 15px;
+    float: right;
+    margin-left: 5px;
 }
 
+.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+
+/*sıkça sorulan sorular*/
+.message {
+      
+      margin-left: auto;
+      margin-right: auto;
+}
+.message-header {
+      cursor: pointer;
+      background-color: #fff;
+      margin-left: 0px;
+      border: 1px solid #000;
+      font-size: 18px;
+      color: #000;
+      
+}
+.message-body   {
+      padding: 0;
+      max-height: 100em;
+      overflow: hidden;
+      transition: 0.3s ease all;
+      background-color: #fff;
+}
+.is-closed .message-body {
+      max-height: 0;
+}
+.message-content {
+      padding: 10px;
+      background-color: #fff;
+      width: 1100px;
+
+      
+}
+/*sıkça sorulan sorula*/

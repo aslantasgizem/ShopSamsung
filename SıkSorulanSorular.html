@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css">
+  <meta charset="UTF-8">
+  <script src="https://unpkg.com/vue"></script>
+  <link rel="stylesheet" href="SıkSorulanSorular.css"/>
+</head>
+<body>
+        <h1 style="font-size: 40px;font-weight: bold;color: #000;margin-left: 550px;" >Sıkça Sorulan Sorular</h1>
+  <!-- our template -->
+  <section id="app" class="section container">
+    
+    <article class="message" :class="accordionClasses">
+      <div class="message-header" @click="toggleAccordion">
+        Üye Olma +     
+      </div>
+      <div class="message-body">
+        <div class="message-content">
+          Shop.samsung.com/tr’ye üye olarak Samsung ürünlerine 7 gün 24 saat dilediğiniz yerden ve dilediğiniz zaman ulaşabilir, online alışverişin rahatlığını yaşarken kampanyalarımızdan 
+          herkesten önce haberdar olabilirsiniz. Üye olmak için sayfanın en üstünde bulunan “Üye Ol” butonuna tıklayarak sizden istenen bilgileri doldurmanız ve şifrenizi belirlemeniz yeterlidir.</strong>
+        </div>
+      </div>
+    </article>
+
+  </section> 
+  <section id="app1" class="section container" style="margin-top: -70px;" >
+    
+    <article class="message" :class="accordionClasses">
+      <div class="message-header" @click="toggleAccordion">
+        Üyelik İptali +     
+      </div>
+      <div class="message-body">
+        <div class="message-content">
+          Web sitemizin en üstünde yer alan kullanıcı alanından üye girişinizi yaptıktan sonra “müşteri bilgilerim” sayfasından üyelik bilgilerinizi silebilirsiniz. Sipariş vermek istediğinizde yeniden üye olmanız gerekecektir.</strong>
+        </div>
+      </div>
+    </article>
+
+  </section> 
+  <section id="app2" class="section container" style="margin-top: -70px;">
+    
+    <article class="message" :class="accordionClasses">
+      <div class="message-header" @click="toggleAccordion">
+        Nasıl Sipariş Verebilirim ? +     
+      </div>
+      <div class="message-body">
+        <div class="message-content">
+          Satın almak istediğiniz ürün için "Sepete Ekle" butonuna bastığınızda ürün sepetinize eklenecektir. “Alışverişi Tamamla” butonuna tıkladığınızda teslimat bilgileri ekranına gelirsiniz. Teslimat ve fatura adresi bilgilerini doldurduktan sonra “Devam Et” butonuna bastığınızda ödeme bilgileri ekranına ulaşırsınız. Kredi kartı bilgilerinizi girdikten sonra “Siparişi Onayla” butonuna sadece bir defa tıklayarak siparişinizi onaylayabilirsiniz. Kurumsal fatura siparişleri için Vergi Dairesi ve Vergi Numarasının girilmesi zorunludur.</strong>
+        </div>
+      </div>
+    </article>
+
+  </section> 
+  <section id="app3" class="section container" style="margin-top: -70px;">
+    
+    <article class="message" :class="accordionClasses">
+      <div class="message-header" @click="toggleAccordion">
+        Sipariş Bilgilerimi Nasıl Görebilirim? +     
+      </div>
+      <div class="message-body">
+        <div class="message-content">
+          Siparişiniz onaylandığında sipariş numarası ekranda görünecektir. Ayrıca sipariş bilgilerinize ”Siparişlerim” sayfasından da ulaşabilirsiniz. Shop.samsung.com/tr’den satın aldığınız ürünlerin kargo takibi, değişim, iade ve servis gönderi işlemleri için sipariş numaranız gerekmektedir.</strong>
+        </div>
+      </div>
+    </article>
+
+  </section> 
+  <section id="app4" class="section container" style="margin-top: -70px;">
+    
+    <article class="message" :class="accordionClasses">
+      <div class="message-header" @click="toggleAccordion">
+        Siparişimi Değiştirebilir / İptal Edebilir Miyim? +     
+      </div>
+      <div class="message-body">
+        <div class="message-content">
+          Siparişinizi teslim aldıktan sonra “Mesafeli Sözleşmeler Yönetmeliği” gereğince ürününüzü 14 gün içinde iade edebilirsiniz.*
+(*Sadece shop.samsung.com.tr üzerinden yapılan alımlarda geçerlidir.)
+
+Sipariş/ürün iptali için bize haftanın her günü saat 08:00-20:00 arası 444 77 11 nolu Müşteri Destek Hattımızdan veya http://www.samsung.com/tr/support/erms1/ adresindeki iletişim formundan ulaşabilirsiniz.
+
+İadeler orjinal kutu/ambalajı ve faturasıyla birlikte yapılmalıdır. Ürünler ve bütün standart aksesuarları hasarsız, kullanılmamış ve tam olarak gönderilmelidir. Telefon, taşınabilir ve görüntülü elektronik cihazlar vb. için ürün ekranında yer alan koruma bandı çıkarılmamış olmalıdır.</strong>
+        </div>
+      </div>
+    </article>
+
+  </section> 
+  <section id="app5" class="section container" style="margin-top: -70px;">
+    
+    <article class="message" :class="accordionClasses">
+      <div class="message-header" @click="toggleAccordion">
+        Kargo ve Teslimat +     
+      </div>
+      <div class="message-body">
+        <div class="message-content">
+          Siparişiniz onaylandıktan sonra e-faturanız e-posta adresinize gönderilecektir. Ürününüz kargo firmasına teslim edildiğinde kargo takip bilgileri size SMS ve e-posta aracılığıyla iletilecektir.
+
+          Satın almış olduğunuz ürün/ürünlerin siparişten teslimata kadar tüm aşamalarını "Siparişlerim" adımından takip edebilir veya 444 77 11 nolu telefondan Samsung Müşteri Hizmetleri Servisimizden bilgi alabilirsiniz.</strong>
+        </div>
+      </div>
+    </article>
+
+  </section> 
+  <section id="app6" class="section container" style="margin-top: -70px;">
+    
+    <article class="message" :class="accordionClasses">
+      <div class="message-header" @click="toggleAccordion">
+        Siparişim elime ne zaman ulaşır? +     
+      </div>
+      <div class="message-body">
+        <div class="message-content">
+          Shop.Samsung’dan Türkiye’nin her yerine teslimat yapılmaktadır. Ürünlerinizin teslimatı Samsung Electronics Türkiye güvencesi altında anlaşmalı olduğumuz kargo firmaları tarafından yapılmaktadır. Teslimatlar sipariş sırasında belirtmiş olduğunuz teslimat adresinde size veya sizin tarafınızdan belirlenmiş olan 2. kişiye (sadece kimlik ibrazı karşılığı) yapılmaktadır.
+
+          Hafta içi saat 14:00’e kadar ürünler stokta ise aynı gün işlem görürler. Bu saatlerin dışında verilen siparişler ise ilk iş günü içinde işleme alınırlar. Hazırda bulunmayan ya da sipariş üzerine üretimi yapılan ürünlerin gönderimleri ise en geç siparişin verildiği günden sonraki 3 iş günü içerisinde kargo firmasına teslim edilir. Kargo firmaları sipariş etmiş olduğunuz ürünleri resmi tatil ve pazar günleri dışında kalan tüm günlerde (cumartesi dahil) teslim edilebilmektedir.Kargo firmalarının teslim süreleri bölgeye göre değişebilmekte olup ortalama 1-4 iş günüdür. Kargoda bulunan siparişlerinizin o anda hangi aşamada olduğunu öğrenmek isterseniz "Siparişlerim" adımından takip edebilirsiniz.
+          
+          Her türlü soru ve görüşleriniz için Samsung Çağrı Merkezinden 444 77 11 veya http://www.samsung.com/tr/support/erms1/ İletişim Formu’ndan bize ulaşabilirsiniz.
+          
+          Büyük Hacimli Ürünler / Beyaz Eşya vb. kategorilerde yer alan ürünlerde kargo teslimatları evinize kadar yapılmaktadır. İçinde farklı ürün gruplarının (cep telefonu, hoparlör, buzdolabı vb) yer aldığı siparişlerde, farklı kargo teslimatları yapılabilecektir. Siparişiniz size ulaştığında, Yetkili servis kurulumu gerektirmeyen cep telefonu vb. ürünlerde, kargo ambalajında sorun yoksa bile kargo paketini kontrol etmeniz faydalı olacaktır. Paket içeriğinde herhangi bir yanlışlık varsa ya da ürünler hasar görmüşse kargo görevlisine hasar tespit tutanağı hazırlatıp Çağrı Merkezimizle iletişime geçmelisiniz.
+          
+          Kurulumu yetkili servis tarafından yapılacak olan ürünlerde ürünün ambalajını açmadan kurulum için Samsung çağrı merkezi 444 77 11 ile irtibata geçiniz. Yetkili Servis dışında açılan ürünler garanti kapsamı dışında kalabilmektedir. Kurulumunun ardından sorun çıkarsa servis raporu hazırlatarak Çağrı Merkezimizle iletişime geçebilirsiniz.</strong>
+        </div>
+      </div>
+    </article>
+
+  </section> 
+  <section id="app7" class="section container" style="margin-top: -70px;">
+    
+    <article class="message" :class="accordionClasses">
+      <div class="message-header" @click="toggleAccordion">
+        Teslimat esnasında adresimde bulunmamam durumunda? +     
+      </div>
+      <div class="message-body">
+        <div class="message-content">
+          Shop.samsung.com/tr’ye üye olarak Samsung ürünlerine 7 gün 24 saat dilediğiniz yerden ve dilediğiniz zaman ulaşabilir, online alışverişin rahatlığını yaşarken kampanyalarımızdan 
+          herkesten önce haberdar olabilirsiniz. Üye olmak için sayfanın en üstünde bulunan “Üye Ol” butonuna tıklayarak sizden istenen bilgileri doldurmanız ve şifrenizi belirlemeniz yeterlidir.</strong>
+        </div>
+      </div>
+    </article>
+
+  </section> 
+  <section id="app8" class="section container" style="margin-top: -70px;">
+    
+    <article class="message" :class="accordionClasses">
+      <div class="message-header" @click="toggleAccordion">
+        Faturamın teslimatı nereye yapılacak? +     
+      </div>
+      <div class="message-body">
+        <div class="message-content">
+          Kargo sorumlusu size kargo şirketinin telefon numarasını içeren bir haber formu bırakacaktır. Haber formunun bırakılmasını takip eden iş günü itibariyle aynı adrese ikinci uğrama gerçekleştirilecektir. Teslim edilemeyen siparişler iade alınacaktır.</strong>
+        </div>
+      </div>
+    </article>
+
+  </section> 
+  <section id="app9" class="section container" style="margin-top: -70px;">
+    
+    <article class="message" :class="accordionClasses">
+      <div class="message-header" @click="toggleAccordion">
+        Ödeme Ve Güvenlik +     
+      </div>
+      <div class="message-body">
+        <div class="message-content">
+          Siparişinize istinaden ürününüz size irsaliye ile ulaştırılacak, faturanız ise belirtmiş olduğunuz e-posta adresinize e-fatura olarak gönderilecektir.</strong>
+        </div>
+      </div>
+    </article>
+
+  </section> 
+  <section id="app10" class="section container" style="margin-top: -70px;">
+    
+    <article class="message" :class="accordionClasses">
+      <div class="message-header" @click="toggleAccordion">
+        SSL +     
+      </div>
+      <div class="message-body">
+        <div class="message-content">
+          Sitemizde güvenliğinizi sağlamak için ziyaretçi ve site arasında gerçekleşen haberleşmede "256 bitlik Rapid SSL sertifikası” kullanılmaktadır. "Secure Sockets Layer” kısaltması olarak adlandırılan SSL ,Sunucu ile istemci arasındaki iletişimin şifrelenmiş şekilde yapılabilmesine imkan veren standartlaşmış bir teknolojidir.
+
+          Sitemizdeki güvenli ortamda yapacağınız alışveriş işlemlerinde siz ve kredi kartını size tahsis eden banka haricinde hiçbir kişi , kurum ve kuruluş tarafından bilgilerinize ulaşamamaktadır.Kart bilgilerinize sitemiz tarafından dahi erişilememektedir. Kredi kart bilgileriniz e-mail veya benzeri yöntemlerle iletilmez, doğrudan banka POS sistemine iletilir.
+          
+          Kredi kartı bilgilerinin siteden bankaya aktarılması ile ilgili güvenlik, Banka'nın sunduğu maksimum güvenlik ile gerçekleşmektedir. Sözkonusu güvenliğin çok sayıda bileşenin yanında, CVV2/CVC2 kodu da çalıntı kart veya kart bilgileri ile alışverişe karşı önlem olarak sitemizde kullanılmaktadır.</strong>
+        </div>
+      </div>
+    </article>
+
+  </section> 
+  <section id="app11" class="section container" style="margin-top: -70px;">
+    
+    <article class="message" :class="accordionClasses">
+      <div class="message-header" @click="toggleAccordion">
+        Müşteri Satış Sözleşmesi Nedir? +     
+      </div>
+      <div class="message-body">
+        <div class="message-content">
+          Müşteri Satış Sözleşmesi, 6502 sayılı "Tüketicinin korunması hakkındaki kanun" gereğince müşteri haklarını tanımlamak ve korumak amacıyla hazırlanmıştır. İlgili kanun gereği internet üzerinden alışveriş yapan müşterilerin bu sözleşmeyi elektronik ortamda kabul etmesi gerekmektedir. Müşteri Satış Sözleşmesi kabul edilmeden samsung.com.tr aracılığıyla alışveriş yapılamamaktadır. Mesafeli Sözleşmeler Yönetmeliğine buraya tıklayarak ulaşabilirsiniz.</strong>
+        </div>
+      </div>
+    </article>
+
+  </section> 
+  <section id="app12" class="section container" style="margin-top: -70px;">
+    
+    <article class="message" :class="accordionClasses">
+      <div class="message-header" @click="toggleAccordion">
+        Garanti Koşulları +     
+      </div>
+      <div class="message-body">
+        <div class="message-content">
+          Garanti süreleri ve koşulları ile ilgili aşağıda yer alan bilgiler kılavuz özelliği taşımakta olup, değişiklik gösterebilir. Garanti süresi ürünün tüketiciye teslim tarihinden itibaren başlar. Garanti uygulaması sırasında değiştirilen ürünün garanti süresi, satın alınan ürünün kalan garanti süresi ile sınırlıdır. Servis noktalarımıza onarım amaçlı girişi olan ürünlerin azami tamir süresi 20 iş günüdür. Tüketicinin ürünü kullanma kılavuzunda yer alan hususlara aykırı kullanmasından kaynaklanan arızalar garanti kapsamı içerisinde değerlendirilmez. Samsung ürününüzle ilgili teknik yardım almak için Samsung Yetkili Servis merkezlerini ziyaret edebilir, ya da Müşteri Hizmetleri merkezimiz ile temasa geçebilirsiniz (444 77 11). Ürününüzün garanti belgesi, faturasının fotokopisi ile model ve seri numarasını belirterek daha kısa sürede yardım alabilirsiniz.
+
+Garanti Süreleri:
+
+Cep Telefonu: 2 yıl
+
+Bluetooth Kulaklık: 2 yıl
+
+Televizyon ve Ev Sinema Sistemleri: 2 yıl
+
+Bulaşık Makinesi: 3 yıl (01.06.2014'ten itibaren)
+
+Mikrodalga Fırın: 2 yıl
+
+Elektrik Süpürgesi: 2 yıl
+
+Set üstü Ocak, Davlumbaz ve Fırın: 2 yıl
+
+Monitör: 2 yıl
+
+Buzdolabı: 3 yıl (01.10.2011 itibariyle)
+
+Çamaşır Makinesi: 3 yıl (01.10.2011 itibariyle)
+
+Klima: 3 yıl (01.06.2012 itibariyle)
+
+Bu tarih öncesinde satışı yapılan ürünlerin geçerli olan garanti süresi 2 yıldır.
+
+Size en yakın yetkili servisimizi buradan ya da 444 77 11 no’lu Çağrı Merkezimizden öğrenebilirsiniz.</strong>
+        </div>
+      </div>
+    </article>
+
+  </section> 
+<!--
+Footer2 div'inde Footer gibi bir alt kısım oluşturuldu. 
+İçindeki footer2-content divine bilgiler ve iconlar için
+footer2-section,footerı2-ımage,footer2-text,databinding,robotdegilim,
+footer2-text2 ve designedby adında divler oluşturuldu.
+Bu divlere uygun şekilde linkler yazıldı ve gerekli sosyal medya ve kredi kartı iconları konuldu.                                                 
+-->
+<!--açılıp kapanı footer-->
+
+<div id="demo">
+        <button v-on:click="show = !show"> Footer</button>
+            <transition name="fade">
+                <p v-if="show">
+                    <div class="footer">
+                        <div class="footer-content">
+                            <!-- Alt menü kısmının içinde linkler bulunduran component.-->
+                            <div id="siteharitası">
+                                <siteharitasıcomponent></siteharitasıcomponent>
+                            </div>
+                              <!-- Alt menü kısmının içinde linkler bulunduran component.-->
+                            <div id="faydalıbilgiler">
+                                 <faydalıbilgilercomponent></faydalıbilgilercomponent>
+                            </div>
+                              <!-- Alt menü kısmının içinde linkler bulunduran component.-->
+                            <div id="destek">
+                                <destekcomponent></destekcomponent>
+                            </div>
+        
+                              <!-- Sosyal medya ikonlarını ve linklerini içinde bulunduran component-->
+                            <div id="sosyalmedya">
+                                <sosyalmedyacomponent></sosyalmedyacomponent>
+                            </div>
+                        </div>
+                    </div>
+                </p>
+      
+             </transition>
+        </div>
+      <div>
+      
+      </div>
+      </div>
+      
+      
+      <!--footercontent component-->
+      <div class="footer2">
+        <div id="footercontent">
+                <footercontentcomponent></footercontentcomponent>
+        </div>
+      </div>
+      
+      
+
+
+  <script src="SıkSorulanSorular.js"></script>
+</body>
+</html>
